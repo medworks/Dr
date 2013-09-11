@@ -85,7 +85,7 @@
 		<!-- END Header part -->
 		<!-- Middle part -->
 		<section id="jms-slideshow" class="jms-slideshow sixteen columns">
-			<!-- Home page -->
+			<!-- Home part -->
 			<div id="home" class="step" data-x="6000" data-y="1600" data-rotate="0" data-scale="15">
 				<div id="jms-content">
 					<div class="five columns">
@@ -142,7 +142,32 @@
 					</div>
 				</div>
 			</div>
-			<!-- END Home page -->
+			<!-- END Home part -->
+			<!-- Resume part -->
+			<div id="resume" class="step" data-x="18000" data-y="2800" data-rotate="-30" data-scale="5">
+				<div id="jms-content2">
+					<div class="one-third column">
+						<div class="block">
+							<div class="title">
+								<h2></h2>
+							</div>
+							<div class="detailsCol">
+								<ul class="employment_ul">
+									<li>
+										<span class="date"></span>
+										<h3></h3>
+										<p></p>
+										<span class="place"></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="one-third column"></div>
+					<div class="one-third column omega"></div>
+				</div>
+			</div>
+			<!-- END Resume part -->
 		</section>
 		<!-- END Middle part -->
 	</div>
