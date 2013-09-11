@@ -58,6 +58,22 @@
 	                <h1>دکتر اقبال صدری</h1> 
 	                <h3>متخصص ارتوپد</h3>
                 </div>
+                <nav id="menu" class="sixteen columns">
+                	<ul id="nav">
+                		<li class="active"><a href="#home">صفحه اصلی</a></li>
+                		<li><a href="#resume">رزومه</a></li>
+                		<li><a href="#services">خدمات</a></li>
+                		<li><a href="#portfolio">کارها</a></li>
+                		<li><a href="#contact">تماس با من</a></li>
+                	</ul>
+                	<select id="dd_menu">
+                		<option value="#home">صفحه اصلی</option>
+                		<option value="#resume">رزومه</option>
+                		<option value="#services">خدمات</option>
+                		<option value="#portfolio">کارها</option>
+                		<option value="#contact">تماس با من</option>
+                	</select>
+                </nav>
            </div>
 		</header>
 	</div>

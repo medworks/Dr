@@ -177,7 +177,7 @@ nav ul {
 nav li {
 	border-top: 			2px solid #eee;
 	border-bottom: 			2px solid #eee;
-	float:					left;
+	float:					right;
 	display:				block;
 	margin:					0;
 	text-align: 			center;
@@ -200,9 +200,8 @@ nav a {
 	padding:				1em 0;
 	text-decoration: 		none; 
 	color:					#999;
-	letter-spacing: 		1px;
 	font-family:"bmitra", tahoma, Arial, Helvetica, sans-serif;
-	font-size:15px;	
+	font-size:18px;	
 	font-weight:300;	
 	text-shadow:none;
 }
