@@ -67,7 +67,7 @@
                 		<li class="active"><a href="#home">صفحه اصلی</a></li>
                 		<li><a href="#resume">رزومه</a></li>
                 		<li><a href="#services">خدمات</a></li>
-                		<li><a href="#portfolio">کارها</a></li>
+                		<li><a href="#portfolio">گالری تصاویر</a></li>
                 		<li><a href="#contact">تماس با من</a></li>
                 	</ul>
                 	<!-- Dropdown menu for mobile -->
@@ -75,7 +75,7 @@
                 		<option value="#home">صفحه اصلی</option>
                 		<option value="#resume">رزومه</option>
                 		<option value="#services">خدمات</option>
-                		<option value="#portfolio">کارها</option>
+                		<option value="#portfolio">گالری تصاویر</option>
                 		<option value="#contact">تماس با من</option>
                 	</select>
                 	<!-- END Dropdown menu for mobile -->
@@ -98,11 +98,11 @@
 					<div class="six columns">
 						<div class="block">
 							<div class="general_info">
-								<h3 class="medium">دکتر اقبال صدری (متخصص ارتوپد)</h3>
+								<h3>دکتر اقبال صدری (متخصص ارتوپد)</h3>
 								<p class="small">توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... </p>
 							</div>
 							<div class="social_icons">
-								<h3 class="medium">دنبال کردن من در</h3>
+								<h3>دنبال کردن من در</h3>
 								<ul class="social">
 									<li><a href="#" class="tip" title="Twitter"><img src="images/twitter.png" alt="twitter"></a></li>
 									<li><a href="#" class="tip" title="Dribbble"><img src="images/dribbble.png" alt="dribbble"></a></li>
@@ -149,7 +149,7 @@
 					<div class="one-third column">
 						<div class="block">
 							<div class="title">
-								<h2 class="large">مقالات</h2>
+								<h2>مقالات</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
@@ -178,7 +178,7 @@
 					<div class="one-third column">
 						<div class="block">
 							<div class="title">
-								<h2 class="large">کنفرانس ها</h2>
+								<h2>کنفرانس ها</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
@@ -207,7 +207,7 @@
 					<div class="one-third column omega">
 						<div class="block">
 							<div class="title">
-								<h2 class="large">عناوین علمی</h2>
+								<h2>عناوین علمی</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
@@ -236,6 +236,46 @@
 				</div>
 			</div>
 			<!-- END Resume part -->
+			<!-- Service part -->
+			<div id="services" class="step" data-x="22000" data-y="2800" data-rotate="30" data-scale="3">
+				<div id="jms-content3">
+					<div class="sixteen columns">
+						<div class="block2">
+							<div class="services clearfix">
+								<div class="four columns omega">
+									<div class="service">
+										<img src="images/serv1.png">
+										<h4>خدمت اول</h4>
+										<p>توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... </p>
+									</div>	
+								</div>
+								<div class="four columns omega">
+									<div class="service">
+										<img src="images/serv2.png">
+										<h4>خدمت دوم</h4>
+										<p>توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... </p>
+									</div>	
+								</div>
+								<div class="four columns omega">
+									<div class="service">
+										<img src="images/serv3.png">
+										<h4>خدمت سوم</h4>
+										<p>توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... </p>
+									</div>	
+								</div>
+								<div class="four columns omega">
+									<div class="service">
+										<img src="images/serv4.png">
+										<h4>خدمت چهارم</h4>
+										<p>توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... </p>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Service part -->
 		</section>
 		<!-- END Middle part -->
 	</div>
