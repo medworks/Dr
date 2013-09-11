@@ -17,6 +17,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+	<link rel="stylesheet" type="text/css" href="skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 </head>
 <body>

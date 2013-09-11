@@ -1,4 +1,13 @@
-/*Fonts ================================================================================= */
+/*
+* Theme Name: Dr - Responsive vCard Template
+* Author: Mediateq
+* Author URL: http://www.mediateq.ir
+*/
+
+@import url('normalize.css');
+/* ============================================================================= 
+Fonts
+==============================================================================*/
 @font-face{
     font-family: 'bmitra';
     src: url('../fonts/BMitra.eot');
@@ -12,4 +21,76 @@
 .large{font-size:25px;}
 .medium{font-size:18px;}
 .small{font-size:15px;}
-/* Reset ================================================================================= */
+/* ============================================================================= 
+General 
+============================================================================= */
+body{
+	font-family: 'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	background-color:#FFF;
+	background-image: url('images/bg.png');
+	font-weight: 400;
+	font-size: 14px;
+	color: #666665;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	overflow: auto;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #E67068;
+}
+a{
+	color: #66B2DC;
+	text-decoration: none;
+}
+a.button{
+	color:#FFF;
+	float:right;
+	background-color:#E67068;
+	-webkit-border-radius:25px;-moz-border-radius:25px;border-radius:25px;
+	padding:6px 10px;
+	box-shadow:none;
+	border:none;
+}
+a.button:hover{
+	background:#cfd0ca;
+	-webkit-transition: all 0.2s linear;
+     -moz-transition: all 0.2s linear;
+     -o-transition: all 0.2s linear;
+     transition: all 0.2s linear;
+}
+button:active, button:focus {outline:0;}
+img:active, img:focus {outline:0;}
+:active, :focus {outline:0;}
+.clr{
+	clear: both;
+	padding: 0;
+	height: 0;
+	margin: 0;
+}
+.container > header{
+	margin: 0px 0px 10px 0px;
+	padding: 20px 0px 10px 0px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	color:#292929;
+	margin-top:0;
+	margin-bottom:10px;	
+}
+p{
+	font-size:13px;
+	line-height:20px;
+	color:#666665;	
+}
+.title h2{
+    font-weight: normal;
+    padding: 0;
+	margin:0;
+	margin-top:0;
+	margin-bottom:10px;
+}
