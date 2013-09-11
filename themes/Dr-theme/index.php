@@ -149,22 +149,90 @@
 					<div class="one-third column">
 						<div class="block">
 							<div class="title">
-								<h2></h2>
+								<h2 class="large">مقالات</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
 									<li>
-										<span class="date"></span>
-										<h3></h3>
-										<p></p>
-										<span class="place"></span>
+										<span class="date">1391-12-1</span>
+										<h3>مقاله یک</h3>
+										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>مقاله دو</h3>
+										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>مقاله سه</h3>
+										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
+										<span class="place">در google</span>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="one-third column"></div>
-					<div class="one-third column omega"></div>
+					<div class="one-third column">
+						<div class="block">
+							<div class="title">
+								<h2 class="large">کنفرانس ها</h2>
+							</div>
+							<div class="detailsCol">
+								<ul class="employment_ul">
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>کنفرانس یک</h3>
+										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>کنفرانس دو</h3>
+										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>کنفرانس سه</h3>
+										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
+										<span class="place">در google</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="one-third column omega">
+						<div class="block">
+							<div class="title">
+								<h2 class="large">عناوین علمی</h2>
+							</div>
+							<div class="detailsCol">
+								<ul class="employment_ul">
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>عنوان یک</h3>
+										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>عنوان دو</h3>
+										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
+										<span class="place">در google</span>
+									</li>
+									<li>
+										<span class="date">1391-12-1</span>
+										<h3>عنوان سه</h3>
+										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
+										<span class="place">در google</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- END Resume part -->

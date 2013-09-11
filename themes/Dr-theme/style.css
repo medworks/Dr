@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5,h6{
 	margin-bottom:10px;	
 }
 p{
-	font-size:13px;
+	font-size:17px;
 	line-height:20px;
 	color:#666665;	
 }
@@ -369,7 +369,7 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
     width: 100%;
 }
 .detailsCol h3 {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 2px;
 	font-weight:400;
 }
@@ -377,16 +377,16 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 	margin:0;
 	padding:0;
 	padding-right:10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 .detailsCol ul li {
     display:inline-block;
 	width:100%;
 	margin: 0 0 15px 0;
-	padding-left:10px;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: #E67068;
+	padding-right:10px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #E67068;
 }
 .detailsCol ul li p{
     margin:5px 0px 5px 0px;
@@ -394,13 +394,13 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 .detailsCol span {
 	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
     display: block;
-	float:left;
+	float:right;
 	color:#b4b4b4;
 }
 .detailsCol span.date {
     color: #E67068;
-	float: right;
-    font-size: 13px;
+	float: left;
+    font-size: 16px;
     text-transform:none;
     line-height: 11px;
 	margin-top:7px;
