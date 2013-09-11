@@ -86,8 +86,61 @@
 		<!-- Middle part -->
 		<section id="jms-slideshow" class="jms-slideshow sixteen columns">
 			<!-- Home page -->
-			<div id="home">
-				
+			<div id="home" class="step" data-x="6000" data-y="1600" data-rotate="0" data-scale="15">
+				<div id="jms-content">
+					<div class="five columns">
+						<div class="block">
+							<div class="portrait">
+								<img src="images/others/personal-photo.jpg" alt="Dr">
+							</div>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="block">
+							<div class="general_info">
+								<h3 class="medium">دکتر اقبال صدری (متخصص ارتوپد)</h3>
+								<p class="small">توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... </p>
+							</div>
+							<div class="social_icons">
+								<h3 class="medium">دنبال کردن من در</h3>
+								<ul class="social">
+									<li><a href="#" class="tip" title="Twitter"><img src="images/twitter.png" alt="twitter"></a></li>
+									<li><a href="#" class="tip" title="Dribbble"><img src="images/dribbble.png" alt="dribbble"></a></li>
+									<li><a href="#" class="tip" title="Lastfm"><img src="images/lastfm.png" alt="lastfm"></a></li>
+									<li><a href="#" class="tip" title="Google Plus"><img src="images/googleplus.png" alt="googleplus"></a></li>
+									<li><a href="#" class="tip" title="Youtube"><img src="images/youtube.png" alt="youtube"></a></li>
+									<li><a href="#" class="tip" title="Skype"><img src="images/skype.png" alt="skype"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="five columns">
+						<div class="block end">
+							<ul class="personal-info">
+								<li>
+									<span class="title">نام و نام خانوادگی</span>
+									<span class="value small">اقبال صدری</span>
+								</li>
+								<li>
+									<span class="title">سن</span>
+									<span class="value small">40</span>
+								</li>
+								<li>
+									<span class="title">آدرس</span>
+									<span class="value small">مشهد، خیابان محتشمی، پلاک 222</span>
+								</li>
+								<li>
+									<span class="title">ایمیل</span>
+									<span class="value small latinfont"><a href="mailto:info@sadri.com">info@sadri.com</a></span>
+								</li>
+								<li>
+									<span class="title medium">تلفن</span>
+									<span class="value small">4785 858 (915)+98</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- END Home page -->
 		</section>

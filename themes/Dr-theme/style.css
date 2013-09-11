@@ -20,7 +20,12 @@ Fonts
 
 .large{font-size:25px;}
 .medium{font-size:18px;}
-.small{font-size:15px;}
+.small{font-size:17px;}
+.x-small{font-size:15px;}
+
+.latinfont{
+	font-family: Arial, Helvetica, sans-serif;
+}
 /* ============================================================================= 
 1.General 
 ============================================================================= */
@@ -329,7 +334,7 @@ nav a, nav li {
 /* personal info */   
 ul.personal-info { 
     margin:10px 0 0 0; 
-	padding-left:0; 
+	padding-right:0; 
 	list-style:none; 
 }
 ul.personal-info li { 
@@ -345,7 +350,7 @@ ul.personal-info .title {
 	color:#333; 
 	padding:3px 10px; 
 	position:relative; 
-	font-size:13px;  
+	font-size:16px;  
 }
 ul.personal-info .value { 
     margin-left:10px; 
