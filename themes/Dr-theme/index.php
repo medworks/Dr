@@ -53,7 +53,9 @@
     </noscript>
 </head>
 <body>
+	<!-- Container -->
 	<div class="container">
+		<!-- Header part -->
 		<header>
 			<div class="sixteen columns">
                 <div class="My_name">
@@ -68,6 +70,7 @@
                 		<li><a href="#portfolio">کارها</a></li>
                 		<li><a href="#contact">تماس با من</a></li>
                 	</ul>
+                	<!-- Dropdown menu for mobile -->
                 	<select id="dd_menu">
                 		<option value="#home">صفحه اصلی</option>
                 		<option value="#resume">رزومه</option>
@@ -75,12 +78,21 @@
                 		<option value="#portfolio">کارها</option>
                 		<option value="#contact">تماس با من</option>
                 	</select>
+                	<!-- END Dropdown menu for mobile -->
                 </nav>
            </div>
 		</header>
+		<!-- END Header part -->
+		<!-- Middle part -->
 		<section id="jms-slideshow" class="jms-slideshow sixteen columns">
-			
+			<!-- Home page -->
+			<div id="home">
+				
+			</div>
+			<!-- END Home page -->
 		</section>
+		<!-- END Middle part -->
 	</div>
+	<!-- END Container -->
 </body>
 </html>
