@@ -19,12 +19,17 @@
 
 	<link rel="stylesheet" type="text/css" href="skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="prettyPhoto.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
 	<script src="js/jquery.min.js" type="text/javascript"></script>
 	<script src="js/jms.js" type="text/javascript"></script>
 	<script src="js/jmpress.js" type="text/javascript"></script>
+	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="js/mousewheel.js" type="text/javascript"></script>
 	<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
@@ -311,7 +316,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-2" data-type="operatingroom">
+								<li class="item four columns omega" data-id="id-2" data-type="hospital">
 									<a href="images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
@@ -349,7 +354,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-4" data-type="operatingroom">
+								<li class="item four columns omega" data-id="id-4" data-type="hospital">
 									<a href="images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
@@ -368,7 +373,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-5" data-type="hospital">
+								<li class="item four columns omega" data-id="id-5" data-type="operatingroom">
 									<a href="images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
@@ -406,7 +411,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-7" data-type="hospital">
+								<li class="item four columns omega" data-id="id-7" data-type="operatingroom">
 									<a href="images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">

@@ -52,4 +52,78 @@ jQuery(document).ready(function(){
 	    $(this).parent().addClass("active");
     });
 
+    // --------------------------------------------------------------------------
+	// building select nav for mobile width only --------------------------------
+	// --------------------------------------------------------------------------
+    $('#dd_menu').change(function() {
+        window.location = $(this).val();
+    });
+	
+    // --------------------------------------------------------------------------
+	// Location Update --------------------------------
+	// --------------------------------------------------------------------------
+    $(document).ready(function(){
+        if(document.location.hash){
+              window.location = "";
+        }
+    });
+
+    // --------------------------------------------------------------------------
+	// Portfolio ----------------------------------------------------------------
+	// --------------------------------------------------------------------------
+	// Clone portfolio items to get a second collection for Quicksand plugin
+	var $portfolioClone = $(".portfolio").clone();
+	
+	// Attempt to call Quicksand on every click event handler
+	$(".filter a").click(function(e){
+		
+		$(".filter li").removeClass("current");	
+		
+		// Get the class attribute value of the clicked link
+		var $filterClass = $(this).parent().attr("class");
+
+		if ( $filterClass == "all" ) {
+			var $filteredPortfolio = $portfolioClone.find("li");
+		} else {
+			var $filteredPortfolio = $portfolioClone.find("li[data-type~=" + $filterClass + "]");
+		}
+		
+		// Call quicksand
+		$(".portfolio").quicksand( $filteredPortfolio, { 
+			duration: 800, 
+			easing: 'easeInOutQuad' 
+		}, function(){
+			
+			// Blur newly cloned portfolio items on mouse over and apply prettyPhoto
+			$(".portfolio a").hover( function(){ 
+				$(this).children("img").animate({ opacity: 0.75 }, "fast"); 
+			}, function(){ 
+				$(this).children("img").animate({ opacity: 1.0 }, "slow"); 
+			}); 
+			
+			$(".portfolio a[data-rel^='prettyPhoto']").prettyPhoto({
+		        social_tools:'',
+		        deeplinking:false,
+		        theme: 'light_square'
+			});
+		});
+
+
+		$(this).parent().addClass("current");
+
+		// Prevent the browser jump to the link anchor
+		e.preventDefault();
+	})
+
+	// --------------------------------------------------------------------------
+	// prettyPhoto --------------------------------------------------------------
+	// --------------------------------------------------------------------------	
+	$("a.prettyPhoto").prettyPhoto({
+		social_tools:'',
+		deeplinking:false,
+		theme: 'light_square'
+	});
+	
+	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto(); 
+
 });
