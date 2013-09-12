@@ -34,6 +34,16 @@ jQuery(document).ready(function(){
 			autoplay	: false,
 	    };		
 	}
+
+	// --------------------------------------------------------------------------
+	// jScrollpane --------------------------------------------------------------
+	// --------------------------------------------------------------------------	
+	$('#jms-content').jScrollPane({ autoReinitialise: true, hijackInternalLinks: true })
+	$('#jms-content2').jScrollPane({ autoReinitialise: true, hijackInternalLinks: true })
+    $('#jms-content3').jScrollPane({ autoReinitialise: true, hijackInternalLinks: true })
+    $('#jms-content4').jScrollPane({ autoReinitialise: true, hijackInternalLinks: true })
+	$('#jms-content5').jScrollPane({ autoReinitialise: true, hijackInternalLinks: true })
+	
 	// --------------------------------------------------------------------------
 	// Main Menu ----------------------------------------------------------------
 	// --------------------------------------------------------------------------

@@ -18,11 +18,13 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" type="text/css" href="skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
 	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jmpress.js" type="text/javascript"></script>
 	<script src="js/jms.js" type="text/javascript"></script>
+	<script src="js/jmpress.js" type="text/javascript"></script>
+	<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
