@@ -135,7 +135,7 @@
 								</li>
 								<li>
 									<span class="title medium">تلفن</span>
-									<span class="value small">4785 858 (915)+98</span>
+									<span class="value small">4785 858 (915)98+</span>
 								</li>
 							</ul>
 						</div>
@@ -443,12 +443,55 @@
 									</a>
 								</li>
 							</ul>
-							<!-- END Portfolio Items -->
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- END portfolio part -->
+			<!-- END Portfolio Items -->
+			<!-- Contact Items -->
+			<div id="contact" class="step" data-x="30000" data-y="6500" data-rotate="30" data-scale="3">
+				<div id="jms-content5">
+					<div class="ten columns">
+						<div class="block">
+							<div class="title">
+								<h2>آدرس من</h2>
+							</div>
+							<div class="gmap" id="map" data-center="98 Norman Grove, London, United Kingdom" data-zoom="15">
+								<address>
+									<strong>احمدآباد، خیابان محتشمی، پلاک 1222</strong>
+									<br />
+									مشهد، ایران
+								</address>
+							</div>
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="block end">
+							<div class="title">
+								<h2>تماس با من</h2>
+							</div>
+							<div id="contact-wrapper">
+								<form id="contactform" action="javascript:alert('success!');">
+									<fieldset class="info_fieldset">
+										<div id="note"></div>
+									</fieldset>
+									<label class="medium">نام</label>
+									<input class="textbox" type="text" name="name" value="" />
+									<br />
+									<label class="medium">ایمیل</label>
+									<input class="textbox" type="text" name="email" value="" />
+									<br />
+									<label class="medium">پیام</label>
+									<textarea class="textbox" name="message" rows="5" cols="25"></textarea>
+									<br />
+									<input class="button" type="submit" value="ارسال پیام">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Contact Items -->
 		</section>
 		<!-- END Middle part -->
 	</div>
