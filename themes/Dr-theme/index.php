@@ -276,6 +276,179 @@
 				</div>
 			</div>
 			<!-- END Service part -->
+			<!-- portfolio part -->
+			<div id="portfolio" class="step" data-x="26000" data-y="2800" data-rotate="-30" data-scale="1">
+				<div id="jms-content4">
+					<div class="sixteen columns">
+						<div class="block2">
+							<!-- Portfolio filter -->
+							<ul class="filter">
+								<li class="current all"><a href="#">همه</a></li>
+								<li class="operatingroom"><a href="#">اتاق عمل</a></li>
+								<li class="hospital"><a href="#">بیمارستان</a></li>
+							</ul>
+							<!-- END Portfolio filter -->
+							<!-- Portfolio Items -->
+							<ul class="portfolio group">
+								<li class="item four columns omega" data-id="id-1" data-type="operatingroom">
+									<a href="images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_1.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>اتاق عمل1</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-2" data-type="operatingroom">
+									<a href="images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_2.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>اتاق عمل2</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-3" data-type="operatingroom">
+									<a href="images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_3.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>اتاق عمل3</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-4" data-type="operatingroom">
+									<a href="images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_4.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>اتاق عمل4</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-5" data-type="hospital">
+									<a href="images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_5.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>بیمارستان 1</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-6" data-type="hospital">
+									<a href="images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_6.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>بیمارستان 2</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-7" data-type="hospital">
+									<a href="images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_7.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>بیمارستان 3</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="item four columns omega" data-id="id-8" data-type="hospital">
+									<a href="images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
+										<div class="flip box fade">
+											<div class="rollover">
+												<div class="cube">
+													<figure class="front">
+														<img src="images/others/image_8.jpg" alt="">
+													</figure>
+													<section class="back">
+														<div class="back-wrap">
+															<h3>بیمارستان 4</h3>
+															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+														</div>
+													</section>
+												</div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<!-- END Portfolio Items -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END portfolio part -->
 		</section>
 		<!-- END Middle part -->
 	</div>
