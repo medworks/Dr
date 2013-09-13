@@ -4,7 +4,7 @@
 	<title></title>
 
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="UTF-8">
 	<meta name="robots" content="INDEX,FOLLOW">
 	<meta name="description" content="dr">
@@ -31,6 +31,7 @@
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
@@ -283,7 +284,7 @@
 				</div>
 			</div>
 			<!-- END Service part -->
-			<!-- portfolio part -->
+			<!-- Portfolio part -->
 			<div id="portfolio" class="step" data-x="26000" data-y="2800" data-rotate="-30" data-scale="1">
 				<div id="jms-content4">
 					<div class="sixteen columns">
@@ -450,12 +451,13 @@
 									</a>
 								</li>
 							</ul>
+							<!-- END Portfolio Items -->
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- END Portfolio Items -->
-			<!-- Contact Items -->
+			<!-- END Portfolio part -->
+			<!-- Contact part -->
 			<div id="contact" class="step" data-x="30000" data-y="6500" data-rotate="30" data-scale="3">
 				<div id="jms-content5">
 					<div class="ten columns">
@@ -498,7 +500,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- END Contact Items -->
+			<!-- END Contact part -->
 		</section>
 		<!-- END Middle part -->
 	</div>
