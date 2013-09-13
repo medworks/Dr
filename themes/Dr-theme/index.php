@@ -31,6 +31,7 @@
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="js/contact_form.js" type="text/javascript"></script>
 	<script src="js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
