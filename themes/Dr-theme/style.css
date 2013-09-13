@@ -125,7 +125,7 @@ p{
 .ltr{
 	direction: ltr;
 }
-ul,li,span,label,input{
+ul,li,span,label,input,textarea{
 	direction: rtl;
 }
 /* ============================================================================= 
@@ -788,6 +788,7 @@ textarea:focus 	{
 }
 /* Submit Button */
 input[type="submit"] 		{
+	margin-right: -22px;
 	color:#FFF;
 	width:50%;
 	float:right;
