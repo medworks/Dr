@@ -302,7 +302,7 @@
 									<a href="images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_1.jpg" alt="">
 													</figure>
@@ -321,7 +321,7 @@
 									<a href="images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_2.jpg" alt="">
 													</figure>
@@ -340,7 +340,7 @@
 									<a href="images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_3.jpg" alt="">
 													</figure>
@@ -359,7 +359,7 @@
 									<a href="images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_4.jpg" alt="">
 													</figure>
@@ -378,7 +378,7 @@
 									<a href="images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_5.jpg" alt="">
 													</figure>
@@ -397,7 +397,7 @@
 									<a href="images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_6.jpg" alt="">
 													</figure>
@@ -416,7 +416,7 @@
 									<a href="images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_7.jpg" alt="">
 													</figure>
@@ -435,7 +435,7 @@
 									<a href="images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube">
+												<div class="cube ltr">
 													<figure class="front">
 														<img src="images/others/image_8.jpg" alt="">
 													</figure>
