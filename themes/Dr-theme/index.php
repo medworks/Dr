@@ -27,7 +27,7 @@
 	<script src="js/jmpress.js" type="text/javascript"></script>
 	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
 	<script src="js/mousewheel.js" type="text/javascript"></script>
-	<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
