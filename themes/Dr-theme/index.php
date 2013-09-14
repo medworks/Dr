@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="jquery.qtip.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
 	<script src="js/jquery.min.js" type="text/javascript"></script>
@@ -31,8 +32,9 @@
 	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="js/jquery.qtip.min.js" type="text/javascript"></script>
 	<script src="js/contact_form.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
 	<script src="js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
