@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fa">
 <head>
-	<title></title>
+	<title>Dr Eghbal Sadri</title>
 
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,8 +14,8 @@
 	<meta name="Generator" content="مدیاتک">
 	<meta name="Author" content="مدیاتک">
 
-	<link rel="icon" href="favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="themes/fa/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="themes/fa/favicon.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.jscrollpane.css" media="all" />
