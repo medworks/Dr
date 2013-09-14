@@ -492,12 +492,12 @@
 									<input class="textbox" type="text" name="name" value="" />
 									<br />
 									<label class="medium">ایمیل</label>
-									<input class="textbox" type="text" name="email" value="" />
+									<input class="textbox ltr" type="text" name="email" value="" />
 									<br />
 									<label class="medium">پیام</label>
 									<textarea class="textbox" name="message" rows="5" cols="25"></textarea>
 									<br />
-									<input class="button" type="submit" value="ارسال پیام">
+									<input class="button small" type="submit" value="ارسال پیام">
 								</form>
 							</div>
 						</div>
