@@ -17,27 +17,27 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="jquery.qtip.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/fa/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/fa/style.css" media="all" />
 
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jms.js" type="text/javascript"></script>
-	<script src="js/jmpress.js" type="text/javascript"></script>
-	<script src="js/jquery.easing.1.3.js" type="text/javascript"></script>
-	<script src="js/detectmobilebrowser.js" type="text/javascript"></script>
-	<script src="js/mousewheel.js" type="text/javascript"></script>
-	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
-	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
-	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="js/jquery.qtip.min.js" type="text/javascript"></script>
-	<script src="js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.min.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jms.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jmpress.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="themes/fa/js/detectmobilebrowser.js" type="text/javascript"></script>
+	<script src="themes/fa/js/mousewheel.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.jscrollpane.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.qtip.min.js" type="text/javascript"></script>
+	<script src="themes/fa/js/jquery.mobilegmap.min.js" type="text/javascript"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
-	<script src="js/contact_form.js" type="text/javascript"></script>
-	<script src="js/scripts.js" type="text/javascript"></script>
-	<script src="js/modernizr.custom.48780.js" type="text/javascript"></script>
+	<script src="themes/fa/js/contact_form.js" type="text/javascript"></script>
+	<script src="themes/fa/js/scripts.js" type="text/javascript"></script>
+	<script src="themes/fa/js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
@@ -105,7 +105,7 @@
 					<div class="five columns">
 						<div class="block">
 							<div class="portrait">
-								<img src="images/others/personal-photo.jpg" alt="Dr">
+								<img src="themes/fa/images/others/personal-photo.jpg" alt="Dr">
 							</div>
 						</div>
 					</div>
@@ -118,12 +118,12 @@
 							<div class="social_icons">
 								<h3>دنبال کردن من در</h3>
 								<ul class="social">
-									<li><a href="#" class="tip" title="Twitter"><img src="images/twitter.png" alt="twitter"></a></li>
-									<li><a href="#" class="tip" title="Dribbble"><img src="images/dribbble.png" alt="dribbble"></a></li>
-									<li><a href="#" class="tip" title="Lastfm"><img src="images/lastfm.png" alt="lastfm"></a></li>
-									<li><a href="#" class="tip" title="Google Plus"><img src="images/googleplus.png" alt="googleplus"></a></li>
-									<li><a href="#" class="tip" title="Youtube"><img src="images/youtube.png" alt="youtube"></a></li>
-									<li><a href="#" class="tip" title="Skype"><img src="images/skype.png" alt="skype"></a></li>
+									<li><a href="#" class="tip" title="Twitter"><img src="themes/fa/images/twitter.png" alt="twitter"></a></li>
+									<li><a href="#" class="tip" title="Dribbble"><img src="themes/fa/images/dribbble.png" alt="dribbble"></a></li>
+									<li><a href="#" class="tip" title="Lastfm"><img src="themes/fa/images/lastfm.png" alt="lastfm"></a></li>
+									<li><a href="#" class="tip" title="Google Plus"><img src="themes/fa/images/googleplus.png" alt="googleplus"></a></li>
+									<li><a href="#" class="tip" title="Youtube"><img src="themes/fa/images/youtube.png" alt="youtube"></a></li>
+									<li><a href="#" class="tip" title="Skype"><img src="themes/fa/images/skype.png" alt="skype"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -258,28 +258,28 @@
 							<div class="services clearfix">
 								<div class="four columns omega">
 									<div class="service">
-										<img src="images/serv1.png">
+										<img src="themes/fa/images/serv1.png">
 										<h4>خدمت اول</h4>
 										<p>توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="images/serv2.png">
+										<img src="themes/fa/images/serv2.png">
 										<h4>خدمت دوم</h4>
 										<p>توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="images/serv3.png">
+										<img src="themes/fa/images/serv3.png">
 										<h4>خدمت سوم</h4>
 										<p>توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="images/serv4.png">
+										<img src="themes/fa/images/serv4.png">
 										<h4>خدمت چهارم</h4>
 										<p>توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... </p>
 									</div>	
@@ -305,12 +305,12 @@
 							<!-- Portfolio Items -->
 							<ul class="portfolio group">
 								<li class="item four columns omega" data-id="id-1" data-type="operatingroom">
-									<a href="images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_1.jpg" alt="">
+														<img src="themes/fa/images/others/image_1.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -324,12 +324,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-2" data-type="hospital">
-									<a href="images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_2.jpg" alt="">
+														<img src="themes/fa/images/others/image_2.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -343,12 +343,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-3" data-type="operatingroom">
-									<a href="images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_3.jpg" alt="">
+														<img src="themes/fa/images/others/image_3.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -362,12 +362,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-4" data-type="hospital">
-									<a href="images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_4.jpg" alt="">
+														<img src="themes/fa/images/others/image_4.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -381,12 +381,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-5" data-type="operatingroom">
-									<a href="images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_5.jpg" alt="">
+														<img src="themes/fa/images/others/image_5.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -400,12 +400,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-6" data-type="hospital">
-									<a href="images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_6.jpg" alt="">
+														<img src="themes/fa/images/others/image_6.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -419,12 +419,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-7" data-type="operatingroom">
-									<a href="images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_7.jpg" alt="">
+														<img src="themes/fa/images/others/image_7.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -438,12 +438,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-8" data-type="hospital">
-									<a href="images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/fa/images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="images/others/image_8.jpg" alt="">
+														<img src="themes/fa/images/others/image_8.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
