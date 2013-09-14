@@ -141,6 +141,13 @@ jQuery(document).ready(function(){
 		theme: 'light_square'
 	});
 	
-	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto(); 
+	jQuery("a[data-rel^='prettyPhoto']").prettyPhoto();
+	
+	// --------------------------------------------------------------------------
+	// Google map container -----------------------------------------------------
+	// --------------------------------------------------------------------------	
+    $('.gmap').mobileGmap({
+         deviceWidth: 480, // The select will be added for screensizes smaller than this
+    });	
 
 });

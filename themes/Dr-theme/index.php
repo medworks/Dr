@@ -33,6 +33,8 @@
 	<script src="js/jquery.quicksand.js" type="text/javascript"></script>
 	<script src="js/jquery.prettyPhoto.js" type="text/javascript"></script>
 	<script src="js/jquery.qtip.min.js" type="text/javascript"></script>
+	<script src="js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
 	<script src="js/contact_form.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script>
 	<script src="js/modernizr.custom.48780.js" type="text/javascript"></script>
@@ -469,7 +471,7 @@
 							<div class="title">
 								<h2>آدرس من</h2>
 							</div>
-							<div class="gmap" id="map" data-center="98 Norman Grove, London, United Kingdom" data-zoom="15">
+							<div class="gmap" id="map" data-center="36.293925, 59.577349" data-zoom="17">
 								<address>
 									<strong>احمدآباد، خیابان محتشمی، پلاک 1222</strong>
 									<br />
