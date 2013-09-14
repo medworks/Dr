@@ -125,7 +125,7 @@ p{
 .ltr{
 	direction: ltr;
 }
-ul,li,span,label,input,textarea{
+ul,li,select,option,span,label,input,textarea{
 	direction: rtl;
 }
 /* ============================================================================= 
@@ -188,6 +188,7 @@ ul,li,span,label,input,textarea{
 ============================================================================= */
 nav select {
     display:none; /* this is just for the mobile display */
+    font-size: 18px;
 }
 #menu {
 	margin-bottom:30px;
