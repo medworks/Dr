@@ -171,19 +171,19 @@
 										<span class="date">1391-12-1</span>
 										<h3>مقاله یک</h3>
 										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>مقاله دو</h3>
 										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>مقاله سه</h3>
 										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 								</ul>
 							</div>
@@ -200,19 +200,19 @@
 										<span class="date">1391-12-1</span>
 										<h3>کنفرانس یک</h3>
 										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>کنفرانس دو</h3>
 										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>کنفرانس سه</h3>
 										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 								</ul>
 							</div>
@@ -229,19 +229,19 @@
 										<span class="date">1391-12-1</span>
 										<h3>عنوان یک</h3>
 										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>عنوان دو</h3>
 										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 									<li>
 										<span class="date">1391-12-1</span>
 										<h3>عنوان سه</h3>
 										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در google</span>
+										<span class="place">در...</span>
 									</li>
 								</ul>
 							</div>
