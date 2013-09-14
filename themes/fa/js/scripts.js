@@ -135,7 +135,7 @@ jQuery(document).ready(function(){
 	// --------------------------------------------------------------------------
 	// prettyPhoto --------------------------------------------------------------
 	// --------------------------------------------------------------------------	
-	$("a.prettyPhoto").prettyPhoto({
+	$("a[data-rel^='prettyPhoto']").prettyPhoto({
 		social_tools:'',
 		deeplinking:false,
 		theme: 'light_square'
