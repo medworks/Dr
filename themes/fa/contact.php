@@ -23,6 +23,7 @@ function checkEmail($email) {
 	if( strlen($name)>=1 && checkEmail($email) && strlen($text)>=1 ){
 		if( @mail (
 				$admin,
+				"$subject",
 				$message,
 				"From:$name $email" )
 		){
