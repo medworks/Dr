@@ -471,7 +471,7 @@
 							<div class="title">
 								<h2>آدرس من</h2>
 							</div>
-							<div class="gmap" id="map" data-center="36.293925, 59.577349" data-zoom="17">
+							<div class="gmap" id="map" data-center="36.293912, 59.577333" data-zoom="18">
 								<address>
 									<strong>احمدآباد، خیابان محتشمی، پلاک 1222</strong>
 									<br />
