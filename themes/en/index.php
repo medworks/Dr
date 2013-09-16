@@ -74,24 +74,24 @@
 		<header>
 			<div class="sixteen columns">
                 <div class="My_name">
-	                <h1>دکتر اقبال صدری</h1> 
-	                <h3>متخصص ارتوپد</h3>
+	                <h1>Dr Eghbal Sadri</h1> 
+	                <h3>Specialist in Orthopedics</h3>
                 </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
-                		<li class="active"><a href="#home">صفحه اصلی</a></li>
-                		<li><a href="#resume">رزومه</a></li>
-                		<li><a href="#services">خدمات</a></li>
-                		<li><a href="#portfolio">گالری تصاویر</a></li>
-                		<li><a href="#contact">تماس با من</a></li>
+                		<li class="active"><a href="#home">Home</a></li>
+                		<li><a href="#resume">Resume</a></li>
+                		<li><a href="#services">Services</a></li>
+                		<li><a href="#portfolio">Gallery</a></li>
+                		<li><a href="#contact">Contact</a></li>
                 	</ul>
                 	<!-- Dropdown menu for mobile -->
                 	<select id="dd_menu">
-                		<option value="#home">صفحه اصلی</option>
-                		<option value="#resume">رزومه</option>
-                		<option value="#services">خدمات</option>
-                		<option value="#portfolio">گالری تصاویر</option>
-                		<option value="#contact">تماس با من</option>
+                		<option value="#home">Home</option>
+                		<option value="#resume">Resume</option>
+                		<option value="#services">Services</option>
+                		<option value="#portfolio">Gallery</option>
+                		<option value="#contact">Contact</option>
                 	</select>
                 	<!-- END Dropdown menu for mobile -->
                 </nav>
@@ -113,11 +113,11 @@
 					<div class="six columns">
 						<div class="block">
 							<div class="general_info">
-								<h3>دکتر اقبال صدری (متخصص ارتوپد)</h3>
-								<p class="small">توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... </p>
+								<h3>Dr Eghbal Sadri (Specialist in Orthopedics)</h3>
+								<p>Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... </p>
 							</div>
 							<div class="social_icons">
-								<h3>دنبال کردن من در</h3>
+								<h3>Follow Me on</h3>
 								<ul class="social">
 									<li><a href="#" class="tip" title="Twitter"><img src="themes/images/twitter.png" alt="twitter"></a></li>
 									<li><a href="#" class="tip" title="Dribbble"><img src="themes/images/dribbble.png" alt="dribbble"></a></li>
@@ -133,24 +133,24 @@
 						<div class="block end">
 							<ul class="personal-info">
 								<li>
-									<span class="title">نام و نام خانوادگی</span>
-									<span class="value small">اقبال صدری</span>
+									<span class="title">Name</span>
+									<span class="value">Eghbal Sadri</span>
 								</li>
 								<li>
-									<span class="title">سن</span>
-									<span class="value small">40</span>
+									<span class="title">Age</span>
+									<span class="value">40</span>
 								</li>
 								<li>
-									<span class="title">آدرس</span>
-									<span class="value small">مشهد، خیابان محتشمی، پلاک 222</span>
+									<span class="title">Address</span>
+									<span class="value">Mohtashami-Iran</span>
 								</li>
 								<li>
-									<span class="title">ایمیل</span>
-									<span class="value small latinfont"><a href="mailto:info@sadri.com">info@sadri.com</a></span>
+									<span class="title">E-mail</span>
+									<span class="value latinfont"><a href="mailto:info@sadri.com">info@sadri.com</a></span>
 								</li>
 								<li>
-									<span class="title medium">تلفن</span>
-									<span class="value small">4785 858 (915)98+</span>
+									<span class="title">Tel</span>
+									<span class="value">+1(123) 456 7890</span>
 								</li>
 							</ul>
 						</div>
@@ -164,27 +164,27 @@
 					<div class="one-third column">
 						<div class="block">
 							<div class="title">
-								<h2>مقالات</h2>
+								<h2>Articles</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله یک</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Article one</h3>
+										<p>Detail of article... Detail of article... Detail of article...</p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله دو</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Article two</h3>
+										<p>Detail of article... Detail of article... Detail of article...</p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله سه</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Article three</h3>
+										<p>Detail of article... Detail of article... Detail of article...</p>
+										<span class="place">google</span>
 									</li>
 								</ul>
 							</div>
@@ -193,27 +193,27 @@
 					<div class="one-third column">
 						<div class="block">
 							<div class="title">
-								<h2>کنفرانس ها</h2>
+								<h2>Conferences</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس یک</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Conference one</h3>
+										<p>Detail of conference... Detail of conference... Detail of conference...</p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس دو</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Conference two</h3>
+										<p>Detail of conference... Detail of conference... Detail of conference...</p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس سه</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Conference three</h3>
+										<p>Detail of conference... Detail of conference... Detail of conference...</p>
+										<span class="place">google</span>
 									</li>
 								</ul>
 							</div>
@@ -222,27 +222,27 @@
 					<div class="one-third column omega">
 						<div class="block">
 							<div class="title">
-								<h2>عناوین علمی</h2>
+								<h2>Academic titles</h2>
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان یک</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Titles one</h3>
+										<p>Detail of title... Detail of title... Detail of title... </p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان دو</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Titles two</h3>
+										<p>Detail of title... Detail of title... Detail of title... </p>
+										<span class="place">google</span>
 									</li>
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان سه</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
+										<span class="date">2002-12-1</span>
+										<h3>Titles three</h3>
+										<p>Detail of title... Detail of title... Detail of title... </p>
+										<span class="place">google.</span>
 									</li>
 								</ul>
 							</div>
@@ -260,29 +260,29 @@
 								<div class="four columns omega">
 									<div class="service">
 										<img src="themes/images/serv1.png">
-										<h4>خدمت اول</h4>
-										<p>توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... </p>
+										<h4>Service one</h4>
+										<p>Detail of service... Detail of service... Detail of service... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
 										<img src="themes/images/serv2.png">
-										<h4>خدمت دوم</h4>
-										<p>توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... </p>
+										<h4>Service two</h4>
+										<p>Detail of service... Detail of service... Detail of service... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
 										<img src="themes/images/serv3.png">
-										<h4>خدمت سوم</h4>
-										<p>توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... </p>
+										<h4>Service three</h4>
+										<p>Detail of service... Detail of service... Detail of service... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
 										<img src="themes/images/serv4.png">
-										<h4>خدمت چهارم</h4>
-										<p>توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... </p>
+										<h4>Service four</h4>
+										<p>Detail of service... Detail of service... Detail of service... </p>
 									</div>	
 								</div>
 							</div>
@@ -298,9 +298,9 @@
 						<div class="block2">
 							<!-- Portfolio filter -->
 							<ul class="filter">
-								<li class="current all"><a href="#">همه</a></li>
-								<li class="operatingroom"><a href="#">اتاق عمل</a></li>
-								<li class="hospital"><a href="#">بیمارستان</a></li>
+								<li class="current all"><a href="#">All</a></li>
+								<li class="operatingroom"><a href="#">Operating room</a></li>
+								<li class="hospital"><a href="#">Hospital</a></li>
 							</ul>
 							<!-- END Portfolio filter -->
 							<!-- Portfolio Items -->
@@ -315,8 +315,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل1</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Operating room 1</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -334,8 +334,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل2</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Hospital 1</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -353,8 +353,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل3</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Operating room 2</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -372,8 +372,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل4</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Hospital 2</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -391,8 +391,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 1</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Operating room 3</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -410,8 +410,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 2</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Hospital 3</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -429,8 +429,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 3</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Operating room 4</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -448,8 +448,8 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 4</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>Hospital 4</h3>
+															<p>Detail... Detail... Detail... Detail... </p>
 														</div>
 													</section>
 												</div>
@@ -470,13 +470,13 @@
 					<div class="ten columns">
 						<div class="block">
 							<div class="title">
-								<h2>آدرس من</h2>
+								<h2>My Location on World Map</h2>
 							</div>
 							<div class="gmap" id="map" data-center="36.293912, 59.577333" data-zoom="18">
 								<address>
-									<strong>احمدآباد، خیابان محتشمی، پلاک 1222</strong>
+									<strong>Mohtashami</strong>
 									<br />
-									مشهد، ایران
+									Mashhad-Iran
 								</address>
 							</div>
 						</div>
@@ -484,23 +484,23 @@
 					<div class="six columns">
 						<div class="block end">
 							<div class="title">
-								<h2>تماس با من</h2>
+								<h2>Contact With Me</h2>
 							</div>
 							<div id="contact-wrapper">
 								<form id="contactform" action="javascript:alert('success!');">
 									<fieldset class="info_fieldset">
 										<div id="note"></div>
 									</fieldset>
-									<label class="medium">نام</label>
+									<label>Name</label>
 									<input class="textbox" type="text" name="name" value="" />
 									<br />
-									<label class="medium">ایمیل</label>
+									<label>E-mail</label>
 									<input class="textbox ltr" type="text" name="email" value="" />
 									<br />
-									<label class="medium">پیام</label>
+									<label>Message</label>
 									<textarea class="textbox" name="message" rows="5" cols="25"></textarea>
 									<br />
-									<input class="button small" type="submit" value="ارسال پیام">
+									<input class="button" type="submit" value="Send Message">
 								</form>
 							</div>
 						</div>

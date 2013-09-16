@@ -315,7 +315,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل1</h3>
+															<h3>اتاق عمل 1</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -334,7 +334,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل2</h3>
+															<h3>بیمارستان 1</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -353,7 +353,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل3</h3>
+															<h3>اتاق عمل 2</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -372,7 +372,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل4</h3>
+															<h3>بیمارستان 2</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -391,7 +391,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 1</h3>
+															<h3>اتاق عمل 3</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -410,7 +410,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 2</h3>
+															<h3>بیمارستان 3</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
@@ -429,7 +429,7 @@
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>بیمارستان 3</h3>
+															<h3>اتاق عمل 4</h3>
 															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
 														</div>
 													</section>
