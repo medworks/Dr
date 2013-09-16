@@ -77,6 +77,10 @@
 	                <h1>Dr Eghbal Sadri</h1> 
 	                <h3>Specialist in Orthopedics</h3>
                 </div>
+                <div class="flags">
+                	<a href="#" class="tip" title="English"><img src="themes/images/england-flag.png" alt="english"></a>
+                	<a href="#" class="tip" title="Persian"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
                 		<li class="active"><a href="#home">Home</a></li>

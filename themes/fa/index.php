@@ -77,6 +77,10 @@
 	                <h1>دکتر اقبال صدری</h1> 
 	                <h3>متخصص ارتوپد</h3>
                 </div>
+                <div class="flags">
+                	<a href="#" class="tip" title="انگلیسی"><img src="themes/images/england-flag.png" alt="english"></a>
+                	<a href="#" class="tip" title="فارسی"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
                 		<li class="active"><a href="#home">صفحه اصلی</a></li>
