@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="fa">
+<html lang="en">
 <head>
 	<title>Dr Eghbal Sadri</title>
 
@@ -9,13 +9,13 @@
 	<meta name="robots" content="INDEX,FOLLOW">
 	<meta name="description" content="dr">
 	<meta name="keywords" content="dr,cms,mediateq">
-	<meta http-equiv="Content-Language" content="Fa">
-	<meta http-equiv="Designer" content="مدیاتک">
-	<meta name="Generator" content="مدیاتک">
-	<meta name="Author" content="مدیاتک">
+	<meta http-equiv="Content-Language" content="En">
+	<meta http-equiv="Designer" content="Mediateq">
+	<meta name="Generator" content="Mediateq">
+	<meta name="Author" content="Mediateq">
 
-	<link rel="icon" href="themes/fa/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/fa/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
 
 	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.jscrollpane.css" media="all" />
