@@ -4,32 +4,13 @@
 * Author URL: http://www.mediateq.ir
 */
 
+@import url("http://fonts.googleapis.com/css?family=Oswald:300,400,700");
+@import url("http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&subset=latin,latin-ext,cyrillic");
 /* ============================================================================= 
-Fonts
-==============================================================================*/
-@font-face{
-    font-family: 'bmitra';
-    src: url('fonts/BMitra.eot');
-    src: url('fonts/BMitra.eot?#iefix') format('embedded-opentype'),
-         url('fonts/BMitra.woff') format('woff'),
-         url('fonts/BMitra.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.large{font-size:25px;}
-.medium{font-size:18px;}
-.small{font-size:17px;}
-.x-small{font-size:15px;}
-
-.latinfont{
-	font-family: Arial, Helvetica, sans-serif;
-}
-/* ============================================================================= 
-1.General 
+1. General 
 ============================================================================= */
 body{
-	font-family: 'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 	background-color:#FFF;
 	background-image: url('../images/bg.png');
 	font-weight: 400;
@@ -81,35 +62,15 @@ img:active, img:focus {outline:0;}
     text-align: center;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	font-family:'Oswald', Arial, Helvetica, sans-serif;
 	color:#292929;
 	margin-top:0;
-	margin-bottom:10px;
-	direction: rtl;	
-}
-h1{
-	font-size: 30px;
-}
-h2{
-	font-size: 25px;
-}
-h3{
-	font-size: 22px;
-}
-h4{
-	font-size: 20px;
-}
-h5{
-	font-size: 18px;
-}
-h6{
-	font-size: 16px;
+	margin-bottom:10px;	
 }
 p{
-	font-size:17px;
+	font-size:13px;
 	line-height:20px;
-	color:#666665;
-	direction: rtl;	
+	color:#666665;	
 }
 .title h2{
     font-weight: normal;
@@ -118,15 +79,7 @@ p{
 	margin-top:0;
 	margin-bottom:10px;
 }
-.rtl{
-	direction: rtl;
-}
-.ltr{
-	direction: ltr;
-}
-ul,li,select,option,span,label,input,textarea{
-	direction: rtl;
-}
+
 /* ============================================================================= 
 2. Content Changer 
 ============================================================================= */
@@ -187,7 +140,6 @@ ul,li,select,option,span,label,input,textarea{
 ============================================================================= */
 nav select {
     display:none; /* this is just for the mobile display */
-    font-size: 18px;
 }
 #menu {
 	margin-bottom:30px;
@@ -205,9 +157,9 @@ nav ul {
 	transition: 			all .25s ease-in;
 }
 nav li {
-	/*border-top: 			1px solid #ddd;
-	border-bottom: 			1px solid #ddd;*/
-	float:					right;
+	border-top: 			2px solid #eee;
+	border-bottom: 			2px solid #eee;
+	float:					left;
 	display:				block;
 	margin:					0;
 	text-align: 			center;
@@ -230,8 +182,9 @@ nav a {
 	padding:				1em 0;
 	text-decoration: 		none; 
 	color:					#999;
-	font-family:"bmitra", tahoma, Arial, Helvetica, sans-serif;
-	font-size:18px;	
+	letter-spacing: 		1px;
+	font-family:"Oswald", Arial, Helvetica, sans-serif;
+	font-size:15px;	
 	font-weight:300;	
 	text-shadow:none;
 }
@@ -255,7 +208,7 @@ nav a, nav li {
 #dd_menu {
 	display: none;
 	width: 100%;
-	font-family: 'bmitra',tahoma, Arial, Helvetica, sans-serif;
+	font-family: 'Oswald', Arial, Helvetica, sans-serif;
     padding: 7px;
     margin: 0 0 0 0;
 	outline: none;
@@ -291,17 +244,17 @@ nav a, nav li {
 	margin-bottom:30px;
 }
 .My_name h1 {
-	font-family:"bmitra", tahoma, Arial, Helvetica, sans-serif;
+	font-family:"Oswald", Arial, Helvetica, sans-serif;
 	font-weight:300;
 	margin-top:0px;
 	margin-bottom:5px;
-	font-size:50px;
+	font-size:60px;
 	line-height: 65px;
 	color:#292929;
 }
 .My_name h3 {
 	margin-bottom:20px;
-	font-size:28px;
+	font-size:18px;
 	line-height: 22px;
 	font-weight: 200;
 	color:#555556;
@@ -359,7 +312,7 @@ nav a, nav li {
 /* personal info */   
 ul.personal-info { 
     margin:10px 0 0 0; 
-	padding-right:0; 
+	padding-left:0; 
 	list-style:none; 
 }
 ul.personal-info li { 
@@ -367,7 +320,7 @@ ul.personal-info li {
 }
 ul.personal-info .title {
 	display:inline-block;
-	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;	
+	font-family:'Oswald', Arial, Helvetica, sans-serif;	
 	border-width: 2px;
 	border-style: solid;
 	border-color: #E67068;	
@@ -375,7 +328,7 @@ ul.personal-info .title {
 	color:#333; 
 	padding:3px 10px; 
 	position:relative; 
-	font-size:16px;  
+	font-size:13px;  
 }
 ul.personal-info .value { 
     margin-left:10px; 
@@ -394,7 +347,7 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
     width: 100%;
 }
 .detailsCol h3 {
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 2px;
 	font-weight:400;
 }
@@ -402,30 +355,30 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 	margin:0;
 	padding:0;
 	padding-right:10px;
-    font-size: 16px;
+    font-size: 13px;
 }
 .detailsCol ul li {
     display:inline-block;
 	width:100%;
 	margin: 0 0 15px 0;
-	padding-right:10px;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: #E67068;
+	padding-left:10px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E67068;
 }
 .detailsCol ul li p{
     margin:5px 0px 5px 0px;
 }
 .detailsCol span {
-	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	font-family:'PT Sans', Arial, Helvetica, sans-serif;
     display: block;
-	float:right;
+	float:left;
 	color:#b4b4b4;
 }
 .detailsCol span.date {
     color: #E67068;
-	float: left;
-    font-size: 16px;
+	float: right;
+    font-size: 13px;
     text-transform:none;
     line-height: 11px;
 	margin-top:7px;
@@ -441,7 +394,7 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 	margin-bottom:2px;
 	font-size:13px;
 	color:#292929;
-	font-family:"bmitra", tahoma, Arial, Helvetica, sans-serif;
+	font-family:"Oswald", Arial, Helvetica, sans-serif;
 	font-weight:400;
 	font-style:normal;
 }
@@ -547,13 +500,11 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 ============================================================================= */
 .portfolio {
 	width:100%;
-	/*padding:0;*/
-	/*margin-left:5px;*/
+	padding:0;
+	margin-left:5px;
 }
 /* Portfolio Items */
-.portfolio li {
-	margin-right: 12px !important; 
-	margin-left: 0px !important; 
+.portfolio li { 
     list-style:none; 
 	float: left;  
 	margin-bottom: 10px; 
@@ -575,7 +526,7 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 ul.filter {
 	overflow:hidden;
 	padding:0;
-	margin-top:30px;
+	margin-top:20px;
 	margin-bottom:20px;
 	margin-right:15px;
 	margin-left:20px;
@@ -583,9 +534,9 @@ ul.filter {
 }
 ul.filter li a {
     float: right;
-	font-family: 'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
     color: #FFF;
-    font-size: 16px;
+    font-size: 12px;
     padding: 5px 7px 5px 7px;
     margin-top: 6px;
 	margin-left:5px;
@@ -742,10 +693,10 @@ textarea	{width:100%;}
 input[type="submit"]	{padding:0;width:100%;margin:5px 0 0;}
 
 /*FORM ELEMENTS*/
-label {
-	padding: 0 20px;
+label { 
+    cursor: pointer;
 	margin-top:7px;
-	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
+	font-family:'Oswald', Arial, Helvetica, sans-serif;
 	font-style:normal;
 	font-weight:400;
 	color: #292929;
@@ -790,10 +741,10 @@ textarea:focus 	{
 }
 /* Submit Button */
 input[type="submit"] 		{
-	margin-right: -22px;
 	color:#FFF;
 	width:50%;
 	float:right;
+	margin-right:-20px;
 	background-color:#E67068;
 	-webkit-border-radius:25px;-moz-border-radius:25px;border-radius:25px;
 	padding:6px 10px;
@@ -815,7 +766,7 @@ input[type="submit"]:hover 		{
 	color: #ca5702;
     padding: 10px;
     margin: 10px auto;
-    text-align:center;
+    text-align:left;
     -webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;
     margin-bottom:5px;
 }
@@ -897,7 +848,7 @@ input[type="submit"]:hover 		{
 		display:block;
 	}
     .My_name h1 {
-	font-family:"bmitra", tahoma, Arial, Helvetica, sans-serif;
+	font-family:"Oswald", Arial, Helvetica, sans-serif;
 	font-weight:300;
 	margin-top:0px;
 	margin-bottom:0px;

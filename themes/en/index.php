@@ -17,10 +17,11 @@
 	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="themes/en/skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/normalize.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="themes/en/style.css" media="all" />
 
 	<script src="themes/js/jquery.min.js" type="text/javascript"></script>
@@ -105,7 +106,7 @@
 					<div class="five columns">
 						<div class="block">
 							<div class="portrait">
-								<img src="themes/fa/images/others/personal-photo.jpg" alt="Dr">
+								<img src="themes/images/others/personal-photo.jpg" alt="Dr">
 							</div>
 						</div>
 					</div>
@@ -118,12 +119,12 @@
 							<div class="social_icons">
 								<h3>دنبال کردن من در</h3>
 								<ul class="social">
-									<li><a href="#" class="tip" title="Twitter"><img src="themes/fa/images/twitter.png" alt="twitter"></a></li>
-									<li><a href="#" class="tip" title="Dribbble"><img src="themes/fa/images/dribbble.png" alt="dribbble"></a></li>
-									<li><a href="#" class="tip" title="Lastfm"><img src="themes/fa/images/lastfm.png" alt="lastfm"></a></li>
-									<li><a href="#" class="tip" title="Google Plus"><img src="themes/fa/images/googleplus.png" alt="googleplus"></a></li>
-									<li><a href="#" class="tip" title="Youtube"><img src="themes/fa/images/youtube.png" alt="youtube"></a></li>
-									<li><a href="#" class="tip" title="Skype"><img src="themes/fa/images/skype.png" alt="skype"></a></li>
+									<li><a href="#" class="tip" title="Twitter"><img src="themes/images/twitter.png" alt="twitter"></a></li>
+									<li><a href="#" class="tip" title="Dribbble"><img src="themes/images/dribbble.png" alt="dribbble"></a></li>
+									<li><a href="#" class="tip" title="Lastfm"><img src="themes/images/lastfm.png" alt="lastfm"></a></li>
+									<li><a href="#" class="tip" title="Google Plus"><img src="themes/images/googleplus.png" alt="googleplus"></a></li>
+									<li><a href="#" class="tip" title="Youtube"><img src="themes/images/youtube.png" alt="youtube"></a></li>
+									<li><a href="#" class="tip" title="Skype"><img src="themes/images/skype.png" alt="skype"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -258,28 +259,28 @@
 							<div class="services clearfix">
 								<div class="four columns omega">
 									<div class="service">
-										<img src="themes/fa/images/serv1.png">
+										<img src="themes/images/serv1.png">
 										<h4>خدمت اول</h4>
 										<p>توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="themes/fa/images/serv2.png">
+										<img src="themes/images/serv2.png">
 										<h4>خدمت دوم</h4>
 										<p>توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="themes/fa/images/serv3.png">
+										<img src="themes/images/serv3.png">
 										<h4>خدمت سوم</h4>
 										<p>توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... </p>
 									</div>	
 								</div>
 								<div class="four columns omega">
 									<div class="service">
-										<img src="themes/fa/images/serv4.png">
+										<img src="themes/images/serv4.png">
 										<h4>خدمت چهارم</h4>
 										<p>توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... </p>
 									</div>	
@@ -305,12 +306,12 @@
 							<!-- Portfolio Items -->
 							<ul class="portfolio group">
 								<li class="item four columns omega" data-id="id-1" data-type="operatingroom">
-									<a href="themes/fa/images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_1.jpg" alt="">
+														<img src="themes/images/others/image_1.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -324,12 +325,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-2" data-type="hospital">
-									<a href="themes/fa/images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_2.jpg" alt="">
+														<img src="themes/images/others/image_2.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -343,12 +344,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-3" data-type="operatingroom">
-									<a href="themes/fa/images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_3.jpg" alt="">
+														<img src="themes/images/others/image_3.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -362,12 +363,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-4" data-type="hospital">
-									<a href="themes/fa/images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_4.jpg" alt="">
+														<img src="themes/images/others/image_4.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -381,12 +382,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-5" data-type="operatingroom">
-									<a href="themes/fa/images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_5.jpg" alt="">
+														<img src="themes/images/others/image_5.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -400,12 +401,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-6" data-type="hospital">
-									<a href="themes/fa/images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_6.jpg" alt="">
+														<img src="themes/images/others/image_6.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -419,12 +420,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-7" data-type="operatingroom">
-									<a href="themes/fa/images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_7.jpg" alt="">
+														<img src="themes/images/others/image_7.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -438,12 +439,12 @@
 									</a>
 								</li>
 								<li class="item four columns omega" data-id="id-8" data-type="hospital">
-									<a href="themes/fa/images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
+									<a href="themes/images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/fa/images/others/image_8.jpg" alt="">
+														<img src="themes/images/others/image_8.jpg" alt="">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
