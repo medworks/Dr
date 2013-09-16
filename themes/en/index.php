@@ -17,11 +17,11 @@
 	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.qtip.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/en/style.css" media="all" />
 
 	<script src="themes/fa/js/jquery.min.js" type="text/javascript"></script>
 	<script src="themes/fa/js/jms.js" type="text/javascript"></script>

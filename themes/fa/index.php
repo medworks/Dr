@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="fa">
 <head>
-	<title>Dr Eghbal Sadri</title>
+	<title>دکتر اقبال صدری</title>
 
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,13 +14,14 @@
 	<meta name="Generator" content="مدیاتک">
 	<meta name="Author" content="مدیاتک">
 
-	<link rel="icon" href="themes/fa/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/fa/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="themes/css/normalize.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="themes/fa/style.css" media="all" />
 
 	<script src="themes/fa/js/jquery.min.js" type="text/javascript"></script>
