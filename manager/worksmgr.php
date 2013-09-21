@@ -28,25 +28,9 @@
 				  
 	    if(empty($_POST["selectpic"]))
 		{ 
-			//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
 			header('location:?item=worksmgr&act=new&msg=4');
-			//$_GET["item"] = "worksmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 4;
 			$overall_error = true;
-			//exit();
 		}
-		// else
-		// {			
-		// 	if (empty($_POST['detail']))
-		// 	{
-		// 	   //header('location:?item=worksmgr&act=new&msg=5');
-		// 		$_GET["item"] = "worksmgr";
-		// 		$_GET["act"] = "new";
-		// 		$_GET["msg"] = 5;
-		// 	   $overall_error = true;
-		// 	}			
-		// }
 	}	
     if (!$overall_error && $_POST["mark"]=="saveworks")
 	{						   				
@@ -55,22 +39,11 @@
 		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'");	
 		if (!$db->InsertQuery('works',$fields,$values)) 
 		{
-			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
 			header('location:?item=worksmgr&act=new&msg=2');
-			//exit();
-			//$_GET["item"] = "worksmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 2;
 		} 	
 		else 
 		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");
-			header('location:?item=worksmgr&act=new&msg=1');					
-			//exit();
-			//$_GET["item"] = "worksmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
-			
+			header('location:?item=worksmgr&act=new&msg=1');			
 		}  				 
 	}
 	else
@@ -84,9 +57,7 @@
 						 "`sdate`"=>"'{$sdatetime}'",
 						 "`fdate`"=>"'{$fdatetime}'");		
         $db->UpdateQuery("works",$values,array("id='{$_GET[wid]}'"));		
-		header('location:?item=worksmgr&act=mgr');
-		//$_GET["item"] = "worksmgr";
-		//$_GET["act"] = "mgr";			
+		header('location:?item=worksmgr&act=mgr');	
 	}
 
 	if ($overall_error)
@@ -175,8 +146,22 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   <input type="text" name="subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
 		   <p>
 			 <label for="detail">توضیحات </label>
+			 <span>*</span>
 		   </p>
-		   <textarea cols="50" rows="10" name="detail" class="detail" id="detail">{$row[body]}</textarea>	  		   
+		   <textarea cols="50" rows="10" name="detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>	  		   
+		   <br />
+		   <hr />
+		   <br />
+		   <p>
+			 <label for="subject">عنوان (لاتین) </label>
+			 <span>*</span>
+		   </p>  	 
+		   <input type="text" name="latin-subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
+		   <p>
+			 <label for="detail">توضیحات (لاتین) </label>
+			 <span>*</span>
+		   </p>
+		   <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
 		   {$editorinsert}
 			 <input type="reset" value="پاک کردن" class="reset" /> 	 	 
 		   </p>
@@ -206,10 +191,7 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "worksmgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=worksmgr&act=mgr&msg=6");
 			}
 		
@@ -269,7 +251,9 @@ del;
             }
 $msgs = GetMessage($_GET['msg']);
 $list = array("subject"=>"عنوان",
-              "body"=>"توضیحات",);
+              "body"=>"توضیحات",
+              "latin-subject"=>"عنوان (لاتین)",
+              "latin-body"=>"توضیحات (لاتین)");
 $combobox = SelectOptionTag("cbsearch",$list,"subject");
 $code=<<<edit
 <script type='text/javascript'>

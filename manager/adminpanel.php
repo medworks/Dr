@@ -117,7 +117,7 @@
  <div class="badboy"></div>
  <footer>
   <div class="foot">
-   <p>پانل مدیرت مدیا تک</p>
+   <p>پانل مدیرت مدیاتِک</p>
    <img src="./images/logo.png" alt="MEdiateq" />
   </div>
  </footer>

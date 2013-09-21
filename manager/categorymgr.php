@@ -23,34 +23,22 @@
 		$values = array("'{$_POST[cbsec]}'","'{$_POST[catname]}'","'{$_POST[latinname]}'","'{$_POST[describe]}'");		
 		if (!$db->InsertQuery('category',$fields,$values)) 
 		{
-			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
 			header('location:?item=catmgr&act=new&msg=2');
-			//exit();
-			//$_GET["item"] = "catmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 2;
 		} 	
 		else 
 		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");
 			header('location:?item=catmgr&act=new&msg=1');
-			//$_GET["item"] = "catmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
 		}  				 
 	}
     else
 	if (!$overall_error && $_POST["mark"]=="editcat")
 	{		
-	    //$_POST["detail"] = addslashes($_POST["detail"]);
 		$values = array("`secid`"=>"'{$_POST[cbsec]}'",
 		                "`catname`"=>"'{$_POST[catname]}'",
 						"`latinname`"=>"'{$_POST[latinname]}'",
 						"`describe`"=>"'{$_POST[describe]}'");		
         $db->UpdateQuery("category",$values,array("id='{$_GET["cid"]}'"));
 		header('location:?item=catmgr&act=mgr');
-		//$_GET["item"] = "catmgr";
-		//$_GET["act"] = "mgr";		
 	}
 
 	if ($overall_error)
@@ -153,14 +141,15 @@ $html=<<<cd
        <input type="text" name="catname" class="validate[required] catname family" id="catname" value='{$row[catname]}'/>
        <p>
          <label for="latinname">نام لاتین </label>
+         <span>*</span>
        </p>    
-       <input type="text" name="latinname" class="latinname family ltr" id="latinname" value='{$row[latinname]}'/>
+       <input type="text" name="latinname" class="validate[required] latinname family ltr" id="latinname" value='{$row[latinname]}'/>
        <p>
-         <label for="describe">توضیحات </label>
+         <label for="describe">توضیح گروه </label>
        </p>    
        <input type="text" name="describe" class="describe subject" id="describe" value='{$row[describe]}'/>
        <p>
-         <label for="detail">انتخاب گروه مادر </label>
+         <label for="detail">انتخاب سرگروه </label>
          <span>*</span>
        </p>
        {$cbsection}
@@ -187,10 +176,7 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "catmgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=newsmgr&act=mgr&msg=6");
 			}
 		
@@ -299,19 +285,11 @@ if (!$overall_error && $_POST["mark"]=="savesec")
 		$values = array("'{$_POST[secname]}'","'{$_POST[latinname]}'","'{$_POST[describe]}'");		
 		if (!$db->InsertQuery('section',$fields,$values)) 
 		{
-			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
-			header('location:?item=secmgr&act=new&msg=2');
-			//$_GET["item"] = "secmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 2;			
+			header('location:?item=secmgr&act=new&msg=2');		
 		} 	
 		else 
 		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");
 			header('location:?item=secmgr&act=new&msg=1');
-			//$_GET["item"] = "secmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
 		}  				 
 	}
     else
@@ -322,9 +300,7 @@ if (!$overall_error && $_POST["mark"]=="savesec")
 						"`describe`"=>"'{$_POST[describe]}'");		
         $db->UpdateQuery("section",$values,array("id='{$_GET["sid"]}'"));
 		echo $db->cmd;
-		header('location:?item=secmgr&act=mgr');
-		//$_GET["item"] = "secmgr";
-		//$_GET["act"] = "mgr";			
+		header('location:?item=secmgr&act=mgr');	
 	}
 
 	if ($overall_error)
@@ -383,10 +359,11 @@ $html=<<<cd
        <input type="text" name="secname" class="validate[required] catname family" id="secname" value='{$row[secname]}'/>
        <p>
          <label for="latinname">نام لاتین </label>
+         <span>*</span>
        </p>    
-       <input type="text" name="latinname" class="latinname family ltr" id="latinname" value='{$row[latinname]}'/>
+       <input type="text" name="latinname" class="validate[required] latinname family ltr" id="latinname" value='{$row[latinname]}'/>
        <p>
-         <label for="describe">توضیحات </label>
+         <label for="describe">توضیح سرگروه </label>
        </p>    
        <input type="text" name="describe" class="describe subject" id="describe" value='{$row[describe]}'/>       
 	   <div class="badboy"></div>
