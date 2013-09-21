@@ -80,12 +80,13 @@ img:active, img:focus {outline:0;}
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     text-align: center;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6,p{
 	font-family:'bmitra', tahoma, Arial, Helvetica, sans-serif;
 	color:#292929;
 	margin-top:0;
 	margin-bottom:10px;
-	direction: rtl;	
+	direction: rtl;
+	font-weight: normal;	
 }
 h1{
 	font-size: 30px;
