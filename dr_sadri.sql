@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 21, 2013 at 06:02 PM
+-- Generation Time: Sep 21, 2013 at 06:24 PM
 -- Server version: 5.5.25a
 -- PHP Version: 5.4.4
 
@@ -23,15 +23,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `news`
+-- Table structure for table `works`
 --
 
-CREATE TABLE IF NOT EXISTS `news` (
+CREATE TABLE IF NOT EXISTS `works` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `subject` varchar(50) NOT NULL,
   `body` text NOT NULL,
   `latin-subject` varchar(50) NOT NULL,
   `latin-body` text NOT NULL,
+  `group` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

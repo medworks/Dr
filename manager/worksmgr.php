@@ -120,7 +120,12 @@ if ($_GET['act']=="do")
 ht;
 }else	
 if ($_GET['act']=="new" or $_GET['act']=="edit")
-{
+{	
+	$list = array("1"=>"مقالات",
+				  "2"=>"سمینارها",
+				  "3"=>"عنواین علمی");
+	$resume_drop = SelectOptionTag("resume_drop",$list,"1",null,"select2");
+
 	$msgs = GetMessage($_GET['msg']);
 	$html=<<<cd
 	<script type='text/javascript'>
@@ -162,6 +167,11 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
+		   <p>
+			 <label for="detail">انتخاب گروه </label>
+			 <span>*</span>
+		   </p>
+		   {$resume_drop}
 		   {$editorinsert}
 			 <input type="reset" value="پاک کردن" class="reset" /> 	 	 
 		   </p>
