@@ -153,7 +153,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <label for="detail">توضیحات </label>
 			 <span>*</span>
 		   </p>
-		   <textarea cols="50" rows="10" name="detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>	  		   
+		   <textarea cols="50" rows="10" name="detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
 		   <br />
 		   <hr />
 		   <br />
@@ -167,6 +167,24 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
+		   <p>
+			<label for="sdate">تاریخ </label>
+			<span>*</span><br /><br />
+			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$row[sdate]}" />
+			<img src="./images/cal.png" id="date_btn_1" alt="cal-pic">
+			 <script type="text/javascript">
+			  Calendar.setup({
+				inputField  : "date_input_1",   // id of the input field
+				button      : "date_btn_1",   // trigger for the calendar (button ID)
+					ifFormat    : "%Y-%m-%d",       // format of the input field
+					showsTime   : false,
+					dateType  : 'jalali',
+					showOthers  : true,
+					langNumbers : true,
+					weekNumbers : true
+			  });
+			</script>
+		   </p>
 		   <p>
 			 <label for="detail">انتخاب گروه </label>
 			 <span>*</span>
