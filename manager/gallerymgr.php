@@ -157,7 +157,20 @@ $html=<<<cd
 				<label for="subject">توضیحات </label>
 				<span></span>
 			</p>
-			<input type="text" name="body" class="subject" id="body" value="{$row[body]}" /> 
+			<input type="text" name="body" class="subject" id="body" value="{$row[body]}" />
+			<br />
+			<hr />
+			<br />
+			<p>
+				<label for="subject">عنوان (لاتین) </label>
+				<span>*</span>
+			</p>
+			<input type="text" name="latin-subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
+			<p>
+				<label for="subject">توضیحات (لاتین) </label>
+				<span></span>
+			</p>
+			<input type="text" name="latin-body" class="subject" id="body" value="{$row[body]}" />  
 			{$editorinsert}
 				<input type="reset" value="پاک کردن" class='reset' /> 				
 			</p>
@@ -177,10 +190,7 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "gallery";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=worksmgr&act=mgr&msg=6");
 			}
 		
@@ -238,7 +248,9 @@ del;
             }
 $msgs = GetMessage($_GET['msg']);
 $list = array("subject"=>"عنوان",
-              "body"=>"توضیحات" );
+              "body"=>"توضیحات",
+              "latin-subject"=>"عنوان (لاتین)",
+              "latin-body"=>"توضیحات (لاتین)" );
 $combobox = SelectOptionTag("cbsearch",$list,"subject");
 $code=<<<edit
 <script type='text/javascript'>
