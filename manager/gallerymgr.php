@@ -133,7 +133,7 @@ $html=<<<cd
 		<div class="title">
 	      <ul>
 	        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-	        <li><span>مدیریت عکسها</span></li>
+	        <li><span>گالری تصاویر</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>	     
@@ -258,7 +258,7 @@ $code=<<<edit
 					<div class="title">
 				      <ul>
 				        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-					    <li><span>مدیریت اسلاید</span></li>
+					    <li><span>گالری تصاویر</span></li>
 				      </ul>
 				      <div class="badboy"></div>
 				  </div>

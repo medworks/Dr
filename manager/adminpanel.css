@@ -9,7 +9,7 @@ body{
   width: 980px;
 }
 
-h1,h2,h3,h4,h5,h6,a,p,label{
+h1,h2,h3,h4,h5,h6,a,p,label,span{
   font-weight: normal;
 }
 
