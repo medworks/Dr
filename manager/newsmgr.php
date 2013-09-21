@@ -207,12 +207,12 @@ $html=<<<cd
          <label for="subject">عنوان (لاتین) </label>
          <span>*</span>
        </p>    
-       <input type="text" name="latin-subject" class="validate[required] subject" id="subject" value='{$row[subject]}'/>
+       <input type="text" name="latin-subject" class="validate[required] subject ltr" id="subject" value='{$row[subject]}'/>
        <p>
          <label for="detail">توضیحات (لاتین) </label>
          <span>*</span>
        </p>
-       <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail" id="detail" > {$row[body]}</textarea>
+       <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail ltr" id="detail" > {$row[body]}</textarea>
 	   {$editorinsert}       
       	 <input type="reset" value="پاک کردن" class='reset' /> 	 	     
        </p>  

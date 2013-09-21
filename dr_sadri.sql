@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 21, 2013 at 06:31 PM
+-- Generation Time: Sep 21, 2013 at 07:01 PM
 -- Server version: 5.5.25a
 -- PHP Version: 5.4.4
 
@@ -46,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `image` varchar(60) NOT NULL,
   `subject` varchar(50) NOT NULL,
   `body` varchar(250) NOT NULL,
+  `catid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=1 ;
 

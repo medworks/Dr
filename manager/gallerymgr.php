@@ -124,6 +124,17 @@ $html=<<<cd
 		{$msgs}
 		</div>
 		<form name="frmgallerymgr" id="frmgallerymgr" class="" action="" method="post" enctype="multipart/form-data" > 
+     		<p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
+			<div class="badboy"></div>
+	        <p>
+	          <label for="cbsection">سر گروه </label>
+	          <span>*</span>
+	        </p>    
+		    {$cbsection}   
+		    <div id="catgory">
+			    {$cbcategory}
+		    </div>
+	        <div class="badboy"></div>
 			<p>
 				<label for="pic">عکس </label>
 				<span>*</span>
