@@ -5,7 +5,6 @@
 	include_once("../classes/session.php");	
 	include_once("../classes/functions.php");
 	include_once("../classes/login.php");
-	include_once("../lib/persiandate.php");	
 	$login = Login::GetLogin();
 	if (!$login->IsLogged())
 	{
@@ -16,56 +15,19 @@
 	$sess = Session::GetSesstion();	
 	$userid = $sess->Get("userid");
 	$overall_error = false;
-	if ($_GET['item']!="newsmgr")	exit();	   
-	if (isset($_POST["mark"]) and $_POST["mark"]!="srhnews")
-	{
-	   date_default_timezone_set('Asia/Tehran');
-	   list($hour,$minute,$second) = explode(':', Date('H:i:s'));
-	   list($year,$month,$day) = explode("-", trim($_POST["ndate"]));		
-	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);		
-	   $ndatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));		
-				  
-	   if(empty($_POST["selectpic"]))
-	   { 
-			//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
-			header('location:?item=newsmgr&act=new&msg=4');
-			//$_GET["item"] = "newsmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 4;
-			$overall_error = true;
-			//exit();
-		}
-		else						
-		if (empty($_POST['detail']))
-		{
-		   header('location:?item=newsmgr&act=new&msg=5');
-			//$_GET["item"] = "newsmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 5;
-		    $overall_error = true;
-		}			
-		
-	}	
+	if ($_GET['item']!="newsmgr")	exit();	
 	if (!$overall_error && $_POST["mark"]=="savenews")
 	{	    
-		$fields = array("`subject`","`image`","`body`","`ndate`","`userid`","`resource`","`catid`");
+		$fields = array("`subject`","`body`","`latin-subject`","`latin-body`");
 		$_POST["detail"] = addslashes($_POST["detail"]);		
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$ndatetime}'","'{$userid}'","'{$_POST[res]}'","'{$_POST[cbcat]}'");
+		$values = array("'{$_POST[subject]}'","'{$_POST[detail]}'","'{$_POST[latinsubject]}'","'{$_POST[latindetail]}'");
 		if (!$db->InsertQuery('news',$fields,$values)) 
 		{
-			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
-			header('location:?item=newsmgr&act=new&msg=2');			
-			//$_GET["item"] = "newsmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 2;
+			header('location:?item=newsmgr&act=new&msg=2');
 		} 	
 		else 
-		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با مو??قیت انجام شد");			
-			header('location:?item=newsmgr&act=new&msg=1');		    
-			//$_GET["item"] = "newsmgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
+		{  				
+			header('location:?item=newsmgr&act=new&msg=1');
 		}  				 
 	}
     else
@@ -73,28 +35,20 @@
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);	    
 		$values = array("`subject`"=>"'{$_POST[subject]}'",
-			            "`image`"=>"'{$_POST[selectpic]}'",
 						"`body`"=>"'{$_POST[detail]}'",
-						"`ndate`"=>"'{$ndatetime}'",
-						"`userid`"=>"'{$userid}'",
-						"`resource`"=>"'{$_POST[res]}'",
-						"`catid`"=>"'{$_POST[cbcat]}'");
+						"`latin-subject`"=>"'{$_POST[latinsubject]}'",
+						"`latin-body`"=>"'{$_POST[latindetail]}'");
 			
         $db->UpdateQuery("news",$values,array("id='{$_GET[nid]}'"));
-		header('location:?item=newsmgr&act=mgr');
-		//$_GET["item"] = "newsmgr";
-		//$_GET["act"] = "act";			
+		header('location:?item=newsmgr&act=mgr');	
 	}
 
 	if ($overall_error)
 	{
 		$row = array("subject"=>$_POST['subject'],
-		             "image"=>$_POST['image'],
 					 "body"=>$_POST['detail'],
-					 "ndate"=>$_POST['ndate'],
-					 "userid"=>$userid,
-					 "resource"=>$_POST['res'],
-					 "cat"=>$_POST['cbcat']);
+					 "latin-subject"=>$_POST['latinsubject'],
+					 "latin-body"=>$_POST['latindetail']);
 	}
 	
 	
@@ -150,33 +104,8 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
-$sections = $db->SelectAll("section","*",null,"id ASC");
-if ($_GET['act']=="edit") 
-{   
-    $category = $db->SelectAll("category","*",null,"id ASC");
-    $secid = $db ->Select("category","secid","ID = '{$row[catid]}'");
-	$secid = $secid[0];
-	$cbsection = DbSelectOptionTag("cbsec",$sections,"secname","{$secid}",null,"select validate[required]");
-	$cbcategory = DbSelectOptionTag("cbcat",$category,"catname","{$row[catid]}",null,"select validate[required]");
-	
-}
-else
-{
-  $cbsection = DbSelectOptionTag("cbsec",$sections,"secname",null,null,"select select validate[required]");
-  $cbcategory = null;
-} 
 
 $html=<<<cd
-	<script type='text/javascript'>
-		$(document).ready(function(){	   
-			$("#frmnewsmgr").validationEngine();
-			$("#cbsec").change(function(){
-				$.get('ajaxcommand.php?sec='+$(this).val(), function(data) {
-						$('#catgory').html(data);
-				});
-			});
-    });
-	</script>
   <div class="title">
       <ul>
         <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
@@ -207,12 +136,12 @@ $html=<<<cd
          <label for="subject">عنوان (لاتین) </label>
          <span>*</span>
        </p>    
-       <input type="text" name="latin-subject" class="validate[required] subject ltr" id="subject" value='{$row[subject]}'/>
+       <input type="text" name="latinsubject" class="validate[required] subject ltr" id="subject" value='{$row["latin-subject"]}'/>
        <p>
          <label for="detail">توضیحات (لاتین) </label>
          <span>*</span>
        </p>
-       <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail ltr" id="detail" > {$row[body]}</textarea>
+       <textarea cols="50" rows="10" name="latindetail" class="validate[required] detail ltr" id="detail" > {$row["latin-body"]}</textarea>
 	   {$editorinsert}       
       	 <input type="reset" value="پاک کردن" class='reset' /> 	 	     
        </p>  
@@ -226,25 +155,15 @@ if ($_GET['act']=="mgr")
 {
 	if ($_POST["mark"]=="srhnews")
 	{	 		
-	    if ($_POST["cbsearch"]=="ndate")
-		{
-		   date_default_timezone_set('Asia/Tehran');		   
-		   list($year,$month,$day) = explode("/", trim($_POST["txtsrh"]));		
-		   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);		
-		   $_POST["txtsrh"] = Date("Y-m-d",mktime(0, 0, 0, $gmonth, $gday, $gyear));
-		}
-		$rows = $db->SelectAll(
+	    $rows = $db->SelectAll(
 				"news",
 				"*",
 				"{$_POST[cbsearch]} LIKE '%{$_POST[txtsrh]}%'",
-				"ndate DESC",
+				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "newsmgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=newsmgr&act=mgr&msg=6");
 			}
 		
@@ -255,7 +174,7 @@ if ($_GET['act']=="mgr")
 				"news",
 				"*",
 				null,
-				"ndate DESC",
+				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
     }
@@ -267,9 +186,11 @@ if ($_GET['act']=="mgr")
 		        $rows[$i]["subject"] =(mb_strlen($rows[$i]["subject"])>20)?mb_substr($rows[$i]["subject"],0,20,"UTF-8")."...":$rows[$i]["subject"];
                 $rows[$i]["body"] =(mb_strlen($rows[$i]["body"])>30)?
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");               
-                $rows[$i]["ndate"] =ToJalali($rows[$i]["ndate"]," l d F  Y ");
-				$rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";                                            
+                html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");
+                $rows[$i]["latin-subject"] =(mb_strlen($rows[$i]["latin-subject"])>20)?mb_substr($rows[$i]["latin-subject"],0,20,"UTF-8")."...":$rows[$i]["latin-subject"];
+                $rows[$i]["latin-body"] =(mb_strlen($rows[$i]["latin-body"])>30)?
+                mb_substr(html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");                
 				if ($i % 2==0)
 				 {
 						$rowsClass[] = "datagridevenrow";
@@ -278,8 +199,6 @@ if ($_GET['act']=="mgr")
 				{
 						$rowsClass[] = "datagridoddrow";
 				}
-				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
-				$rows[$i]["catid"] = GetCategoryName($rows[$i]["catid"]);
 				$rows[$i]["edit"] = "<a href='?item=newsmgr&act=edit&nid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["delete"]=<<< del
@@ -297,6 +216,8 @@ del;
                     $gridcode .= DataGrid(array(
 							"subject"=>"عنوان",
 							"body"=>"توضیحات",
+							"latin-subject"=>"عنوان (لاتین)",
+							"latin-body"=>"توضیحات (لاتین)",
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=newsmgr&act=mgr");
@@ -306,7 +227,8 @@ $msgs = GetMessage($_GET['msg']);
 $list = array("subject"=>"عنوان",
               "body"=>"توضیحات",
               "latin-subject"=>"عنوان (لاتین)",
-              "latin-body"=>"توضیحات (لاتین)");
+              "latin-body"=>"توضیحات (لاتین)"
+              );
 $combobox = SelectOptionTag("cbsearch",$list,"subject");
 $code=<<<edit
 <script type='text/javascript'>
