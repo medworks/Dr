@@ -381,6 +381,11 @@ ul.personal-info .title {
 ul.personal-info .value { 
     margin-left:10px; 
 }
+ul.personal-info .value.tel,
+ul.personal-info .value.fax{
+	display: inline-block;
+    direction: ltr;
+}
 ul.personal-info .available { /* Font Color For Freelance Status = Available */
     color:#6f803b; 
 }

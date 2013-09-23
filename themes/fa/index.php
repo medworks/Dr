@@ -173,11 +173,11 @@ $html.=<<<cd
 								</li>
 								<li>
 									<span class="title medium">تلفن</span>
-									<span class="value small">{$Tell_Number}</span>
+									<span class="value small tel">{$Tell_Number}</span>
 								</li>
 								<li>
 									<span class="title medium">فاکس</span>
-									<span class="value small">{$Fax_Number}</span>
+									<span class="value small fax">{$Fax_Number}</span>
 								</li>
 							</ul>
 						</div>
