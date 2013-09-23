@@ -8,18 +8,21 @@
 	include_once("../classes/login.php");
 	$login = Login::GetLogin();
     if (!$login->IsLogged())
-	 {
+	{
 		header("Location: ../index.php");
 		die(); // solve a security bug
-	 }
+	}
 	$db = Database::GetDatabase();
 	if ($_POST['mark']=="editabout")
 	{
-		SetSettingValue("About_System",$_POST["about"]);		
+		SetSettingValue("Dr_Name",$_POST["name"]);		
+		SetSettingValue("Dr_Specialty",$_POST["specialty"]);		
+		SetSettingValue("About_System",$_POST["about"]);
+
+		SetSettingValue("Dr_Name_Latin",$_POST["latinname"]);		
+		SetSettingValue("Dr_Specialty_Latin",$_POST["latinspecialty"]);		
+		SetSettingValue("About_System_Latin",$_POST["latinabout"]);		
 		header('location:?item=settingmgr&act=do');
-		//$_GET['item'] = "settingmgr";
-		//$_GET['act'] = "about";
-		//$_GET['msg'] = 1;
 	}
 	else
 	if ($_POST['mark']=="editseo")
@@ -27,10 +30,7 @@
 		SetSettingValue("Site_Title",$_POST["title"]);
 		SetSettingValue("Site_KeyWords",$_POST["keywords"]);
 		SetSettingValue("Site_Describtion",$_POST["describe"]);
-		header('location:?item=settingmgr&act=do');	
-		//$_GET['item'] = "settingmgr";
-		//$_GET['act'] = "seo";
-		//$_GET['msg'] = 1;
+		header('location:?item=settingmgr&act=do');
 	}
 	else
 	if ($_POST['mark']=="editadd")
@@ -46,9 +46,6 @@
 		SetSettingValue("Fax_Number",$_POST["fax_number"]);
 		SetSettingValue("Address",$_POST["address"]);		
 		header('location:?item=settingmgr&act=do');
-		//$_GET['item'] = "settingmgr";
-		//$_GET['act'] = "addresses";
-		//$_GET['msg'] = 1;
 	}
 	else
 	if ($_POST['mark']=="editgrid")
@@ -56,9 +53,6 @@
 		SetSettingValue("Max_Page_Number",$_POST["Max_Page_Number"]);
 		SetSettingValue("Max_Post_Number",$_POST["Max_Post_Number"]);		
 		header('location:?item=settingmgr&act=do');
-		//$_GET['item'] = "settingmgr";
-		//$_GET['act'] = "grid";
-		//$_GET['msg'] = 1;
 	}
 	if ($_GET['act']=="do")
    {
@@ -100,7 +94,14 @@ ht;
 else
 	if ($_GET['act']=="about")
 	{
-	$About_System = GetSettingValue('About_System',0);
+	$about = GetSettingValue('About_System',0);
+	$name = GetSettingValue('Dr_Name',0);
+	$specialty = GetSettingValue('Dr_Specialty',0);
+
+	$latin_about = GetSettingValue('About_System_Latin',0);
+	$latin_name = GetSettingValue('Dr_Name_Latin',0);
+	$latin_specialty = GetSettingValue('Dr_Specialty_Latin',0);
+
 	$html=<<<ht
 	<div class="title">
 	      <ul>
@@ -109,66 +110,51 @@ else
 	      </ul>
 	      <div class="badboy"></div>
 	</div>
+	<script type='text/javascript'>
+		$(document).ready(function(){		
+			$("#frmabout").validationEngine();			
+		});	   
+	</script>
 	<form name="frmabout" id= "frmabout" action="" method="post" >
 		<p>
-			 <label for="about">درباره ما </label>
-		   </p>
-		   <textarea cols="50" rows="10" name="about" class="validate[required] detail" id="detail">{$About_System}</textarea>
-		   <p>
-			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
-			 <input type='hidden' name='mark' value='editabout' />
-		     <input type="reset" value="پاک کردن" class="reset" /> 	 	 
-		   </p>
+		 <label for="about">نام و نام خانوادگی </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="name" value="{$name}" class="validate[required] subject">
+	    <p>
+		 <label for="about">تخصص </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="specialty" value="{$specialty}" class="validate[required] subject">
+		<p>
+		 <label for="about">درباره ما </label>
+		 <span>*</span>
+	    </p>
+	    <textarea cols="50" rows="10" name="about" class="validate[required] detail" id="detail">{$about}</textarea>
+	    <br />
+	    <hr />
+	    <br />
+	    <p>
+		 <label for="about">نام و نام خانوادگی (لاتین) </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="latinname" value="{$latin_name}" class="ltr validate[required] subject">
+	    <p>
+		 <label for="about">تخصص (لاتین) </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="latinspecialty" value="{$latin_specialty}" class="ltr validate[required] subject">
+		<p>
+		 <label for="about">درباره ما (لاتین) </label>
+		 <span>*</span>
+	    </p>
+	    <textarea cols="50" rows="10" name="latinabout" class="ltr validate[required] detail" id="detail">{$latin_about}</textarea>
+	    <p>
+		 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
+		 <input type='hidden' name='mark' value='editabout' />
+	     <input type="reset" value="پاک کردن" class="reset" /> 	 	 
+	    </p>
 	</form>
-	<!-- TinyMCE -->
-	<script type="text/javascript" src="../lib/js/tiny/tiny_mce.js"></script>
-	<script type="text/javascript">
-		tinyMCE.init({
-			// General options
-			mode : "textareas",
-			theme : "advanced",
-			skin : "o2k7",
-			plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
-			init_instance_callback : "initialiseInstance",
-
-			// Theme options
-			theme_advanced_buttons1 : "newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
-			theme_advanced_buttons2 : "cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor,image,cleanup,help,code,|,insertdate,inserttime,preview,|,forecolor,backcolor",
-			theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen,|,table",
-			theme_advanced_buttons4 : "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft",
-			theme_advanced_toolbar_location : "top",
-			theme_advanced_toolbar_align : "right",
-			theme_advanced_statusbar_location : "bottom",
-			theme_advanced_resizing : true,
-
-			// Example content CSS (should be your site CSS)
-			content_css : "../lib/js/tiny/tiny_mce/css/content.css",
-
-			// Drop lists for link/image/media/template dialogs
-			template_external_list_url : "../lib/js/tiny/tiny_mce/lists/template_list.js",
-			external_link_list_url : "../lib/js/tiny/tiny_mce/lists/link_list.js",
-			external_image_list_url : "../lib/js/tiny/tiny_mce/lists/image_list.js",
-			media_external_list_url : "../lib/js/tiny/tiny_mce/lists/media_list.js",
-
-			// Style formats
-			style_formats : [
-				{title : 'Bold text', inline : 'b'},
-				{title : 'Red text', inline : 'span', styles : {color : '#ff0000'}},
-				{title : 'Red header', block : 'h1', styles : {color : '#ff0000'}},
-				{title : 'Example 1', inline : 'span', classes : 'example1'},
-				{title : 'Example 2', inline : 'span', classes : 'example2'},
-				{title : 'Table styles'},
-				{title : 'Table row 1', selector : 'tr', classes : 'tablerow1'}
-			],
-
-			// Replace values for the template plugin
-			template_replace_values : {
-				username : "Some User",
-				staffid : "991234"
-			}
-		});
-	</script>
-	<!-- /TinyMCE -->  
 ht;
 	}
 	else
@@ -194,23 +180,21 @@ ht;
 					<label for="subject">کلمات کلیدی </label>
 				</p>    
 				<input type="text" name="keywords" class="subject" id="keywords" value='{$Site_KeyWords}'/>
-								<p>
+				<p>
 					<label for="subject">توضیحات سایت </label>
 				</p>    
 				<input type="text" name="describe" class="subject" id="describe" value='{$Site_Describtion}'/>
 				<p>
-			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
-			 <input type='hidden' name='mark' value='editseo' />
-		     <input type="reset" value="پاک کردن" class="reset" /> 	 	 
-		   </p>
+					<input type='submit' id='submit' value='ویرایش' class='submit' />	 
+					<input type='hidden' name='mark' value='editseo' />
+				    <input type="reset" value="پاک کردن" class="reset" /> 	 	 
+		   		</p>
 			</form>
 ht;
 	}
 	else
 	if ($_GET['act']=="addresses")
 	{
-		$Admin_Email = GetSettingValue('Admin_Email',0);
-		$News_Email = GetSettingValue('News_Email',0);
 		$Contact_Email = GetSettingValue('Contact_Email',0);
 		$FaceBook_Add = GetSettingValue('FaceBook_Add',0);
 		$Twitter_Add = GetSettingValue('Twitter_Add',0);
@@ -229,14 +213,6 @@ ht;
 	    </div>
 			<form name="frmaddresses" id= "frmaddresses" action="" method="post" >
 				<p>
-					<label for="subject">ایمیل ادمین</label>
-				</p>    
-				<input type="text" name="admin_email" class="subject ltr" id="admin_email" value='{$Admin_Email}'/>
-				<p>
-					<label for="subject">ایمیل خبرنامه </label>
-				</p>    
-				<input type="text" name="news_email" class="subject ltr" id="news_email" value='{$News_Email}'/>
-								<p>
 					<label for="subject"> ایمیل تماس با ما</label>
 				</p>    
 				<input type="text" name="contact_email" class="subject ltr" id="contact_email" value='{$Contact_Email}'/>
@@ -257,15 +233,15 @@ ht;
 				</p>    
 				<input type="text" name="gplus_add" class="subject ltr" id="gplus_add" value='{$Gplus_Add}'/>
 				<p>
-					<label for="tel">تلفن شرکت</label>
+					<label for="tel">تلفن</label>
 				</p>    
 				<input type="text" name="tel_number" class="subject ltr" id="tel_number" value='{$Tell_Number}'/>
 				<p>
-					<label for="fax">فاکس شرکت</label>
+					<label for="fax">فاکس</label>
 				</p>    
 				<input type="text" name="fax_number" class="subject ltr" id="fax_number" value='{$Fax_Number}'/>
 				<p>
-					<label for="address">آدرس شرکت</label>
+					<label for="address">آدرس</label>
 				</p>    
 				<input type="text" name="address" class="subject" id="address" value='{$Address}'/>
 				<p>

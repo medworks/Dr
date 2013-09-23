@@ -1,14 +1,35 @@
+<?php
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+	include_once("./classes/database.php");
+	include_once("./classes/seo.php");
+	$seo = Seo::GetSeo();
+
+	$name = GetSettingValue('Dr_Name',0);
+	$specialty  = GetSettingValue('Dr_Specialty',0);
+	$about = GetSettingValue('About_System',0);
+
+	$Contact_Email = GetSettingValue('Contact_Email',0);
+	$FaceBook_Add = GetSettingValue('FaceBook_Add',0);
+	$Twitter_Add = GetSettingValue('Twitter_Add',0);
+	$Rss_Add = GetSettingValue('Rss_Add',0);
+	$Gplus_Add = GetSettingValue('Gplus_Add',0);
+	$Tell_Number = GetSettingValue('Tell_Number',0);
+	$Fax_Number = GetSettingValue('Fax_Number',0);
+	$Address = GetSettingValue('Address',0);
+
+$html=<<<cd
 <!DOCTYPE HTML>
 <html lang="fa">
 <head>
-	<title>دکتر اقبال صدری</title>
+	<title>{$seo->Site_Title}</title>
 
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="UTF-8">
 	<meta name="robots" content="INDEX,FOLLOW">
-	<meta name="description" content="dr">
-	<meta name="keywords" content="dr,cms,mediateq">
+	<meta name="description" content="{$seo->Site_Describtion}">
+	<meta name="keywords" content="{$seo->Site_KeyWords}">
 	<meta http-equiv="Content-Language" content="Fa">
 	<meta http-equiv="Designer" content="مدیاتک">
 	<meta name="Generator" content="مدیاتک">
@@ -67,6 +88,8 @@
 		</style>
     </noscript>
 </head>
+cd;
+$html.=<<<cd
 <body>
 	<!-- Container -->
 	<div class="container">
@@ -74,8 +97,8 @@
 		<header>
 			<div class="sixteen columns">
                 <div class="My_name">
-	                <h1>دکتر اقبال صدری</h1> 
-	                <h3>متخصص ارتوپد</h3>
+	                <h1>{$name}</h1> 
+	                <h3>{$specialty}</h3>
                 </div>
                 <div class="flags">
                 	<a href="#" class="tip" title="انگلیسی"><img src="themes/images/england-flag.png" alt="english"></a>
@@ -117,8 +140,8 @@
 					<div class="six columns">
 						<div class="block">
 							<div class="general_info">
-								<h3>دکتر اقبال صدری (متخصص ارتوپد)</h3>
-								<p class="small">توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... توضیحات در مورد دکتر اقبال صدری... </p>
+								<h3>{$name} ({$specialty})</h3>
+								<p class="small">{$about}</p>
 							</div>
 							<div class="social_icons">
 								<h3>دنبال کردن من در</h3>
@@ -138,23 +161,23 @@
 							<ul class="personal-info">
 								<li>
 									<span class="title">نام و نام خانوادگی</span>
-									<span class="value small">اقبال صدری</span>
-								</li>
-								<li>
-									<span class="title">سن</span>
-									<span class="value small">40</span>
+									<span class="value small">{$name}</span>
 								</li>
 								<li>
 									<span class="title">آدرس</span>
-									<span class="value small">مشهد، خیابان محتشمی، پلاک 222</span>
+									<span class="value small">{$Address}</span>
 								</li>
 								<li>
 									<span class="title">ایمیل</span>
-									<span class="value small latinfont"><a href="mailto:info@sadri.com">info@sadri.com</a></span>
+									<span class="value small latinfont"><a href="mailto:{$Contact_Email}">{$Contact_Email}</a></span>
 								</li>
 								<li>
 									<span class="title medium">تلفن</span>
-									<span class="value small">4785 858 (915)98+</span>
+									<span class="value small">{$Tell_Number}</span>
+								</li>
+								<li>
+									<span class="title medium">فاکس</span>
+									<span class="value small">{$Fax_Number}</span>
 								</li>
 							</ul>
 						</div>
@@ -518,3 +541,6 @@
 	<!-- END Container -->
 </body>
 </html>
+cd;
+echo $html;
+?>
