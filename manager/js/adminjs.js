@@ -119,3 +119,32 @@ $(window).load(function(){
         });
     });
 });
+
+function NewWin(url,name)
+{
+    window.open(url, name,'status=yes,scrollbars=yes,toolbar=yes,resizable=1,menubar=no,location=no,width=570px,height=500px');
+}
+
+function DelMsg(id,msg,link)
+{
+  if(confirm(msg))
+  {
+    setTimeout('document.location.href="'+link+id+'"',1 )
+  }
+}
+function GoUrl(url)
+{
+    setTimeout('document.location.href="'+url+'"',1 )
+
+}
+function ShowTab(tabNo,idxOfEndTab){
+    for(var i=1;i<=idxOfEndTab;i++)
+    {
+        document.getElementById("tab_"+i).style.display = 'none';
+    }
+        document.getElementById("tab_"+tabNo).style.display = 'block';
+}
+function DisEna(id,act){
+    var obj = document.getElementById(id);
+    obj.disabled = act;
+}
