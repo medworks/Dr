@@ -14,19 +14,13 @@
  $db = Database::GetDatabase();
  $overall_error = false;
  // in this variable save string bit of pics folders
- $pic_fldr_bit_addr = array("newspics"=>0,
-                            "workspics"=>0,
-  						    "userspics"=>0,
-							"slidespics"=>0,
+ $pic_fldr_bit_addr = array("userspics"=>0,
 							"gallerypics"=>0);
  $pic_fldrs = array("newspics","workspics","userspics","slidespics","gallerypics");
  $fa_pic_fldrs = array("اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر");
   for($i=0;$i<count($_POST['picsaddr']);$i++)
   {
-	if ($_POST['picsaddr'][$i]=="newspics") {$pic_fldr_bit_addr["newspics"]= 1;}
-	if ($_POST['picsaddr'][$i]=="workspics") {$pic_fldr_bit_addr["workspics"]= 1;}
-	if ($_POST['picsaddr'][$i]=="userspics") {$pic_fldr_bit_addr["userspics"]= 1;}
-	if ($_POST['picsaddr'][$i]=="slidespics") {$pic_fldr_bit_addr["slidespics"]= 1;}	  
+	if ($_POST['picsaddr'][$i]=="userspics") {$pic_fldr_bit_addr["userspics"]= 1;}	  
 	if ($_POST['picsaddr'][$i]=="gallerypics") {$pic_fldr_bit_addr["gallerypics"]= 1;}	  
   }	  
   $str = "";
@@ -170,10 +164,7 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
-$chechbox = array("newspics"=>"پوشه اخبار",
-                  "workspics"=>"پوشه فعالیت ها",
-                  "userspics"=>"پوشه کاربران",
-				  "slidespics"=>"پوشه اسلاید ها",
+$chechbox = array("userspics"=>"پوشه کاربران",
 				  "gallerypics"=>"پوشه گالری تصاویر");
 if ($_GET['act']=="edit")
 {
