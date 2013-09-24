@@ -245,8 +245,7 @@ if ($_GET['act']=="mgr")
                 $rows[$i]["latin-subject"] =(mb_strlen($rows[$i]["latin-subject"])>20)?mb_substr($rows[$i]["latin-subject"],0,20,"UTF-8")."...":$rows[$i]["latin-subject"];
                 $rows[$i]["latin-body"] =(mb_strlen($rows[$i]["latin-body"])>30)?
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");
-				$rows[$i]["latin-body"] =GetCategoryName('catid');
+                html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");				
                 $rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";
 				$rows[$i]["catid"] =GetCategoryName($rows[$i]["catid"]);
 				if ($i % 2==0)
