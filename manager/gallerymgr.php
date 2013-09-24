@@ -246,7 +246,10 @@ if ($_GET['act']=="mgr")
                 $rows[$i]["latin-body"] =(mb_strlen($rows[$i]["latin-body"])>30)?
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");				
-                $rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";
+                $rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";				
+				$secid = $db->Select("category","secid","ID = '{$rows[$i]["catid"]}'");
+				$secid = $secid[0];				
+				$rows[$i]["secid"] =GetSectionName($secid);
 				$rows[$i]["catid"] =GetCategoryName($rows[$i]["catid"]);
 				if ($i % 2==0)
 				 {
@@ -276,7 +279,8 @@ del;
 							"body"=>"توضیحات",
 							"latin-subject"=>"عنوان (لاتین)",
 							"latin-body"=>"توضیحات (لاتین)",
-							"catid" =>"سرگروه",							
+							"secid" =>"سرگروه",
+							"catid" =>"گروه",
 							"edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=gallerymgr&act=mgr");
