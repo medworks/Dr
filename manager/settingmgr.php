@@ -60,32 +60,27 @@
 		<div class="title">
 	      <ul>
 	        <li><a href="?item=dashboard&act=do">پیشخوان</a></li>
-	        <li><span>مدیریت تنظیمات</span></li>
+	        <li><span>تنظیمات</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>
 		<div class="sub-menu" id="mainnav">
-			<ul class="two-column">
-			  <li>		  
-				<a href="?item=settingmgr&act=about">درباره ما
-					<span class="about-us"></span>
-				</a>
-			  </li>
-			  <li>
-				<a href="?item=settingmgr&act=seo" >اطلاعات تکمیلی 
-					<span class="seo-detail"></span>
-				</a>
-			  </li>
-			  <li>
-				<a href="?item=settingmgr&act=addresses" >آدرس ها 
-					<span class="email"></span>
-				</a>
-			  </li>
-			  <li>
-				<a href="?item=settingmgr&act=grid" >صفحه بندی مطالب 
-					<span class="information"></span>
-				</a>
-			  </li>
+			<ul>
+				  <li>		  
+					<a href="?item=settingmgr&act=about">درباره ما
+						<span class="about-us"></span>
+					</a>
+				  </li>
+				  <li>
+					<a href="?item=settingmgr&act=seo" >اطلاعات تکمیلی 
+						<span class="seo-detail"></span>
+					</a>
+				  </li>
+				  <li>
+					<a href="?item=settingmgr&act=addresses" >آدرس ها 
+						<span class="email"></span>
+					</a>
+				  </li>
 			 </ul>
 			 <div class="badboy"></div>
 		</div>		 
@@ -167,7 +162,7 @@ ht;
 		<div class="title">
 	      <ul>
 	        <li><a href="?item=dashboard&act=do">پیشخوان</a></li>
-			<li><span>اطلاعات سئو</span></li>
+			<li><span>اطلاعات تکمیلی</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>
