@@ -26,8 +26,8 @@
   } 	
  if (!$overall_error && $_POST["mark"]=="savegall")
  {						   				
-	$fields = array("`image`","`subject`","`body`");	
-	$values = array("'{$_POST[selectpic]}'","'{$_POST[subject]}'","'{$_POST[body]}'");
+	$fields = array("`image`","`subject`","`body`","`latin-subject`","`latin-ody`","`catid`");	
+	$values = array("'{$_POST[selectpic]}'","'{$_POST[subject]}'","'{$_POST[body]}'","'{$_POST[latinsubject]}'","'{$_POST[latinbody]}'","'{$_POST[cbcat]}'");
 	if (!$db->InsertQuery('gallery',$fields,$values)) 
 	{
 		header('location:?item=gallerymgr&act=new&msg=2');
@@ -42,7 +42,10 @@
  {			    
 	$values = array("`image`"=>"'{$_POST[selectpic]}'",
 	       		    "`subject`"=>"'{$_POST[subject]}'",
-					"`body`"=>"'{$_POST[body]}'");
+					"`body`"=>"'{$_POST[body]}'",
+					"`latin-subject`"=>"'{$_POST[latinsubject]}'",
+					"`latin-body`"=>"'{$_POST[latinbody]}'",
+					"`catid`"=>"'{$_POST[cbcat]}'");
 	$db->UpdateQuery("gallery",$values,array("id='{$_GET['sid']}'"));
 	header('location:?item=gallerymgr&act=mgr');	
  }
@@ -51,7 +54,9 @@
 	{
 		$row = array("image"=>$_FILES['pic']['name'],
 					 "subject"=>$_POST['subject'],
-					 "body"=>$_POST['body']);
+					 "body"=>$_POST['body'],
+					 "latin-subject"=>$_POST['latinsubject'],
+					 "latin-body"=>$_POST['latinbody']);
 	}
  
    if ($_GET['act']=="new")
@@ -107,11 +112,33 @@ ht;
 if ($_GET['act']=="new" or $_GET['act']=="edit")
 {
 $msgs = GetMessage($_GET['msg']);
+$sections = $db->SelectAll("section","*",null,"id ASC");
+if ($_GET['act']=="edit") 
+{   
+    $category = $db->SelectAll("category","*",null,"id ASC");
+    $secid = $db->Select("category","secid","ID = '{$row[catid]}'");
+	$secid = $secid[0];
+	$cbsection = DbSelectOptionTag("cbsec",$sections,"secname","{$secid}",null,"select validate[required]");
+	$cbcategory = DbSelectOptionTag("cbcat",$category,"catname","{$row[catid]}",null,"select validate[required]");
+	
+}
+else
+{
+  $cbsection = DbSelectOptionTag("cbsec",$sections,"secname",null,null,"select validate[required]");
+  $cbcategory = null;
+} 
 $html=<<<cd
 		<script type='text/javascript'>
-			$(document).ready(function(){		
+			$(document).ready(function(){	   
+				$("#frmnewsmgr").validationEngine();
+				$("#cbsec").change(function(){
+					$.get('ajaxcommand.php?sec='+$(this).val(), function(data) {
+							$('#catgory').html(data);
+					});
+				});
 				$("#frmgallerymgr").validationEngine();			   
-			});
+
+	    	});
 		</script>
 		<div class="title">
 	      <ul>
@@ -165,12 +192,12 @@ $html=<<<cd
 				<label for="subject">عنوان (لاتین) </label>
 				<span>*</span>
 			</p>
-			<input type="text" name="latin-subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
+			<input type="text" name="latinsubject" class="ltr validate[required] subject" id="subject" value="{$row['latin-subject']}" />
 			<p>
 				<label for="subject">توضیحات (لاتین) </label>
 				<span></span>
 			</p>
-			<input type="text" name="latin-body" class="subject" id="body" value="{$row[body]}" />  
+			<input type="text" name="latinbody" class="ltr subject" id="body" value="{$row['latin-body']}" />  
 			{$editorinsert}
 				<input type="reset" value="پاک کردن" class='reset' /> 				
 			</p>
@@ -213,7 +240,13 @@ if ($_GET['act']=="mgr")
 		        $rows[$i]["subject"] =(mb_strlen($rows[$i]["subject"])>20)?mb_substr($rows[$i]["subject"],0,20,"UTF-8")."...":$rows[$i]["subject"];
                 $rows[$i]["body"] =(mb_strlen($rows[$i]["body"])>30)?
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
-                html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");               
+                html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");
+
+                $rows[$i]["latin-subject"] =(mb_strlen($rows[$i]["latin-subject"])>20)?mb_substr($rows[$i]["latin-subject"],0,20,"UTF-8")."...":$rows[$i]["latin-subject"];
+                $rows[$i]["latin-body"] =(mb_strlen($rows[$i]["latin-body"])>30)?
+                mb_substr(html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");
+				$rows[$i]["latin-body"] =GetCategoryName('catid');
                 $rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";
 				if ($i % 2==0)
 				 {
@@ -236,12 +269,16 @@ del;
 
     if (!$_GET["pageNo"] or $_GET["pageNo"]<=0) $_GET["pageNo"] = 0;
             if (Count($rows) > 0)
-            {                    
+            {       
                     $gridcode.= DataGrid(array( 
 							"image"=>"عکس",
 							"subject"=>"عنوان",
 							"body"=>"توضیحات",
-							 "edit"=>"ویرایش",
+							"latin-subject"=>"عنوان (لاتین)",
+							"latin-body"=>"توضیحات (لاتین)",
+							"catid" =>"سرگروه",
+							
+							"edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=gallerymgr&act=mgr");
                     
