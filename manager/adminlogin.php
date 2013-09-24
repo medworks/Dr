@@ -38,7 +38,7 @@ else
 	</head>
 	<body>
 	<div class="container">
-		<div class="logo"><img src="./images/logo2.png" alt="mediateq"></div>
+		<div class="logo"><img src="./images/login/logo.png" alt="mediateq"></div>
 		<div class="login-content">
 			<form action="" method="post">
 					<fieldset>
