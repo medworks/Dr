@@ -547,7 +547,10 @@ ul.personal-info .not_available { /* Font Color For Freelance Status = Not Avail
 	-moz-transform: rotate(720deg);
 	transform: rotate(720deg);
 }
-
+.services .omega{
+	margin-right: 11px;
+	margin-left: 0;
+}
 /* ============================================================================= 
 9. Portfolio Panel 
 ============================================================================= */

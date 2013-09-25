@@ -6,7 +6,7 @@
 	$seo = Seo::GetSeo();
 	$db = Database::GetDatabase();
 	
-  	$news = $db->SelectAll("news","*",null,"id DESC");
+  	$news = $db->SelectAll("news","*",null,"id ASC");
   	$gallery = $db->SelectAll("gallery","*",null,"id DESC");
 	$category = $db->SelectAll("category","*",null,"id ASC");
 
@@ -290,34 +290,27 @@ $html.=<<<cd
 					<div class="sixteen columns">
 						<div class="block2">
 							<div class="services clearfix">
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv1.png">
-										<h4>خدمت اول</h4>
-										<p>توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... توضیح خدمت اول... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv2.png">
-										<h4>خدمت دوم</h4>
-										<p>توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... توضیح خدمت دوم... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv3.png">
-										<h4>خدمت سوم</h4>
-										<p>توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... توضیح خدمت سوم... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv4.png">
-										<h4>خدمت چهارم</h4>
-										<p>توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... توضیح خدمت چهارم... </p>
-									</div>	
-								</div>
+cd;
+								$i=1;
+								foreach($news as $val){
+									
+$html.=<<<cd
+									<div class="four columns omega">
+										<div class="service">
+cd;
+										if($i<5){
+$html.=<<<cd
+											<img src="themes/images/serv{$i}.png">
+cd;
+										}
+$html.=<<<cd
+											<h4>{$val[subject]}</h4>
+											<p>{$val[body]}</p>
+										</div>	
+									</div>
+cd;
+								$i++;}
+$html.=<<<cd
 							</div>
 						</div>
 					</div>
