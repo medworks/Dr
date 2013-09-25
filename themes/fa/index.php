@@ -2,11 +2,13 @@
 	include_once("./config.php");
 	include_once("./classes/functions.php");
 	include_once("./classes/database.php");
+	include_once("./lib/persiandate.php");	
 	include_once("./classes/seo.php");
 	$seo = Seo::GetSeo();
 	$db = Database::GetDatabase();
 	
   	$news = $db->SelectAll("news","*",null,"id ASC");
+  	$works = $db->SelectAll("works","*",null,"id ASC");
   	$gallery = $db->SelectAll("gallery","*",null,"id DESC");
 	$category = $db->SelectAll("category","*",null,"id ASC");
 
@@ -201,24 +203,19 @@ $html.=<<<cd
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==1){
+										$date = ToJalali($works[$i]['date']);
+$html.=<<<cd
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله یک</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['subject']}</h3>
+										<p>{$works[$i]['body']}</p>
 									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله دو</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
-									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>مقاله سه</h3>
-										<p>توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... توضیحات مقاله... </p>
-										<span class="place">در...</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>
@@ -230,24 +227,19 @@ $html.=<<<cd
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==2){
+										$date = ToJalali($works[$i]['date']);
+$html.=<<<cd
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس یک</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['subject']}</h3>
+										<p>{$works[$i]['body']}</p>
 									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس دو</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
-									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>کنفرانس سه</h3>
-										<p>توضیحات کنفرانس... توضیحات کنفرانس... توضیحات کنفرانس... </p>
-										<span class="place">در...</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>
@@ -259,24 +251,19 @@ $html.=<<<cd
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==3){
+										$date = ToJalali($works[$i]['date']);
+$html.=<<<cd
 									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان یک</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['subject']}</h3>
+										<p>{$works[$i]['body']}</p>
 									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان دو</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
-									</li>
-									<li>
-										<span class="date">1391-12-1</span>
-										<h3>عنوان سه</h3>
-										<p>توضیحات عنوان... توضیحات عنوان... توضیحات عنوان... </p>
-										<span class="place">در...</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>

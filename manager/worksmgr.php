@@ -25,18 +25,12 @@
 	   list($year,$month,$day) = explode("-", trim($_POST["fdate"]));
 	   list($gyear,$gmonth,$gday) = jalali_to_gregorian($year,$month,$day);
 	   $fdatetime = Date("Y-m-d H:i:s",mktime($hour, $minute, $second, $gmonth, $gday, $gyear));
-				  
-	    if(empty($_POST["selectpic"]))
-		{ 
-			header('location:?item=worksmgr&act=new&msg=4');
-			$overall_error = true;
-		}
 	}	
     if (!$overall_error && $_POST["mark"]=="saveworks")
 	{						   				
-		$fields = array("`subject`","`image`","`body`","`link`","`sdate`","`fdate`");
+		$fields = array("`subject`","`body`","`latin-subject`","`latin-body`","`date`","`group`");
 		$_POST["detail"] = addslashes($_POST["detail"]);
-		$values = array("'{$_POST[subject]}'","'{$_POST[selectpic]}'","'{$_POST[detail]}'","'{$_POST[link]}'","'{$sdatetime}'","'{$fdatetime}'");	
+		$values = array("'{$_POST[subject]}'","'{$_POST[detail]}'","'{$_POST[latinsubject]}'","'{$_POST[latindetail]}'","'{$sdatetime}'","'{$_POST[resume_drop]}'");	
 		if (!$db->InsertQuery('works',$fields,$values)) 
 		{
 			header('location:?item=worksmgr&act=new&msg=2');
@@ -51,11 +45,11 @@
 	{		
 	    $_POST["detail"] = addslashes($_POST["detail"]);
 		$values = array("`subject`"=>"'{$_POST[subject]}'",
-		                 "`image`"=>"'{$_POST[selectpic]}'",
 						 "`body`"=>"'{$_POST[detail]}'",
-						 "`link`"=>"'{$_POST[link]}'",
-						 "`sdate`"=>"'{$sdatetime}'",
-						 "`fdate`"=>"'{$fdatetime}'");		
+						 "`latin-subject`"=>"'{$_POST[latinsubject]}'",
+						 "`latin-body`"=>"'{$_POST[latindetail]}'",
+						 "`date`"=>"'{$_POST[$sdatetime]}'",
+						 "`group`"=>"'{$_POST[resume_drop]}'");		
         $db->UpdateQuery("works",$values,array("id='{$_GET[wid]}'"));		
 		header('location:?item=worksmgr&act=mgr');	
 	}
@@ -65,9 +59,9 @@
 		$row = array("subject"=>$_POST['subject'],
 					 "image"=>$_POST['image'],
 					 "body"=>$_POST['detail'],
-					 "link"=>$_POST['link'],
-					 "sdate"=>$_POST['sdate'],
-					 "fdate"=>$_POST['fdate']);
+					 "latin-subject"=>$_POST['latinsubject'],
+					 "latin-body"=>$_POST['latindetail'],
+					 "group"=>$_POST['resume_drop']);
 	}
 	if ($_GET['act']=="new")
 	{
@@ -79,8 +73,7 @@
 	if ($_GET['act']=="edit")
 	{
 		$row=$db->Select("works","*","id='{$_GET["wid"]}'",NULL);
-		$row['sdate'] = ToJalali($row["sdate"]);
-		$row['fdate'] = ToJalali($row["fdate"]);
+		$row['sdate'] = ToJalali($row["date"]);
 		$editorinsert = "
 		<p>
 			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
@@ -124,7 +117,9 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 	$list = array("1"=>"مقالات",
 				  "2"=>"سمینارها",
 				  "3"=>"عنواین علمی");
-	$resume_drop = SelectOptionTag("resume_drop",$list,"1",null,"select2");
+	$itemselect = ($row['group'])? $row['group'] :"1";
+	$resume_drop = SelectOptionTag("resume_drop",$list,$itemselect,null,"select2");
+	$date = ToJalali($row['date']);
 
 	$msgs = GetMessage($_GET['msg']);
 	$html=<<<cd
@@ -161,16 +156,16 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <label for="subject">عنوان (لاتین) </label>
 			 <span>*</span>
 		   </p>  	 
-		   <input type="text" name="latin-subject" class="validate[required] subject ltr" id="subject" value="{$row[subject]}" />
+		   <input type="text" name="latinsubject" class="validate[required] subject ltr" id="subject" value="{$row['latin-subject']}" />
 		   <p>
 			 <label for="detail">توضیحات (لاتین) </label>
 			 <span>*</span>
 		   </p>
-		   <textarea cols="50" rows="10" name="latin-detail" class="validate[required] detail ltr" id="detail">{$row[body]}</textarea>
+		   <textarea cols="50" rows="10" name="latindetail" class="validate[required] detail ltr" id="detail">{$row['latin-body']}</textarea>
 		   <p>
 			<label for="sdate">تاریخ </label>
 			<span>*</span><br /><br />
-			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$row[sdate]}" />
+			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$date}" />
 			<img src="./images/cal.png" id="date_btn_1" alt="cal-pic">
 			 <script type="text/javascript">
 			  Calendar.setup({
@@ -215,7 +210,7 @@ if ($_GET['act']=="mgr")
 				"works",
 				"*",
 				"{$_POST[cbsearch]} LIKE '%{$_POST[txtsrh]}%'",
-				"sdate DESC,fdate DESC",
+				"id ASC",
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
@@ -230,7 +225,7 @@ if ($_GET['act']=="mgr")
 				"works",
 				"*",
 				null,
-				"sdate DESC,fdate DESC",
+				"id ASC",
 				$_GET["pageNo"]*10,
 				10);
     }
@@ -243,9 +238,16 @@ if ($_GET['act']=="mgr")
                 $rows[$i]["body"] =(mb_strlen($rows[$i]["body"])>30)?
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");               
-                $rows[$i]["sdate"] =ToJalali($rows[$i]["sdate"]," l d F  Y ");
-				$rows[$i]["fdate"] =ToJalali($rows[$i]["fdate"]," l d F  Y ");
-				$rows[$i]["image"] ="<img src='{$rows[$i][image]}' alt='{$rows[$i][subject]}' width='40px' height='40px' />";                
+                $rows[$i]["latin-subject"] =(mb_strlen($rows[$i]["latin-subject"])>20)?mb_substr($rows[$i]["latin-subject"],0,20,"UTF-8")."...":$rows[$i]["latin-subject"];
+                $rows[$i]["latin-body"] =(mb_strlen($rows[$i]["latin-body"])>30)?
+                mb_substr(html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
+                html_entity_decode(strip_tags($rows[$i]["latin-body"]), ENT_QUOTES, "UTF-8");               
+                switch($rows[$i]["group"])
+				{
+				 case 1: $rows[$i]["group"] = "مقالات"; break;
+				 case 2: $rows[$i]["group"] = "سمینارها"; break;
+				 case 3: $rows[$i]["group"] = "عناوین علمی"; break;
+				}
 				if ($i % 2==0)
 				 {
 						$rowsClass[] = "datagridevenrow";
@@ -254,7 +256,6 @@ if ($_GET['act']=="mgr")
 				{
 						$rowsClass[] = "datagridoddrow";
 				}
-				$rows[$i]["username"]=GetUserName($rows[$i]["userid"]); 
 				$rows[$i]["edit"] = "<a href='?item=worksmgr&act=edit&wid={$rows[$i]["id"]}' class='edit-field'" .
 						"style='text-decoration:none;'></a>";								
 				$rows[$i]["delete"]=<<< del
@@ -271,7 +272,10 @@ del;
             {                    
                     $gridcode .= DataGrid(array( 
 							"subject"=>"عنوان",
-							"body"=>"توضیحات",							
+							"body"=>"توضیحات",
+							"latin-subject"=>"عنوان (لاتین)",
+							"latin-body"=>"توضیحات (لاتین)",
+							"group"=>"گروه",							
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
                             $_GET["pageNo"], "id", false, true, true, $rowCount,"item=worksmgr&act=mgr");
