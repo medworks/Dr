@@ -309,7 +309,11 @@ $html.=<<<cd
 										</div>	
 									</div>
 cd;
-								$i++;}
+								if($i%4==0){
+$html.=<<<cd
+								<div class="clear"></div>
+cd;
+								}$i++;}
 $html.=<<<cd
 							</div>
 						</div>
