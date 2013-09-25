@@ -22,6 +22,7 @@
 	$Tell_Number = GetSettingValue('Tell_Number',0);
 	$Fax_Number = GetSettingValue('Fax_Number',0);
 	$Address = GetSettingValue('Address',0);
+	$Dr_Pic = GetSettingValue('Dr_Pic',0);
 
 $html=<<<cd
 <!DOCTYPE HTML>
@@ -138,7 +139,7 @@ $html.=<<<cd
 					<div class="five columns">
 						<div class="block">
 							<div class="portrait">
-								<img src="themes/images/others/personal-photo.jpg" alt="Dr">
+								<img src="{$Dr_Pic}" alt="Dr Sadri">
 							</div>
 						</div>
 					</div>
