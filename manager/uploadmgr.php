@@ -13,7 +13,6 @@
  if ($_GET['item']!="uploadmgr")	exit();
  $db = Database::GetDatabase();
  $overall_error = false;
- // in this variable save string bit of pics folders
  $pic_fldr_bit_addr = array("userspics"=>0,
 							"gallerypics"=>0);
  $pic_fldrs = array("newspics","workspics","userspics","slidespics","gallerypics");
@@ -49,11 +48,7 @@
 	}	 
    else	 
    { 
-		//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
 		header('location:?item=uploadmgr&act=new&msg=4');
-		//$_GET["item"] = "uploadmgr";
-		//$_GET["act"] = "new";
-		//$_GET["msg"] = 4;
 		$overall_error = true;
 	}
   }    
@@ -64,21 +59,11 @@
 	$values = array("'{$filename}'","'{$_POST[subject]}'","'{$_POST[body]}'","'{$str}'");
 	if (!$db->InsertQuery('uploadcenter',$fields,$values)) 
 	{
-		//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
 		header('location:?item=uploadmgr&act=new&msg=2');
-		//exit();
-		//$_GET["item"] = "uploadmgr";
-		//$_GET["act"] = "new";
-		//$_GET["msg"] = 2;
 	} 	
 	else 
 	{  										
-		//$msgs = $msg->ShowSuccess("ثبت اطلاعات با موفقیت انجام شد");
-		header('location:?item=uploadmgr&act=new&msg=1');					
-		//exit();
-		//$_GET["item"] = "uploadmgr";
-		//$_GET["act"] = "new";
-		//$_GET["msg"] = 1;
+		header('location:?item=uploadmgr&act=new&msg=1');
 	 }
  }
  else
@@ -88,8 +73,6 @@
 					"`body`"=>"'{$_POST[body]}'");
 	$db->UpdateQuery("uploadcenter",$values,array("id='{$_GET['uid']}'"));
 	header('location:?item=uploadmgr&act=mgr');
-	//$_GET["item"] = "uploadmgr";
-	//$_GET["act"] = "mgr";	
  }
 
 	if ($overall_error)
@@ -124,7 +107,6 @@
 		 {
 		   if ($add[$i]==1)
 		   {
-               //$address= OS_ROOT."/{$pic_fldrs[$i]}/".$row['image'];
 			   $address= "../{$pic_fldrs[$i]}/".$row['image'];			   
 			   unlink($address);
 		   }
@@ -151,8 +133,7 @@ if ($_GET['act']=="do")
 				</a>
 			  </li>
 			  <li>
-				<a href="?item=uploadmgr&act=mgr" id="news" name="news">
-				  حذف/ویرایش عکس ها
+				<a href="?item=uploadmgr&act=mgr" id="news" name="news">حذف/ویرایش عکس ها
 					<span class="edit-file"></span>
 				</a>
 			  </li>
@@ -195,7 +176,7 @@ $html=<<<cd
 		<div class="title">
 	      <ul>
 	        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-	        <li><span>مدیریت عکس ها</span></li>
+	        <li><span>عکس جدید</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>	     
@@ -242,10 +223,7 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "uploadmgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=uploadmgr&act=mgr&msg=6");
 			}
 		
@@ -270,7 +248,6 @@ if ($_GET['act']=="mgr")
                 mb_substr(html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8"), 0, 30,"UTF-8") . "..." :
                 html_entity_decode(strip_tags($rows[$i]["body"]), ENT_QUOTES, "UTF-8");               
 				$adr = $rows[$i]['address'];
-				//echo "adr is ",$adr;
 				for($j=0;$j<strlen($adr);$j++)
 				 {
 				   if ($adr[$j]==1)
@@ -339,7 +316,7 @@ $code=<<<edit
 					<div class="title">
 				      <ul>
 				        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-					    <li><span> مدیریت آپلود</span></li>
+					    <li><span>حذف/ویرایش عکس ها</span></li>
 				      </ul>
 				      <div class="badboy"></div>
 				  </div>

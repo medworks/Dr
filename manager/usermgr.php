@@ -18,17 +18,7 @@
 	$pass = "";
 	if (isset($_POST["mark"]) and $_POST["mark"]!="srhnews")    
 	{
-		$msgs = "";	    
-		// if(empty($_POST["selectpic"]))
-		// {
-		// 	//$msgs = $msg->ShowError("لط??ا ??ایل عکس را انتخاب کنید");
-		// 	//header('location:?item=newsmgr&act=new&msg=4');
-		// 	$_GET["item"] = "usermgr";
-		// 	$_GET["act"] = "new";
-		// 	$_GET["msg"] = 4;
-		// 	$overall_error = true;
-		// 	//exit();
-		// }		
+		$msgs = "";		
 	}	
 	if (!$overall_error &&$_POST["mark"]=="saveuser")
 	{
@@ -37,21 +27,11 @@
 		$values = array("'{$_POST[name]}'","'{$_POST[family]}'","'{$_POST[selectpic]}'","'{$_POST[email]}'","'{$_POST[username]}'","'{$pass}'");	
 		if (!$db->InsertQuery('users',$fields,$values)) 
 		{
-			//$msgs = $msg->ShowError("ثبت اطلاعات با مشکل مواجه شد");
 			header('location:?item=usermgr&act=new&msg=2');
-			//exit();
-			//$_GET["item"] = "usermgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 2;
 		} 	
 		else 
 		{  										
-			//$msgs = $msg->ShowSuccess("ثبت اطلاعات با موفقیت انجام شد");
-			header('location:?item=usermgr&act=new&msg=1');					
-			//exit();
-			//$_GET["item"] = "usermgr";
-			//$_GET["act"] = "new";
-			//$_GET["msg"] = 1;
+			header('location:?item=usermgr&act=new&msg=1');
 		}  				 
 	}
 	else
@@ -69,9 +49,7 @@
 						 "`username`"=>"'{$_POST[username]}'",
 						 "`password`"=>"'{$pass}'");		
         $db->UpdateQuery("users",$values,array("id='{$_GET[uid]}'"));		
-		header('location:?item=usermgr&act=mgr');
-		//$_GET["item"] = "usermgr";
-		//$_GET["act"] = "mgr";		
+		header('location:?item=usermgr&act=mgr');	
 	}
 
 	if ($overall_error)
@@ -139,21 +117,13 @@ $msgs = GetMessage($_GET['msg']);
 $html=<<<cd
 <script type='text/javascript'>
 	$(document).ready(function(){		
-	$("#frmusermgr").validationEngine();	  
-		$("#submit").click(function(){		    
-			//alert("test");
-			//$("#message").html('saeid hatami');
-		//window.location.href="?item=usermgr&act=do";
-			//$("#message").fadeOut(5000,function (){
-              //    window.location.href="?item=usermgr&act=do"});
-			 
-          });		  
+		$("#frmusermgr").validationEngine();		  
     });	   
 </script>	     
   <div class="title">
       <ul>
         <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-        <li><a href="#">مدیریت کاربران</a></li>
+        <li><a href="#">درج کاربر جدید</a></li>
       </ul>
       <div class="badboy"></div>
   </div>  
@@ -229,10 +199,7 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "usermgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
+			{								
 				header("Location:?item=usermgr&act=mgr&msg=6");
 			}
 		
@@ -304,7 +271,7 @@ $code=<<<edit
 					<div class="title">
 				      <ul>
 				        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-					    <li><span> مدیریت آپلود</span></li>
+					    <li><span>حذف/ویرایش کاربران</span></li>
 				      </ul>
 				      <div class="badboy"></div>
 				  </div>

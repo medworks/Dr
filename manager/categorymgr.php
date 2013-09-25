@@ -77,7 +77,7 @@ if ($_GET['act']=="do")
 		<div class="title">
 	      <ul>
 	        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-	        <li><span>مدیریت گروه ها</span></li>
+	        <li><span>دسته بندی</span></li>
 	      </ul>
 	      <div class="badboy"></div>
 	    </div>
@@ -464,7 +464,7 @@ $code=<<<edit
 					<div class="title">
 				      <ul>
 				        <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-					    <li><span>مدیریت گروه ها</span></li>
+					    <li><span>مدیریت سرگروه ها</span></li>
 				      </ul>
 				      <div class="badboy"></div>
 				  </div>

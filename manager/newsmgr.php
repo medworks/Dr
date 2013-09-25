@@ -109,7 +109,7 @@ $html=<<<cd
   <div class="title">
       <ul>
         <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-	    <li><span>مدیریت خدمات</span></li>
+	    <li><span>درج خدمت</span></li>
       </ul>
       <div class="badboy"></div>
   </div>
@@ -243,7 +243,7 @@ $code=<<<edit
 <div class="title">
   <ul>
     <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-    <li><span>مدیریت خدمات</span></li>
+    <li><span>حذف/ویرایش خدمات</span></li>
   </ul>
   <div class="badboy"></div>
 </div>

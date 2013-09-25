@@ -136,7 +136,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 	  <div class="title">
 		  <ul>
 			 <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-			 <li><span>مدیریت رزومه</span></li>
+			 <li><span>درج رزومه</span></li>
 		  </ul>
 		  <div class="badboy"></div>
 	  </div>  
@@ -298,7 +298,7 @@ $code=<<<edit
 <div class="title">
   <ul>
     <li><a href="adminpanel.php?item=dashboard&act=do">پیشخوان</a></li>
-    <li><span>مدیریت رزومه</span></li>
+    <li><span>حذف/ویرایش رزمه</span></li>
   </ul>
   <div class="badboy"></div>
 </div>
