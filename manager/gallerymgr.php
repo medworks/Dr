@@ -26,7 +26,7 @@
   } 	
  if (!$overall_error && $_POST["mark"]=="savegall")
  {						   				
-	$fields = array("`image`","`subject`","`body`","`latin-subject`","`latin-ody`","`catid`");	
+	$fields = array("`image`","`subject`","`body`","`latin-subject`","`latin-body`","`catid`");	
 	$values = array("'{$_POST[selectpic]}'","'{$_POST[subject]}'","'{$_POST[body]}'","'{$_POST[latinsubject]}'","'{$_POST[latinbody]}'","'{$_POST[cbcat]}'");
 	if (!$db->InsertQuery('gallery',$fields,$values)) 
 	{

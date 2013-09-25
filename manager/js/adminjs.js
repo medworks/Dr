@@ -119,7 +119,7 @@ $(window).load(function(){
         });
     });
 });
-
+// End $(document).ready
 function NewWin(url,name)
 {
     window.open(url, name,'status=yes,scrollbars=yes,toolbar=yes,resizable=1,menubar=no,location=no,width=570px,height=500px');

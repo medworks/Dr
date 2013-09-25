@@ -4,6 +4,11 @@
 	include_once("./classes/database.php");
 	include_once("./classes/seo.php");
 	$seo = Seo::GetSeo();
+	$db = Database::GetDatabase();
+	
+  	$news = $db->SelectAll("news","*",null,"id DESC");
+  	$gallery = $db->SelectAll("gallery","*",null,"id DESC");
+	$category = $db->SelectAll("category","*",null,"id ASC");
 
 	$name = GetSettingValue('Dr_Name',0);
 	$specialty  = GetSettingValue('Dr_Specialty',0);
@@ -326,24 +331,36 @@ $html.=<<<cd
 							<!-- Portfolio filter -->
 							<ul class="filter">
 								<li class="current all"><a href="#">همه</a></li>
-								<li class="operatingroom"><a href="#">اتاق عمل</a></li>
-								<li class="hospital"><a href="#">بیمارستان</a></li>
+cd;
+								foreach($gallery as $val){
+									$catname = GetCategoryName($val["catid"]);
+$html.=<<<cd
+									<li class="{$val['catid']}"><a href="#">{$catname}</a></li>
+cd;
+								}
+$html.=<<<cd
 							</ul>
 							<!-- END Portfolio filter -->
 							<!-- Portfolio Items -->
 							<ul class="portfolio group">
-								<li class="item four columns omega" data-id="id-1" data-type="operatingroom">
-									<a href="themes/images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
+cd;
+							for($i=0;$i<count($gallery);$i++){
+								if (!isset($gallery[$i]["subject"])) continue;
+								$body = strip_tags($gallery[$i]["body"]);
+							    $body = (mb_strlen($body)>100) ? mb_substr($body,0,100,"UTF-8")."..." : $body;
+$html.=<<<cd
+								<li class="item four columns omega" data-id="id-1" data-type="{$gallery[$i]['catid']}">
+									<a href="{$gallery[$i]['image']}" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube ltr">
 													<figure class="front">
-														<img src="themes/images/others/image_1.jpg" alt="">
+														<img src="{$gallery[$i]['image']}" alt="{$gallery[$i]['subject']}">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>اتاق عمل 1</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
+															<h3>{$gallery[$i]['subject']}</h3>
+															<p>{$gallery[$i]['body']}</p>
 														</div>
 													</section>
 												</div>
@@ -351,139 +368,9 @@ $html.=<<<cd
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-2" data-type="hospital">
-									<a href="themes/images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_2.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>بیمارستان 1</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-3" data-type="operatingroom">
-									<a href="themes/images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_3.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>اتاق عمل 2</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-4" data-type="hospital">
-									<a href="themes/images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_4.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>بیمارستان 2</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-5" data-type="operatingroom">
-									<a href="themes/images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_5.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>اتاق عمل 3</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-6" data-type="hospital">
-									<a href="themes/images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_6.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>بیمارستان 3</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-7" data-type="operatingroom">
-									<a href="themes/images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_7.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>اتاق عمل 4</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-8" data-type="hospital">
-									<a href="themes/images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_8.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>بیمارستان 4</h3>
-															<p>توضیحات... توضیحات... توضیحات... توضیحات... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
+cd;
+							}
+$html.=<<<cd
 							</ul>
 							<!-- END Portfolio Items -->
 						</div>
