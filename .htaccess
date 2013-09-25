@@ -1,0 +1,12 @@
+# deny most common except .php
+<FilesMatch "\.(inc|tpl|h|ihtml|sql|ini|conf|class|bin|spd|theme|module)$">
+deny from all
+</FilesMatch>
+                           
+<IFModule mod_rewrite.c>
+RewriteEngine on
+</IFModule>
+# Enable / Disable directory Listing/Browsing
+Options -Indexes
+IndexOptions -FancyIndexing
+ServerSignature Off
