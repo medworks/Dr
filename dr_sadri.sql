@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 24, 2013 at 07:25 PM
+-- Generation Time: Sep 25, 2013 at 09:43 AM
 -- Server version: 5.5.25a
 -- PHP Version: 5.4.4
 
@@ -35,14 +35,6 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=3 ;
 
---
--- Dumping data for table `category`
---
-
-INSERT INTO `category` (`id`, `secid`, `catname`, `latinname`, `describe`) VALUES
-(1, 1, 'اتاق عمل', 'Operating room', ''),
-(2, 1, 'درمانگاه', 'Clinic', '');
-
 -- --------------------------------------------------------
 
 --
@@ -58,14 +50,7 @@ CREATE TABLE IF NOT EXISTS `gallery` (
   `latin-body` varchar(250) NOT NULL,
   `catid` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`id`, `image`, `subject`, `body`, `latin-subject`, `latin-body`, `catid`) VALUES
-(1, '../gallerypics/image_1.jpg', 'عکس اول', 'توضیحات در مورد عکس اول....', 'pic one', 'detail of pic one...', 1);
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
@@ -82,14 +67,6 @@ CREATE TABLE IF NOT EXISTS `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
---
--- Dumping data for table `news`
---
-
-INSERT INTO `news` (`id`, `subject`, `body`, `latin-subject`, `latin-body`) VALUES
-(1, 'خدمت اول', 'توضیحات خدمت اول... توضیحات خدمت اول... توضیحات خدمت اول... توضیحات خدمت اول... توضیحات خدمت اول... ', 'service one', ' detail of service one... detail of service one... detail of service one... '),
-(3, 'خدمت دوم', ' توضیح در مورد خدمت دوم...  توضیح در مورد خدمت دوم...  توضیح در مورد خدمت دوم...  توضیح در مورد خدمت دوم... ', 'service two', ' detail of service two...  detail of service two...  detail of service two...  detail of service two... ');
-
 -- --------------------------------------------------------
 
 --
@@ -104,13 +81,6 @@ CREATE TABLE IF NOT EXISTS `section` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
---
--- Dumping data for table `section`
---
-
-INSERT INTO `section` (`id`, `secname`, `latinname`, `describe`) VALUES
-(1, 'بیمارستان', 'Hospital', '');
-
 -- --------------------------------------------------------
 
 --
@@ -122,30 +92,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `key` varchar(30) NOT NULL,
   `value` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=18 ;
-
---
--- Dumping data for table `settings`
---
-
-INSERT INTO `settings` (`id`, `key`, `value`) VALUES
-(1, 'Site_Title', 'دکتر اقبال صدری'),
-(2, 'Site_KeyWords', 'جراحی,ارتوپدی,صدری'),
-(3, 'Site_Describtion', 'دکتر اقبال صدری جراح و متخصص ارتوپد'),
-(4, 'Dr_Name', 'دکتر اقبال صدری'),
-(5, 'Dr_Specialty', 'متخصص ارتوپد'),
-(6, 'About_System', 'درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... درباره دکتر... '),
-(7, 'Dr_Name_Latin', 'Dr Eghbal Sadri'),
-(8, 'About_System_Latin', 'detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... detail... '),
-(9, 'Dr_Specialty_Latin', 'Orthopedics'),
-(10, 'Contact_Email', 'info@sadri.com'),
-(11, 'FaceBook_Add', '#'),
-(12, 'Twitter_Add', '#'),
-(13, 'Rss_Add', '#'),
-(14, 'Tell_Number', '+98(511) 841 2211'),
-(15, 'Fax_Number', '+98(511) 841 2211'),
-(16, 'Address', 'خیابان احمد آباد...'),
-(17, 'Gplus_Add', '#');
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 -- --------------------------------------------------------
 
@@ -161,22 +108,6 @@ CREATE TABLE IF NOT EXISTS `uploadcenter` (
   `address` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
-
---
--- Dumping data for table `uploadcenter`
---
-
-INSERT INTO `uploadcenter` (`id`, `image`, `subject`, `body`, `address`) VALUES
-(1, 'amjadi.jpg', '', '', '00100'),
-(2, 'amjadi.jpg', '', '', '00100'),
-(3, 'image_1.jpg', '', '', '01'),
-(4, 'image_2.jpg', '', '', '01'),
-(5, 'image_3.jpg', '', '', '01'),
-(6, 'image_4.jpg', '', '', '01'),
-(7, 'image_5.jpg', '', '', '01'),
-(8, 'image_6.jpg', '', '', '01'),
-(9, 'image_7.jpg', '', '', '01'),
-(10, 'image_8.jpg', '', '', '01');
 
 -- --------------------------------------------------------
 
@@ -195,13 +126,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `type` tinyint(4) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `name`, `family`, `image`, `email`, `username`, `password`, `type`) VALUES
-(3, 'Mojtaba', 'Amjadi', '../userspics/amjadi.jpg', 'amjadi.mojtaba@gmail.com', 'admin', '202cb962ac59075b964b07152d234b70', 0);
 
 -- --------------------------------------------------------
 
