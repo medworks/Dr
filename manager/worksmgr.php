@@ -73,7 +73,7 @@
 	if ($_GET['act']=="edit")
 	{
 		$row=$db->Select("works","*","id='{$_GET["wid"]}'",NULL);
-		$row['sdate'] = ToJalali($row["date"]);
+		$row['date'] = ToJalali($row["date"]);
 		$editorinsert = "
 		<p>
 			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
@@ -119,7 +119,6 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 				  "3"=>"عنواین علمی");
 	$itemselect = ($row['group'])? $row['group'] :"1";
 	$resume_drop = SelectOptionTag("resume_drop",$list,$itemselect,null,"select2");
-	$date = ToJalali($row['date']);
 
 	$msgs = GetMessage($_GET['msg']);
 	$html=<<<cd
@@ -165,7 +164,7 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		   <p>
 			<label for="sdate">تاریخ </label>
 			<span>*</span><br /><br />
-			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$date}" />
+			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$row['date']}" />
 			<img src="./images/cal.png" id="date_btn_1" alt="cal-pic">
 			 <script type="text/javascript">
 			  Calendar.setup({
@@ -225,7 +224,7 @@ if ($_GET['act']=="mgr")
 				"works",
 				"*",
 				null,
-				"id ASC",
+				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
     }
