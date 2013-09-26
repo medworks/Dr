@@ -17,7 +17,7 @@
 	$sess = Session::GetSesstion();
 	$name = $sess->Get("name").' '.$sess->Get("family");
 	$user = $sess->Get("username");
-    $pic = $sess->Get("userimg");
+  $pic = $sess->Get("userimg");
 	$datetime = ToJalali(date('Y-M-d H:i:s'),'l، d F Y');
 	if ($_GET["item"] == "logout")
    {
@@ -67,9 +67,7 @@
           <li class="pic"><img src="<?php echo $pic; ?>" alt="<?php echo $name; ?>" /></li>       
           <li><a><?php echo "نام: <span class='highlight'>$name</span>"; ?></a></li>
           <li><a><?php echo "نام کاربری: <span class='highlight'>$user</span>"; ?></a></li>
-          <li><a><?php echo "تاریخ: <span class='highlight'>$datetime</span>"; ?></a></li>
-          <!-- <li><a href="#" >وظایف</a></li>
-          <li><a href="#">ثبت نام ها <span id="newSignup">06</span></a></li> -->  
+          <li><a><?php echo "تاریخ: <span class='highlight'>$datetime</span>"; ?></a></li> 
           <li class="exit"><a href="?item=logout&act=do">خروج</a></li>		  
         </ul>
         <div class="badboy"></div>
