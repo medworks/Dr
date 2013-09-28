@@ -40,6 +40,15 @@ a p{
   transition: all ease-in-out 0.2s;
 }
 
+p.ltr{
+  text-align: left;
+  direction: ltr;
+}
+
+.leftdis{
+  display: inline-block !important;
+}
+
 a:hover,
 a:hover p,
 input:hover{

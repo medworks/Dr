@@ -123,16 +123,8 @@ else
 		});	   
 	</script>
 	<form name="frmabout" id= "frmabout" action="" method="post" >
-		<p>
-		 <label for="about">نام و نام خانوادگی </label>
-		 <span>*</span>
-	    </p>
-	    <input type="text" name="name" value="{$name}" class="validate[required] subject">
-	    <p>
-		 <label for="about">تخصص </label>
-		 <span>*</span>
-	    </p>
-	    <input type="text" name="specialty" value="{$specialty}" class="validate[required] subject">
+		<p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
+			<div class="badboy"></div>
 		<p>
          <label for="pic">عکس </label>
          <span>*</span>
@@ -146,6 +138,19 @@ else
 	    <div class="badboy"></div>
 	    <div id="filesbrowser"></div>
 	    <div class="badboy"></div>
+	    <br />
+	    <hr />
+	    <br />
+		<p>
+		 <label for="about">نام و نام خانوادگی </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="name" value="{$name}" class="validate[required] subject">
+	    <p>
+		 <label for="about">تخصص </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="specialty" value="{$specialty}" class="validate[required] subject">
 		<p>
 		 <label for="about">درباره ما </label>
 		 <span>*</span>
@@ -154,21 +159,21 @@ else
 	    <br />
 	    <hr />
 	    <br />
-	    <p>
-		 <label for="about">نام و نام خانوادگی (لاتین) </label>
+	    <p class="ltr">
+		 <label for="about">Name and Family </label>
 		 <span>*</span>
 	    </p>
-	    <input type="text" name="latinname" value="{$latin_name}" class="ltr validate[required] subject">
-	    <p>
-		 <label for="about">تخصص (لاتین) </label>
+	    <input type="text" name="latinname" value="{$latin_name}" class="leftdis ltr validate[required] subject">
+	    <p class="ltr">
+		 <label for="about">Specialty </label>
 		 <span>*</span>
 	    </p>
-	    <input type="text" name="latinspecialty" value="{$latin_specialty}" class="ltr validate[required] subject">
-		<p>
-		 <label for="about">درباره ما (لاتین) </label>
+	    <input type="text" name="latinspecialty" value="{$latin_specialty}" class="leftdis ltr validate[required] subject">
+		<p class="ltr">
+		 <label for="about">About me </label>
 		 <span>*</span>
 	    </p>
-	    <textarea cols="50" rows="10" name="latinabout" class="ltr validate[required] detail" id="detail">{$latin_about}</textarea>
+	    <textarea cols="50" rows="10" name="latinabout" class="leftdis ltr validate[required] detail" id="detail">{$latin_about}</textarea>
 	    <p>
 		 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
 		 <input type='hidden' name='mark' value='editabout' />
@@ -211,18 +216,18 @@ ht;
 				<br />
 				<hr />
 				<br />
-				<p>
-					<label for="subject">عنوان سایت (لاتین) </label>
+				<p class="ltr">
+					<label for="subject">Title of website </label>
 				</p>    
-				<input type="text" name="latintitle" class="subject ltr" id="title" value='{$Latin_Site_Title}'/>
-				<p>
-					<label for="subject">کلمات کلیدی (لاتین) </label>
+				<input type="text" name="latintitle" class="leftdis subject ltr" id="title" value='{$Latin_Site_Title}'/>
+				<p class="ltr">
+					<label for="subject">Keywords </label>
 				</p>    
-				<input type="text" name="latinkeywords" class="subject ltr" id="keywords" value='{$Latin_Site_KeyWords}'/>
-				<p>
-					<label for="subject">توضیحات سایت (لاتین) </label>
+				<input type="text" name="latinkeywords" class="leftdis subject ltr" id="keywords" value='{$Latin_Site_KeyWords}'/>
+				<p class="ltr">
+					<label for="subject">Description of website </label>
 				</p>    
-				<input type="text" name="latindescribe" class="subject ltr" id="describe" value='{$Latin_Site_Describtion}'/>
+				<input type="text" name="latindescribe" class="leftdis subject ltr" id="describe" value='{$Latin_Site_Describtion}'/>
 				<p>
 					<input type='submit' id='submit' value='ویرایش' class='submit' />	 
 					<input type='hidden' name='mark' value='editseo' />
@@ -293,18 +298,18 @@ ht;
 				<br />
 				<hr />
 				<br />
-				<p>
-				<label for="tel">تلفن (لاتین)</label>
+				<p class="ltr">
+					<label for="tel">Tel </label>
 				</p>    
-				<input type="text" name="latin_tel_number" class="subject ltr" id="tel_number" value='{$Latin_Tell_Number}'/>
-				<p>
-					<label for="fax">فاکس (لاتین)</label>
+				<input type="text" name="latin_tel_number" class="leftdis subject ltr" id="tel_number" value='{$Latin_Tell_Number}'/>
+				<p class="ltr">
+					<label for="fax">Fax </label>
 				</p>    
-				<input type="text" name="latin_fax_number" class="subject ltr" id="fax_number" value='{$Latin_Fax_Number}'/>
-				<p>
-					<label for="address">آدرس (لاتین)</label>
+				<input type="text" name="latin_fax_number" class="leftdis subject ltr" id="fax_number" value='{$Latin_Fax_Number}'/>
+				<p class="ltr">
+					<label for="address">Address </label>
 				</p>    
-				<input type="text" name="latin_address" class="subject ltr" id="address" value='{$Latin_Address}'/>
+				<input type="text" name="latin_address" class="leftdis subject ltr" id="address" value='{$Latin_Address}'/>
 				<p>
 				 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
 				 <input type='hidden' name='mark' value='editadd' />

@@ -132,16 +132,16 @@ $html=<<<cd
        <br />
        <hr />
        <br />
-       <p>
-         <label for="subject">عنوان (لاتین) </label>
+       <p class="ltr">
+         <label for="subject">Title </label>
          <span>*</span>
        </p>    
-       <input type="text" name="latinsubject" class="validate[required] subject ltr" id="subject" value='{$row["latin-subject"]}'/>
-       <p>
-         <label for="detail">توضیحات (لاتین) </label>
+       <input type="text" name="latinsubject" class="leftdis validate[required] subject ltr" id="subject" value='{$row["latin-subject"]}'/>
+       <p class="ltr">
+         <label for="detail">Description </label>
          <span>*</span>
        </p>
-       <textarea cols="50" rows="10" name="latindetail" class="validate[required] detail ltr" id="detail" > {$row["latin-body"]}</textarea>
+       <textarea cols="50" rows="10" name="latindetail" class="leftdis validate[required] detail ltr" id="detail" > {$row["latin-body"]}</textarea>
 	   {$editorinsert}       
       	 <input type="reset" value="پاک کردن" class='reset' /> 	 	     
        </p>  

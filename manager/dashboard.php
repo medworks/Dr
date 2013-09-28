@@ -45,16 +45,8 @@ $html=<<<ht
 		});	   
 	</script>
 	<form name="frmabout" id= "frmabout" action="" method="post" >
-		<p>
-		 <label for="about">نام و نام خانوادگی </label>
-		 <span>*</span>
-	    </p>
-	    <input type="text" name="name" value="{$name}" class="validate[required] subject">
-	    <p>
-		 <label for="about">تخصص </label>
-		 <span>*</span>
-	    </p>
-	    <input type="text" name="specialty" value="{$specialty}" class="validate[required] subject">
+		<p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
+			<div class="badboy"></div>
 		<p>
          <label for="pic">عکس </label>
          <span>*</span>
@@ -68,29 +60,42 @@ $html=<<<ht
 	    <div class="badboy"></div>
 	    <div id="filesbrowser"></div>
 	    <div class="badboy"></div>
+	    <br />
+	    <hr />
+	    <br />
 		<p>
-		 <label for="about">درباره ما </label>
+		 <label for="about">نام و نام خانوادگی </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="name" value="{$name}" class="validate[required] subject">
+	    <p>
+		 <label for="about">تخصص </label>
+		 <span>*</span>
+	    </p>
+	    <input type="text" name="specialty" value="{$specialty}" class="validate[required] subject">
+		<p>
+		 <label for="about">درباره من </label>
 		 <span>*</span>
 	    </p>
 	    <textarea cols="50" rows="10" name="about" class="validate[required] detail" id="detail">{$about}</textarea>
 	    <br />
 	    <hr />
 	    <br />
-	    <p>
-		 <label for="about">نام و نام خانوادگی (لاتین) </label>
+	    <p class="ltr">
+		 <label for="about">Name and Family </label>
 		 <span>*</span>
 	    </p>
-	    <input type="text" name="latinname" value="{$latin_name}" class="ltr validate[required] subject">
-	    <p>
-		 <label for="about">تخصص (لاتین) </label>
+	    <input type="text" name="latinname" value="{$latin_name}" class="leftdis ltr validate[required] subject">
+	    <p class="ltr">
+		 <label for="about">Specialty </label>
 		 <span>*</span>
 	    </p>
-	    <input type="text" name="latinspecialty" value="{$latin_specialty}" class="ltr validate[required] subject">
-		<p>
-		 <label for="about">درباره ما (لاتین) </label>
+	    <input type="text" name="latinspecialty" value="{$latin_specialty}" class="leftdis ltr validate[required] subject">
+		<p class="ltr">
+		 <label for="about">About me </label>
 		 <span>*</span>
 	    </p>
-	    <textarea cols="50" rows="10" name="latinabout" class="ltr validate[required] detail" id="detail">{$latin_about}</textarea>
+	    <textarea cols="50" rows="10" name="latinabout" class="leftdis ltr validate[required] detail" id="detail">{$latin_about}</textarea>
 	    <p>
 		 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
 		 <input type='hidden' name='mark' value='editabout' />

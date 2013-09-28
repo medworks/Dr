@@ -139,29 +139,6 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 		  <div class="mes" id="message">{$msgs}</div>
 		   <p class="note">پر کردن موارد مشخص شده با * الزامی می باشد</p>
 		   <p>
-			 <label for="subject">عنوان </label>
-			 <span>*</span>
-		   </p>  	 
-		   <input type="text" name="subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
-		   <p>
-			 <label for="detail">توضیحات </label>
-			 <span>*</span>
-		   </p>
-		   <textarea cols="50" rows="10" name="detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
-		   <br />
-		   <hr />
-		   <br />
-		   <p>
-			 <label for="subject">عنوان (لاتین) </label>
-			 <span>*</span>
-		   </p>  	 
-		   <input type="text" name="latinsubject" class="validate[required] subject ltr" id="subject" value="{$row['latin-subject']}" />
-		   <p>
-			 <label for="detail">توضیحات (لاتین) </label>
-			 <span>*</span>
-		   </p>
-		   <textarea cols="50" rows="10" name="latindetail" class="validate[required] detail ltr" id="detail">{$row['latin-body']}</textarea>
-		   <p>
 			<label for="sdate">تاریخ </label>
 			<span>*</span><br /><br />
 			<input type="text" name="sdate" class="validate[required] sdate" id="date_input_1" value="{$row['date']}" />
@@ -184,6 +161,32 @@ if ($_GET['act']=="new" or $_GET['act']=="edit")
 			 <span>*</span>
 		   </p>
 		   {$resume_drop}
+		   <br />
+		   <hr />
+		   <br />
+		   <p>
+			 <label for="subject">عنوان </label>
+			 <span>*</span>
+		   </p>  	 
+		   <input type="text" name="subject" class="validate[required] subject" id="subject" value="{$row[subject]}" />
+		   <p>
+			 <label for="detail">توضیحات </label>
+			 <span>*</span>
+		   </p>
+		   <textarea cols="50" rows="10" name="detail" class="validate[required] detail" id="detail">{$row[body]}</textarea>
+		   <br />
+		   <hr />
+		   <br />
+		   <p class="ltr">
+			 <label for="subject">Title </label>
+			 <span>*</span>
+		   </p>  	 
+		   <input type="text" name="latinsubject" class="leftdis validate[required] subject ltr" id="subject" value="{$row['latin-subject']}" />
+		   <p class="ltr">
+			 <label for="detail">Description </label>
+			 <span>*</span>
+		   </p>
+		   <textarea cols="50" rows="10" name="latindetail" class="leftdis validate[required] detail ltr" id="detail">{$row['latin-body']}</textarea>
 		   {$editorinsert}
 			 <input type="reset" value="پاک کردن" class="reset" /> 	 	 
 		   </p>
