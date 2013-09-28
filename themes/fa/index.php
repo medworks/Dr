@@ -1,9 +1,9 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-	include_once("./classes/database.php");
-	include_once("./lib/persiandate.php");	
-	include_once("./classes/seo.php");
+	include_once("../../config.php");
+	include_once("../../classes/functions.php");
+	include_once("../../classes/database.php");
+	include_once("../../lib/persiandate.php");	
+	include_once("../../classes/seo.php");
 	$seo = Seo::GetSeo();
 	$db = Database::GetDatabase();
 	
@@ -43,31 +43,31 @@ $html=<<<cd
 	<meta name="Generator" content="مدیاتک">
 	<meta name="Author" content="مدیاتک">
 
-	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="../themes/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="../themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/fa/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/normalize.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/fa/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
-	<script src="themes/js/jquery.min.js" type="text/javascript"></script>
-	<script src="themes/js/jms.js" type="text/javascript"></script>
-	<script src="themes/js/jmpress.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.easing.1.3.js" type="text/javascript"></script>
-	<script src="themes/js/detectmobilebrowser.js" type="text/javascript"></script>
-	<script src="themes/js/mousewheel.js" type="text/javascript"></script>
-	<script src="themes/fa/js/jquery.jscrollpane.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.quicksand.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.qtip.min.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.min.js" type="text/javascript"></script>
+	<script src="../js/jms.js" type="text/javascript"></script>
+	<script src="../js/jmpress.js" type="text/javascript"></script>
+	<script src="../js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="../js/detectmobilebrowser.js" type="text/javascript"></script>
+	<script src="../js/mousewheel.js" type="text/javascript"></script>
+	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
+	<script src="../js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="../js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="../js/jquery.qtip.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.mobilegmap.min.js" type="text/javascript"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
-	<script src="themes/fa/js/contact_form.js" type="text/javascript"></script>
-	<script src="themes/fa/js/scripts.js" type="text/javascript"></script>
-	<script src="themes/js/modernizr.custom.48780.js" type="text/javascript"></script>
+	<script src="js/contact_form.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="../js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
@@ -109,8 +109,8 @@ $html.=<<<cd
 	                <h3>{$specialty}</h3>
                 </div>
                 <div class="flags">
-                	<a href="#" class="tip" title="انگلیسی"><img src="themes/images/england-flag.png" alt="english"></a>
-                	<a href="#" class="tip" title="فارسی"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                	<a href="../../index.php?lang=en" class="tip" title="انگلیسی"><img src="themes/images/england-flag.png" alt="english"></a>
+                	<a href="../../index.php?lang=fa" class="tip" title="فارسی"><img src="themes/images/iran-flag.png" alt="persian"></a>
                 </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
