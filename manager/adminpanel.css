@@ -1352,7 +1352,7 @@ input.search-form{
   -o-border-radius: 4px !important;
   border-radius: 4px !important;
   width: 250px;
-  color: #999 !important;
+  /*color: #999 !important;*/
 }
 
 input.search-form:hover{
