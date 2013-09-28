@@ -109,8 +109,8 @@ $html.=<<<cd
 	                <h3>{$specialty}</h3>
                 </div>
                 <div class="flags">
-                	<a href="../../index.php?lang=en" class="tip" title="انگلیسی"><img src="themes/images/england-flag.png" alt="english"></a>
-                	<a href="../../index.php?lang=fa" class="tip" title="فارسی"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                	<a href="../../index.php?lang=en" class="tip" title="انگلیسی"><img src="../images/england-flag.png" alt="english"></a>
+                	<a href="../../index.php?lang=fa" class="tip" title="فارسی"><img src="../images/iran-flag.png" alt="persian"></a>
                 </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
@@ -154,12 +154,12 @@ $html.=<<<cd
 							<div class="social_icons">
 								<h3>دنبال کردن من در</h3>
 								<ul class="social">
-									<li><a href="#" class="tip" title="Twitter"><img src="themes/images/twitter.png" alt="twitter"></a></li>
-									<li><a href="#" class="tip" title="Dribbble"><img src="themes/images/dribbble.png" alt="dribbble"></a></li>
-									<li><a href="#" class="tip" title="Lastfm"><img src="themes/images/lastfm.png" alt="lastfm"></a></li>
-									<li><a href="#" class="tip" title="Google Plus"><img src="themes/images/googleplus.png" alt="googleplus"></a></li>
-									<li><a href="#" class="tip" title="Youtube"><img src="themes/images/youtube.png" alt="youtube"></a></li>
-									<li><a href="#" class="tip" title="Skype"><img src="themes/images/skype.png" alt="skype"></a></li>
+									<li><a href="#" class="tip" title="Twitter"><img src="../images/twitter.png" alt="twitter"></a></li>
+									<li><a href="#" class="tip" title="Dribbble"><img src="../images/dribbble.png" alt="dribbble"></a></li>
+									<li><a href="#" class="tip" title="Lastfm"><img src="../images/lastfm.png" alt="lastfm"></a></li>
+									<li><a href="#" class="tip" title="Google Plus"><img src="../images/googleplus.png" alt="googleplus"></a></li>
+									<li><a href="#" class="tip" title="Youtube"><img src="../images/youtube.png" alt="youtube"></a></li>
+									<li><a href="#" class="tip" title="Skype"><img src="../images/skype.png" alt="skype"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -287,7 +287,7 @@ $html.=<<<cd
 cd;
 										if($i<5){
 $html.=<<<cd
-											<img src="themes/images/serv{$i}.png">
+											<img src="../images/serv{$i}.png">
 cd;
 										}
 $html.=<<<cd
