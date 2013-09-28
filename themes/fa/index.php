@@ -331,8 +331,6 @@ $html.=<<<cd
 cd;
 							for($i=0;$i<count($gallery);$i++){
 								if (!isset($gallery[$i]["subject"])) continue;
-								$body = strip_tags($gallery[$i]["body"]);
-							    $body = (mb_strlen($body)>100) ? mb_substr($body,0,100,"UTF-8")."..." : $body;
 $html.=<<<cd
 								<li class="item four columns omega" data-id="id-1" data-type="{$gallery[$i]['catid']}">
 									<a href="{$gallery[$i]['image']}" data-rel="prettyPhoto[portfolio]">
