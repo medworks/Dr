@@ -177,7 +177,7 @@ if ($_GET['act']=="mgr")
 				10);
 			if (!$rows) 
 			{								
-				header("Location:?item=newsmgr&act=mgr&msg=6");
+				header("Location:?item=catmgr&act=mgr&msg=6");
 			}
 		
 	}
@@ -389,11 +389,8 @@ if ($_GET['act']=="mgr")
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
-			{					
-				//$_GET['item'] = "secmgr";
-				//$_GET['act'] = "mgr";
-				//$_GET['msg'] = 6;				
-				header("Location:?item=newsmgr&act=mgr&msg=6");
+			{			
+				header("Location:?item=secmgr&act=mgr&msg=6");
 			}
 		
 	}
@@ -439,8 +436,8 @@ del;
             if (Count($rows) > 0)
             {                    
                     $gridcode .= DataGrid(array(					        
-							"secname"=>"نام گروه",
-							"latinname"=>"نام لاتین",
+							"secname"=>"نام سرگروه",
+							"latinname"=>"نام سرگروه (لاتین)",
 							"describe"=>"توضیحات",							
                             "edit"=>"ویرایش",
 							"delete"=>"حذف",), $rows, $colsClass, $rowsClass, 10,
