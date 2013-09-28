@@ -1,14 +1,43 @@
+<?php
+	include_once("./config.php");
+	include_once("./classes/functions.php");
+	include_once("./classes/database.php");
+	include_once("./lib/persiandate.php");	
+	include_once("./classes/seo.php");
+	$seo = Seo::GetSeo();
+	$db = Database::GetDatabase();
+	
+  	$news = $db->SelectAll("news","*",null,"id ASC");
+  	$works = $db->SelectAll("works","*",null,"id ASC");
+  	$gallery = $db->SelectAll("gallery","*",null,"id DESC");
+	$category = $db->SelectAll("category","*",null,"id ASC");
+
+	$name = GetSettingValue('Dr_Name',0);
+	$specialty  = GetSettingValue('Dr_Specialty',0);
+	$about = GetSettingValue('About_System',0);
+
+	$Contact_Email = GetSettingValue('Contact_Email',0);
+	$FaceBook_Add = GetSettingValue('FaceBook_Add',0);
+	$Twitter_Add = GetSettingValue('Twitter_Add',0);
+	$Rss_Add = GetSettingValue('Rss_Add',0);
+	$Gplus_Add = GetSettingValue('Gplus_Add',0);
+	$Tell_Number = GetSettingValue('Tell_Number',0);
+	$Fax_Number = GetSettingValue('Fax_Number',0);
+	$Address = GetSettingValue('Address',0);
+	$Dr_Pic = GetSettingValue('Dr_Pic',0);
+
+$html=<<<cd
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Dr Eghbal Sadri</title>
+	<title>{$seo->Latin_Site_Title}</title>
 
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="UTF-8">
 	<meta name="robots" content="INDEX,FOLLOW">
-	<meta name="description" content="dr">
-	<meta name="keywords" content="dr,cms,mediateq">
+	<meta name="description" content="{$seo->Latin_Site_Describtion}">
+	<meta name="keywords" content="{$seo->Latin_Site_KeyWords}">
 	<meta http-equiv="Content-Language" content="En">
 	<meta http-equiv="Designer" content="Mediateq">
 	<meta name="Generator" content="Mediateq">
@@ -518,3 +547,6 @@
 	<!-- END Container -->
 </body>
 </html>
+cd;
+echo $html;
+?>

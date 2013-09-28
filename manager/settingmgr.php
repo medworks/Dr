@@ -32,6 +32,10 @@
 		SetSettingValue("Site_Title",$_POST["title"]);
 		SetSettingValue("Site_KeyWords",$_POST["keywords"]);
 		SetSettingValue("Site_Describtion",$_POST["describe"]);
+
+		SetSettingValue("Latin_Site_Title",$_POST["latintitle"]);
+		SetSettingValue("Latin_Site_KeyWords",$_POST["latinkeywords"]);
+		SetSettingValue("Latin_Site_Describtion",$_POST["latindescribe"]);
 		header('location:?item=settingmgr&act=do');
 	}
 	else
@@ -175,6 +179,10 @@ ht;
 		$Site_Title = GetSettingValue('Site_Title',0);
 		$Site_KeyWords = GetSettingValue('Site_KeyWords',0);
 		$Site_Describtion = GetSettingValue('Site_Describtion',0);
+
+		$Latin_Site_Title = GetSettingValue('Latin_Site_Title',0);
+		$Latin_Site_KeyWords = GetSettingValue('Latin_Site_KeyWords',0);
+		$Latin_Site_Describtion = GetSettingValue('Latin_Site_Describtion',0);
 		$html=<<<ht
 		<div class="title">
 	      <ul>
@@ -196,6 +204,21 @@ ht;
 					<label for="subject">توضیحات سایت </label>
 				</p>    
 				<input type="text" name="describe" class="subject" id="describe" value='{$Site_Describtion}'/>
+				<br />
+				<hr />
+				<br />
+				<p>
+					<label for="subject">عنوان سایت (لاتین) </label>
+				</p>    
+				<input type="text" name="latintitle" class="subject ltr" id="title" value='{$Latin_Site_Title}'/>
+				<p>
+					<label for="subject">کلمات کلیدی (لاتین) </label>
+				</p>    
+				<input type="text" name="latinkeywords" class="subject ltr" id="keywords" value='{$Latin_Site_KeyWords}'/>
+				<p>
+					<label for="subject">توضیحات سایت (لاتین) </label>
+				</p>    
+				<input type="text" name="latindescribe" class="subject ltr" id="describe" value='{$Latin_Site_Describtion}'/>
 				<p>
 					<input type='submit' id='submit' value='ویرایش' class='submit' />	 
 					<input type='hidden' name='mark' value='editseo' />

@@ -7,12 +7,20 @@ class Seo
  public $Site_Title;
  public $Site_KeyWords;
  public $Site_Describtion;
+
+ public $Latin_Site_Title;
+ public $Latin_Site_KeyWords;
+ public $Latin_Site_Describtion;
  
  function __construct()
  {	
      $this->Site_Title = GetSettingValue('Site_Title',0);
 	 $this->Site_KeyWords = GetSettingValue('Site_KeyWords',0);
 	 $this->Site_Describtion = GetSettingValue('Site_Describtion',0);
+
+	 $this->Latin_Site_Title = GetSettingValue('Latin_Site_Title',0);
+	 $this->Latin_Site_KeyWords = GetSettingValue('Latin_Site_KeyWords',0);
+	 $this->Latin_Site_Describtion = GetSettingValue('Latin_Site_Describtion',0);
  }
 
  public static function GetSeo()
