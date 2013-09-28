@@ -442,6 +442,12 @@ code;
 		$row = $db ->Select("category","catname","ID = '{$catid}'");
 		return ($row["catname"]);
 	}
+	function GetCategoryLatinName($catid)
+	{
+	    $db = Database::GetDatabase();
+		$row = $db ->Select("category","latinname","ID = '{$catid}'");
+		return ($row["latinname"]);
+	}
 	function GetSectionName($secid)
 	{
 	    $db = Database::GetDatabase();

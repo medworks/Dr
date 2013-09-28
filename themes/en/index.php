@@ -313,24 +313,34 @@ $html.=<<<cd
 							<!-- Portfolio filter -->
 							<ul class="filter">
 								<li class="current all"><a href="#">All</a></li>
-								<li class="operatingroom"><a href="#">Operating room</a></li>
-								<li class="hospital"><a href="#">Hospital</a></li>
+cd;
+								foreach($gallery as $val){
+									$latin_catname = GetCategoryLatinName($val["catid"]);
+$html.=<<<cd
+									<li class="{$val['catid']}"><a href="#">{$latin_catname}</a></li>
+cd;
+								}
+$html.=<<<cd
 							</ul>
 							<!-- END Portfolio filter -->
 							<!-- Portfolio Items -->
 							<ul class="portfolio group">
-								<li class="item four columns omega" data-id="id-1" data-type="operatingroom">
-									<a href="themes/images/others/image_1big.jpg" data-rel="prettyPhoto[portfolio]">
+cd;
+							for($i=0;$i<count($gallery);$i++){
+								if (!isset($gallery[$i]["latin-subject"])) continue;
+$html.=<<<cd
+								<li class="item four columns omega" data-id="id-1" data-type="{$gallery[$i]['catid']}">
+									<a href="{$gallery[$i]['image']}" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
-												<div class="cube ltr">
+												<div class="cube">
 													<figure class="front">
-														<img src="themes/images/others/image_1.jpg" alt="">
+														<img src="{$gallery[$i]['image']}" alt="{$gallery[$i]['latin-subject']}">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
-															<h3>Operating room 1</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
+															<h3>{$gallery[$i]['latin-subject']}</h3>
+															<p>{$gallery[$i]['latin-body']}</p>
 														</div>
 													</section>
 												</div>
@@ -338,139 +348,9 @@ $html.=<<<cd
 										</div>
 									</a>
 								</li>
-								<li class="item four columns omega" data-id="id-2" data-type="hospital">
-									<a href="themes/images/others/image_2big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_2.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Hospital 1</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-3" data-type="operatingroom">
-									<a href="themes/images/others/image_3big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_3.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Operating room 2</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-4" data-type="hospital">
-									<a href="themes/images/others/image_4big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_4.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Hospital 2</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-5" data-type="operatingroom">
-									<a href="themes/images/others/image_5big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_5.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Operating room 3</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-6" data-type="hospital">
-									<a href="themes/images/others/image_6big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_6.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Hospital 3</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-7" data-type="operatingroom">
-									<a href="themes/images/others/image_7big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_7.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Operating room 4</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li class="item four columns omega" data-id="id-8" data-type="hospital">
-									<a href="themes/images/others/image_8big.jpg" data-rel="prettyPhoto[portfolio]">
-										<div class="flip box fade">
-											<div class="rollover">
-												<div class="cube ltr">
-													<figure class="front">
-														<img src="themes/images/others/image_8.jpg" alt="">
-													</figure>
-													<section class="back">
-														<div class="back-wrap">
-															<h3>Hospital 4</h3>
-															<p>Detail... Detail... Detail... Detail... </p>
-														</div>
-													</section>
-												</div>
-											</div>
-										</div>
-									</a>
-								</li>
+cd;
+							}
+$html.=<<<cd
 							</ul>
 							<!-- END Portfolio Items -->
 						</div>
