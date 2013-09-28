@@ -317,10 +317,13 @@ $html.=<<<cd
 							<ul class="filter">
 								<li class="current all"><a href="#">همه</a></li>
 cd;
-								foreach($gallery as $val){
-									$catname = GetCategoryName($val["catid"]);
+								$cats = array();
+								foreach($gallery as $val){ $cats[] = $val['catid'];}
+								$uniqcat = array_unique($cats);
+								foreach($uniqcat as $val){
+									$catname = GetCategoryName($val);
 $html.=<<<cd
-									<li class="{$val['catid']}"><a href="#">{$catname}</a></li>
+									<li class="{$val}"><a href="#">{$catname}</a></li>
 cd;
 								}
 $html.=<<<cd
