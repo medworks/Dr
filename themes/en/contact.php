@@ -30,11 +30,11 @@ function checkEmail($email) {
 			$msg="OK";
 
 		}else{
-			$msg="<div class='notification_error rtl medium'>خطا! پیام شما ارسال نشد لطفا مجددا تلاش نمایید.</div>";
+			$msg="<div class='notification_error'>Error! Your message didn't send please try again.</div>";
 
 		}
 	}else{
-		$msg="<div class='notification_error rtl medium'>خطا! لطفا فیلدها را بررسی نمایید و مجددا ارسال کنید!</div>";
+		$msg="<div class='notification_error'>Error! Please check fields and try again!</div>";
 	}
 
 echo $msg

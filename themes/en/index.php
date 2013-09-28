@@ -64,7 +64,7 @@ $html=<<<cd
 	<script src="themes/js/jquery.qtip.min.js" type="text/javascript"></script>
 	<script src="themes/js/jquery.mobilegmap.min.js" type="text/javascript"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
-	<script src="themes/js/contact_form.js" type="text/javascript"></script>
+	<script src="themes/en/js/contact_form.js" type="text/javascript"></script>
 	<script src="themes/en/js/scripts.js" type="text/javascript"></script>
 	<script src="themes/js/modernizr.custom.48780.js" type="text/javascript"></script>
 
