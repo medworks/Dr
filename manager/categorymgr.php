@@ -379,7 +379,7 @@ cd;
 } else
 if ($_GET['act']=="mgr")
 {
-	if ($_POST["mark"]=="srhcat")
+	if ($_POST["mark"]=="srhsec")
 	{	 		
 	   $rows = $db->SelectAll(
 				"section",
@@ -406,7 +406,7 @@ if ($_GET['act']=="mgr")
     }
                 $rowsClass = array();
                 $colsClass = array();
-                $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhcat")?$db->CountAll("section"):Count($rows);
+                $rowCount =($_GET["rec"]=="all" or $_POST["mark"]!="srhsec")?$db->CountAll("section"):Count($rows);
                 for($i = 0; $i < Count($rows); $i++)
                 {						
 		        $rows[$i]["secname"] =(mb_strlen($rows[$i]["secname"])>20)?mb_substr($rows[$i]["secname"],0,20,"UTF-8")."...":$rows[$i]["secname"];
@@ -467,7 +467,7 @@ $code=<<<edit
 				  </div>
                     <div class="Top">                       
 						<center>
-							<form action="?item=catmgr&act=mgr" method="post" id="frmsrh" name="frmsrh">
+							<form action="?item=secmgr&act=mgr" method="post" id="frmsrh" name="frmsrh">
 								<p>جستجو بر اساس {$combobox}</p>
 
 								<p class="search-form">
@@ -475,7 +475,7 @@ $code=<<<edit
 									<a href="?item=secmgr&act=mgr" name="srhsubmit" id="srhsubmit" class="button"> جستجو</a>
 									<a href="?item=secmgr&act=mgr&rec=all" name="retall" id="retall" class="button"> کلیه اطلاعات</a>
 								</p>
-								<input type="hidden" name="mark" value="srhcat" /> 
+								<input type="hidden" name="mark" value="srhsec" /> 
 								{$msgs}
 
 								{$gridcode} 
