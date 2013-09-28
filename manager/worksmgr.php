@@ -211,7 +211,7 @@ if ($_GET['act']=="mgr")
 		$rows = $db->SelectAll(
 				"works",
 				"*",
-				"{$_POST[cbsearch]} LIKE '%{$_POST[txtsrh]}%'",
+				"`{$_POST[cbsearch]}` LIKE '%{$_POST[txtsrh]}%'",
 				"id ASC",
 				$_GET["pageNo"]*10,
 				10);
