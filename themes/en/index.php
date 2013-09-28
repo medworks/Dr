@@ -1,8 +1,8 @@
 <?php
-	include_once("./config.php");
-	include_once("./classes/functions.php");
-	include_once("./classes/database.php");
-	include_once("./classes/seo.php");
+	include_once("../../config.php");
+	include_once("../../classes/functions.php");
+	include_once("../../classes/database.php");
+	include_once("../../classes/seo.php");
 	$seo = Seo::GetSeo();
 	$db = Database::GetDatabase();
 	
@@ -105,9 +105,9 @@ $html=<<<cd
 	                <h1>{$name_latin}</h1> 
 	                <h3>{$specialty_latin}</h3>
                 </div>
-                <div class="flags">
-                	<a href="#" class="tip" title="English"><img src="themes/images/england-flag.png" alt="english"></a>
-                	<a href="#" class="tip" title="Persian"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                <div class="flags">				
+                	<a href="../../index.php?lang=en" class="tip" title="English"><img src="themes/images/england-flag.png" alt="english"></a>
+                	<a href="../../index.php?lang=fa" class="tip" title="Persian"><img src="themes/images/iran-flag.png" alt="persian"></a>
                 </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
