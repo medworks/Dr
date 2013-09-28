@@ -314,10 +314,14 @@ $html.=<<<cd
 							<ul class="filter">
 								<li class="current all"><a href="#">All</a></li>
 cd;
-								foreach($gallery as $val){
-									$latin_catname = GetCategoryLatinName($val["catid"]);
+                                $cats = array();
+								foreach($gallery as $val){ $cats[] = $val['catid'];}
+								$uniqcat = array_unique($cats);
+								foreach($uniqcat as $val)
+								{
+									$latin_catname = GetCategoryLatinName($val);
 $html.=<<<cd
-									<li class="{$val['catid']}"><a href="#">{$latin_catname}</a></li>
+									<li class="{$val}"><a href="#">{$latin_catname}</a></li>
 cd;
 								}
 $html.=<<<cd
