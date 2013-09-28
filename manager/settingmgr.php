@@ -50,7 +50,11 @@
 		SetSettingValue("Gplus_Add",$_POST["gplus_add"]);
 		SetSettingValue("Tell_Number",$_POST["tel_number"]);
 		SetSettingValue("Fax_Number",$_POST["fax_number"]);
-		SetSettingValue("Address",$_POST["address"]);		
+		SetSettingValue("Address",$_POST["address"]);
+
+		SetSettingValue("Latin_Tell_Number",$_POST["latin_tel_number"]);
+		SetSettingValue("Latin_Fax_Number",$_POST["latin_fax_number"]);
+		SetSettingValue("Latin_Address",$_POST["latin_address"]);		
 		header('location:?item=settingmgr&act=do');
 	}
 	else
@@ -238,6 +242,10 @@ ht;
 		$Tell_Number = GetSettingValue('Tell_Number',0);
 		$Fax_Number = GetSettingValue('Fax_Number',0);
 		$Address = GetSettingValue('Address',0);
+
+		$Latin_Tell_Number = GetSettingValue('Latin_Tell_Number',0);
+		$Latin_Fax_Number = GetSettingValue('Latin_Fax_Number',0);
+		$Latin_Address = GetSettingValue('Latin_Address',0);
 		$html=<<<ht
 		<div class="title">
 	      <ul>
@@ -248,7 +256,7 @@ ht;
 	    </div>
 			<form name="frmaddresses" id= "frmaddresses" action="" method="post" >
 				<p>
-					<label for="subject"> ایمیل تماس با ما</label>
+					<label for="subject">آدرس ایمیل </label>
 				</p>    
 				<input type="text" name="contact_email" class="subject ltr" id="contact_email" value='{$Contact_Email}'/>
 				<p>
@@ -267,6 +275,9 @@ ht;
 					<label for="gpluse">آدرس گوگل پلاس </label>
 				</p>    
 				<input type="text" name="gplus_add" class="subject ltr" id="gplus_add" value='{$Gplus_Add}'/>
+				<br />
+				<hr />
+				<br />
 				<p>
 					<label for="tel">تلفن</label>
 				</p>    
@@ -279,11 +290,26 @@ ht;
 					<label for="address">آدرس</label>
 				</p>    
 				<input type="text" name="address" class="subject" id="address" value='{$Address}'/>
+				<br />
+				<hr />
+				<br />
 				<p>
-			 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
-			 <input type='hidden' name='mark' value='editadd' />
-		     <input type="reset" value="پاک کردن" class="reset" /> 	 	 
-		   </p>
+				<label for="tel">تلفن (لاتین)</label>
+				</p>    
+				<input type="text" name="latin_tel_number" class="subject ltr" id="tel_number" value='{$Latin_Tell_Number}'/>
+				<p>
+					<label for="fax">فاکس (لاتین)</label>
+				</p>    
+				<input type="text" name="latin_fax_number" class="subject ltr" id="fax_number" value='{$Latin_Fax_Number}'/>
+				<p>
+					<label for="address">آدرس (لاتین)</label>
+				</p>    
+				<input type="text" name="latin_address" class="subject ltr" id="address" value='{$Latin_Address}'/>
+				<p>
+				 <input type='submit' id='submit' value='ویرایش' class='submit' />	 
+				 <input type='hidden' name='mark' value='editadd' />
+			     <input type="reset" value="پاک کردن" class="reset" /> 	 	 
+		   		</p>
 			</form>
 ht;
 	}

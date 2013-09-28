@@ -2,7 +2,6 @@
 	include_once("./config.php");
 	include_once("./classes/functions.php");
 	include_once("./classes/database.php");
-	include_once("./lib/persiandate.php");	
 	include_once("./classes/seo.php");
 	$seo = Seo::GetSeo();
 	$db = Database::GetDatabase();
@@ -12,18 +11,18 @@
   	$gallery = $db->SelectAll("gallery","*",null,"id DESC");
 	$category = $db->SelectAll("category","*",null,"id ASC");
 
-	$name = GetSettingValue('Dr_Name',0);
-	$specialty  = GetSettingValue('Dr_Specialty',0);
-	$about = GetSettingValue('About_System',0);
+	$name_latin = GetSettingValue('Dr_Name_Latin',0);
+	$specialty_latin  = GetSettingValue('Dr_Specialty_Latin',0);
+	$about_latin = GetSettingValue('About_System_Latin',0);
 
 	$Contact_Email = GetSettingValue('Contact_Email',0);
 	$FaceBook_Add = GetSettingValue('FaceBook_Add',0);
 	$Twitter_Add = GetSettingValue('Twitter_Add',0);
 	$Rss_Add = GetSettingValue('Rss_Add',0);
 	$Gplus_Add = GetSettingValue('Gplus_Add',0);
-	$Tell_Number = GetSettingValue('Tell_Number',0);
-	$Fax_Number = GetSettingValue('Fax_Number',0);
-	$Address = GetSettingValue('Address',0);
+	$Latin_Tell_Number = GetSettingValue('Latin_Tell_Number',0);
+	$Latin_Fax_Number = GetSettingValue('Latin_Fax_Number',0);
+	$Latin_Address = GetSettingValue('Latin_Address',0);
 	$Dr_Pic = GetSettingValue('Dr_Pic',0);
 
 $html=<<<cd
@@ -103,8 +102,8 @@ $html=<<<cd
 		<header>
 			<div class="sixteen columns">
                 <div class="My_name">
-	                <h1>Dr Eghbal Sadri</h1> 
-	                <h3>Specialist in Orthopedics</h3>
+	                <h1>{$name_latin}</h1> 
+	                <h3>{$specialty_latin}</h3>
                 </div>
                 <div class="flags">
                 	<a href="#" class="tip" title="English"><img src="themes/images/england-flag.png" alt="english"></a>
@@ -139,15 +138,15 @@ $html=<<<cd
 					<div class="five columns">
 						<div class="block">
 							<div class="portrait">
-								<img src="themes/images/others/personal-photo.jpg" alt="Dr">
+								<img src="{$Dr_Pic}" alt="Dr Sadri">
 							</div>
 						</div>
 					</div>
 					<div class="six columns">
 						<div class="block">
 							<div class="general_info">
-								<h3>Dr Eghbal Sadri (Specialist in Orthopedics)</h3>
-								<p>Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... Detail of Dr... </p>
+								<h3>{$name_latin} ({$specialty_latin})</h3>
+								<p class="small">{$about_latin}</p>
 							</div>
 							<div class="social_icons">
 								<h3>Follow Me on</h3>
@@ -167,23 +166,23 @@ $html=<<<cd
 							<ul class="personal-info">
 								<li>
 									<span class="title">Name</span>
-									<span class="value">Eghbal Sadri</span>
-								</li>
-								<li>
-									<span class="title">Age</span>
-									<span class="value">40</span>
+									<span class="value">{$name_latin}</span>
 								</li>
 								<li>
 									<span class="title">Address</span>
-									<span class="value">Mohtashami-Iran</span>
+									<span class="value">{$Latin_Address}</span>
 								</li>
 								<li>
 									<span class="title">E-mail</span>
-									<span class="value latinfont"><a href="mailto:info@sadri.com">info@sadri.com</a></span>
+									<span class="value small latinfont"><a href="mailto:{$Contact_Email}">{$Contact_Email}</a></span>
 								</li>
 								<li>
-									<span class="title">Tel</span>
-									<span class="value">+1(123) 456 7890</span>
+									<span class="title medium">Tel</span>
+									<span class="value small tel">{$Latin_Tell_Number}</span>
+								</li>
+								<li>
+									<span class="title medium">Fax</span>
+									<span class="value small fax">{$Latin_Fax_Number}</span>
 								</li>
 							</ul>
 						</div>
@@ -201,24 +200,19 @@ $html=<<<cd
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==1){
+										$date = $works[$i]['date'];
+$html.=<<<cd
 									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Article one</h3>
-										<p>Detail of article... Detail of article... Detail of article...</p>
-										<span class="place">google</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['latin-subject']}</h3>
+										<p>{$works[$i]['latin-body']}</p>
 									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Article two</h3>
-										<p>Detail of article... Detail of article... Detail of article...</p>
-										<span class="place">google</span>
-									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Article three</h3>
-										<p>Detail of article... Detail of article... Detail of article...</p>
-										<span class="place">google</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>
@@ -230,24 +224,19 @@ $html=<<<cd
 							</div>
 							<div class="detailsCol">
 								<ul class="employment_ul">
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==2){
+										$date = $works[$i]['date'];
+$html.=<<<cd
 									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Conference one</h3>
-										<p>Detail of conference... Detail of conference... Detail of conference...</p>
-										<span class="place">google</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['latin-subject']}</h3>
+										<p>{$works[$i]['latin-body']}</p>
 									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Conference two</h3>
-										<p>Detail of conference... Detail of conference... Detail of conference...</p>
-										<span class="place">google</span>
-									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Conference three</h3>
-										<p>Detail of conference... Detail of conference... Detail of conference...</p>
-										<span class="place">google</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>
@@ -258,25 +247,20 @@ $html=<<<cd
 								<h2>Academic titles</h2>
 							</div>
 							<div class="detailsCol">
-								<ul class="employment_ul">
+								<ul>
+cd;
+								for ($i=0; $i < count($works) ; $i++) {
+									if($works[$i]['group']==3){
+										$date = $works[$i]['date'];
+$html.=<<<cd
 									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Titles one</h3>
-										<p>Detail of title... Detail of title... Detail of title... </p>
-										<span class="place">google</span>
+										<span class="date">{$date}</span>
+										<h3>{$works[$i]['latin-subject']}</h3>
+										<p>{$works[$i]['latin-body']}</p>
 									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Titles two</h3>
-										<p>Detail of title... Detail of title... Detail of title... </p>
-										<span class="place">google</span>
-									</li>
-									<li>
-										<span class="date">2002-12-1</span>
-										<h3>Titles three</h3>
-										<p>Detail of title... Detail of title... Detail of title... </p>
-										<span class="place">google.</span>
-									</li>
+cd;
+								}}
+$html.=<<<cd
 								</ul>
 							</div>
 						</div>
@@ -290,34 +274,31 @@ $html=<<<cd
 					<div class="sixteen columns">
 						<div class="block2">
 							<div class="services clearfix">
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv1.png">
-										<h4>Service one</h4>
-										<p>Detail of service... Detail of service... Detail of service... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv2.png">
-										<h4>Service two</h4>
-										<p>Detail of service... Detail of service... Detail of service... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv3.png">
-										<h4>Service three</h4>
-										<p>Detail of service... Detail of service... Detail of service... </p>
-									</div>	
-								</div>
-								<div class="four columns omega">
-									<div class="service">
-										<img src="themes/images/serv4.png">
-										<h4>Service four</h4>
-										<p>Detail of service... Detail of service... Detail of service... </p>
-									</div>	
-								</div>
+cd;
+								$i=1;
+								foreach($news as $val){
+									
+$html.=<<<cd
+									<div class="four columns omega">
+										<div class="service">
+cd;
+										if($i<5){
+$html.=<<<cd
+											<img src="themes/images/serv{$i}.png">
+cd;
+										}
+$html.=<<<cd
+											<h4>{$val['latin-subject']}</h4>
+											<p>{$val['latin-body']}</p>
+										</div>	
+									</div>
+cd;
+								if($i%4==0){
+$html.=<<<cd
+								<div class="clear"></div>
+cd;
+								}$i++;}
+$html.=<<<cd
 							</div>
 						</div>
 					</div>
