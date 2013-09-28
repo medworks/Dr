@@ -158,15 +158,14 @@ if ($_GET['act']=="mgr")
 	    $rows = $db->SelectAll(
 				"news",
 				"*",
-				"{$_POST[cbsearch]} LIKE '%{$_POST[txtsrh]}%'",
+				"`{$_POST[cbsearch]}` LIKE '%{$_POST[txtsrh]}%'",
 				"id DESC",
 				$_GET["pageNo"]*10,
 				10);
 			if (!$rows) 
 			{								
 				header("Location:?item=newsmgr&act=mgr&msg=6");
-			}
-		
+			}			
 	}
 	else
 	{	
