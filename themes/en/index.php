@@ -42,31 +42,31 @@ $html=<<<cd
 	<meta name="Generator" content="Mediateq">
 	<meta name="Author" content="Mediateq">
 
-	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="../themes/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="../themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/en/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/normalize.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/en/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
-	<script src="themes/js/jquery.min.js" type="text/javascript"></script>
-	<script src="themes/js/jms.js" type="text/javascript"></script>
-	<script src="themes/js/jmpress.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.easing.1.3.js" type="text/javascript"></script>
-	<script src="themes/js/detectmobilebrowser.js" type="text/javascript"></script>
-	<script src="themes/js/mousewheel.js" type="text/javascript"></script>
-	<script src="themes/en/js/jquery.jscrollpane.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.quicksand.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.qtip.min.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.min.js" type="text/javascript"></script>
+	<script src="../js/jms.js" type="text/javascript"></script>
+	<script src="../js/jmpress.js" type="text/javascript"></script>
+	<script src="../js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="../js/detectmobilebrowser.js" type="text/javascript"></script>
+	<script src="../js/mousewheel.js" type="text/javascript"></script>
+	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
+	<script src="../js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="../js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="../js/jquery.qtip.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.mobilegmap.min.js" type="text/javascript"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
-	<script src="themes/en/js/contact_form.js" type="text/javascript"></script>
-	<script src="themes/en/js/scripts.js" type="text/javascript"></script>
-	<script src="themes/js/modernizr.custom.48780.js" type="text/javascript"></script>
+	<script src="js/contact_form.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="../js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
