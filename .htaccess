@@ -4,7 +4,11 @@ deny from all
 </FilesMatch>
                            
 <IFModule mod_rewrite.c>
-RewriteEngine on
+#RewriteEngine on
+#RewriteCond %{QUERY_STRING} lang=fa
+#RewriteRule ^index.php  /dr/themes/fa/index.php?  [L,NC] 
+#RewriteCond %{QUERY_STRING} lang=en
+#RewriteRule ^index.php  /dr/themes/en/index.php?  [L,NC] 
 </IFModule>
 # Enable / Disable directory Listing/Browsing
 Options -Indexes

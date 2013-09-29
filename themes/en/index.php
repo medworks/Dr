@@ -42,31 +42,31 @@ $html=<<<cd
 	<meta name="Generator" content="Mediateq">
 	<meta name="Author" content="Mediateq">
 
-	<link rel="icon" href="themes/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="themes/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="../themes/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="../themes/favicon.ico" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="themes/en/skeleton.css" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.jscrollpane.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/prettyPhoto.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/jquery.qtip.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/css/normalize.css" media="all" />
-	<link rel="stylesheet" type="text/css" href="themes/en/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.jscrollpane.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/prettyPhoto.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/jquery.qtip.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
 
-	<script src="themes/js/jquery.min.js" type="text/javascript"></script>
-	<script src="themes/js/jms.js" type="text/javascript"></script>
-	<script src="themes/js/jmpress.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.easing.1.3.js" type="text/javascript"></script>
-	<script src="themes/js/detectmobilebrowser.js" type="text/javascript"></script>
-	<script src="themes/js/mousewheel.js" type="text/javascript"></script>
-	<script src="themes/en/js/jquery.jscrollpane.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.quicksand.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.qtip.min.js" type="text/javascript"></script>
-	<script src="themes/js/jquery.mobilegmap.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.min.js" type="text/javascript"></script>
+	<script src="../js/jms.js" type="text/javascript"></script>
+	<script src="../js/jmpress.js" type="text/javascript"></script>
+	<script src="../js/jquery.easing.1.3.js" type="text/javascript"></script>
+	<script src="../js/detectmobilebrowser.js" type="text/javascript"></script>
+	<script src="../js/mousewheel.js" type="text/javascript"></script>
+	<script src="js/jquery.jscrollpane.js" type="text/javascript"></script>
+	<script src="../js/jquery.quicksand.js" type="text/javascript"></script>
+	<script src="../js/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="../js/jquery.qtip.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.mobilegmap.min.js" type="text/javascript"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDun8B3aM33iKhRIZniXwprr2ztGlzgnrQ&sensor=false" type="text/javascript"></script>
-	<script src="themes/en/js/contact_form.js" type="text/javascript"></script>
-	<script src="themes/en/js/scripts.js" type="text/javascript"></script>
-	<script src="themes/js/modernizr.custom.48780.js" type="text/javascript"></script>
+	<script src="js/contact_form.js" type="text/javascript"></script>
+	<script src="js/scripts.js" type="text/javascript"></script>
+	<script src="../js/modernizr.custom.48780.js" type="text/javascript"></script>
 
 	<!--[if lt IE 7]>
         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
@@ -106,8 +106,8 @@ $html=<<<cd
 	                <h3>{$specialty_latin}</h3>
                 </div>
                 <div class="flags">				
-                	<a href="../../index.php?lang=en" class="tip" title="English"><img src="themes/images/england-flag.png" alt="english"></a>
-                	<a href="../../index.php?lang=fa" class="tip" title="Persian"><img src="themes/images/iran-flag.png" alt="persian"></a>
+                	<a href="../../index.php?lang=en" class="tip" title="English"><img src="../images/england-flag.png" alt="english"></a>
+                	<a href="../../index.php?lang=fa" class="tip" title="Persian"><img src="../images/iran-flag.png" alt="persian"></a>
                 </div>
                 <nav id="menu" class="sixteen columns">
                 	<ul id="nav">
@@ -151,12 +151,12 @@ $html=<<<cd
 							<div class="social_icons">
 								<h3>Follow Me on</h3>
 								<ul class="social">
-									<li><a href="#" class="tip" title="Twitter"><img src="themes/images/twitter.png" alt="twitter"></a></li>
-									<li><a href="#" class="tip" title="Dribbble"><img src="themes/images/dribbble.png" alt="dribbble"></a></li>
-									<li><a href="#" class="tip" title="Lastfm"><img src="themes/images/lastfm.png" alt="lastfm"></a></li>
-									<li><a href="#" class="tip" title="Google Plus"><img src="themes/images/googleplus.png" alt="googleplus"></a></li>
-									<li><a href="#" class="tip" title="Youtube"><img src="themes/images/youtube.png" alt="youtube"></a></li>
-									<li><a href="#" class="tip" title="Skype"><img src="themes/images/skype.png" alt="skype"></a></li>
+									<li><a href="#" class="tip" title="Twitter"><img src="../images/twitter.png" alt="twitter"></a></li>
+									<li><a href="#" class="tip" title="Dribbble"><img src="../images/dribbble.png" alt="dribbble"></a></li>
+									<li><a href="#" class="tip" title="Lastfm"><img src="../images/lastfm.png" alt="lastfm"></a></li>
+									<li><a href="#" class="tip" title="Google Plus"><img src="../images/googleplus.png" alt="googleplus"></a></li>
+									<li><a href="#" class="tip" title="Youtube"><img src="../images/youtube.png" alt="youtube"></a></li>
+									<li><a href="#" class="tip" title="Skype"><img src="../images/skype.png" alt="skype"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -284,7 +284,7 @@ $html.=<<<cd
 cd;
 										if($i<5){
 $html.=<<<cd
-											<img src="themes/images/serv{$i}.png">
+											<img src="../images/serv{$i}.png">
 cd;
 										}
 $html.=<<<cd
