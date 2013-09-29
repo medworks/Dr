@@ -4,9 +4,12 @@ deny from all
 </FilesMatch>
                            
 <IFModule mod_rewrite.c>
-#RewriteEngine on
+RewriteEngine on
+#RewriteRule ^/themes/fa/(.+) http://127.0.0.1/$1 [R=301,L] 
+
+#RewriteRule ^(.*)$ themes/fa/index.php?/$1 [L]
 #RewriteCond %{QUERY_STRING} lang=fa
-#RewriteRule ^index.php  /dr/themes/fa/index.php?  [L,NC] 
+#RewriteRule ^index.php  themes/fa/index.php?  [L,NC] 
 #RewriteCond %{QUERY_STRING} lang=en
 #RewriteRule ^index.php  /dr/themes/en/index.php?  [L,NC] 
 </IFModule>
