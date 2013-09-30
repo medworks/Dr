@@ -287,7 +287,7 @@ $html.=<<<cd
 cd;
 										if($i<5){
 $html.=<<<cd
-											<img src="../images/serv{$i}.png">
+											<img src="images/serv{$i}.png">
 cd;
 										}
 $html.=<<<cd
