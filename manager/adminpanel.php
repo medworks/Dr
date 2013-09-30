@@ -83,6 +83,7 @@
           </li>
           <li>
             <a href="?item=catmgr&act=do" class="catmgr"><p>دسته بندی</p></a>
+            <a href="?item=secmgr&act=do" class="trick"></a>
           </li>
           <li>
             <a href="?item=newsmgr&act=do" id="news" name="news" class="news"><p>مدیریت خدمات</p></a>

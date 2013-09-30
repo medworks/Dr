@@ -21,6 +21,15 @@ div,table,form,label,input,a,p{
   direction: ltr;
 }
 
+p.ltr{
+  text-align: left;
+  direction: ltr;
+}
+
+.leftdis{
+  display: inline-block !important;
+}
+
 a:active,
 a:visited,
 a:link{ 
@@ -40,13 +49,9 @@ a p{
   transition: all ease-in-out 0.2s;
 }
 
-p.ltr{
-  text-align: left;
-  direction: ltr;
-}
-
-.leftdis{
-  display: inline-block !important;
+.trick{
+  height: 0 !important;
+  padding: 0 !important;
 }
 
 a:hover,
