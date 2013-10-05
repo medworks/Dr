@@ -23,7 +23,7 @@
 	$Latin_Tell_Number = GetSettingValue('Latin_Tell_Number',0);
 	$Latin_Fax_Number = GetSettingValue('Latin_Fax_Number',0);
 	$Latin_Address = GetSettingValue('Latin_Address',0);
-	$Dr_Pic = GetSettingValue('Dr_Pic',0);
+	$Dr_Pic = '../'.GetSettingValue('Dr_Pic',0);
 
 $html=<<<cd
 <!DOCTYPE HTML>
@@ -332,14 +332,15 @@ $html.=<<<cd
 cd;
 							for($i=0;$i<count($gallery);$i++){
 								if (!isset($gallery[$i]["latin-subject"])) continue;
+								$image = "../".$gallery[$i]['image'];
 $html.=<<<cd
 								<li class="item four columns omega" data-id="id-1" data-type="{$gallery[$i]['catid']}">
-									<a href="{$gallery[$i]['image']}" data-rel="prettyPhoto[portfolio]">
+									<a href="{$image}" data-rel="prettyPhoto[portfolio]">
 										<div class="flip box fade">
 											<div class="rollover">
 												<div class="cube">
 													<figure class="front">
-														<img src="{$gallery[$i]['image']}" alt="{$gallery[$i]['latin-subject']}">
+														<img src="{$image}" alt="{$gallery[$i]['latin-subject']}">
 													</figure>
 													<section class="back">
 														<div class="back-wrap">
@@ -408,6 +409,15 @@ $html.=<<<cd
 			<!-- END Contact part -->
 		</section>
 		<!-- END Middle part -->
+		<div class="clear"></div>
+		<!-- Footer part -->
+		<footer>
+			<div class="copyright">
+				<p>All right reserved by Dr Eghbal Sadri.</p>
+				<p>Design by <a href="http://www.mediateq.ir">Mediateq</a></p>
+			</div>
+		</footer>
+		<!-- END Footer part -->
 	</div>
 	<!-- END Container -->
 </body>
