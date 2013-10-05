@@ -15,9 +15,9 @@
 	}	
 	$mes = Message::GetMessage();
 	$sess = Session::GetSesstion();
-	$name = $sess->Get("name").' '.$sess->Get("family");
-	$user = $sess->Get("username");
-  $pic = $sess->Get("userimg");
+	$header_name = $sess->Get("name").' '.$sess->Get("family");
+	$header_user = $sess->Get("username");
+  $header_pic = $sess->Get("userimg");
 	$datetime = ToJalali(date('Y-M-d H:i:s'),'l، d F Y');
 	if ($_GET["item"] == "logout")
    {
@@ -64,9 +64,9 @@
       <a href="../" class="logo" title="Mediateq" target="_blank">Dr Sadri website</a>
       <div id="mini-nav">
         <ul class="hidden-phone">
-          <li class="pic"><img src="<?php echo $pic; ?>" alt="<?php echo $name; ?>" /></li>       
-          <li><a><?php echo "نام: <span class='highlight'>$name</span>"; ?></a></li>
-          <li><a><?php echo "نام کاربری: <span class='highlight'>$user</span>"; ?></a></li>
+          <li class="pic"><img src="<?php echo $header_pic; ?>" alt="<?php echo $name; ?>" /></li>       
+          <li><a><?php echo "نام: <span class='highlight'>$header_name</span>"; ?></a></li>
+          <li><a><?php echo "نام کاربری: <span class='highlight'>$header_user</span>"; ?></a></li>
           <li><a><?php echo "تاریخ: <span class='highlight'>$datetime</span>"; ?></a></li> 
           <li class="exit"><a href="?item=logout&act=do">خروج</a></li>		  
         </ul>
