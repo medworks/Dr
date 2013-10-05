@@ -24,7 +24,7 @@
 
 .error span{
   display: inline-block;
-  background: url('../images/msg/error.png') no-repeat right center;
+  background: url('./images/msg/error.png') no-repeat right center;
   background-size: 48px 48px;
   height: 48px;
   width: 48px;
@@ -55,7 +55,7 @@
 
 .info span{
   display: inline-block;
-  background: url('../images/msg/info.png') no-repeat right center;
+  background: url('./images/msg/info.png') no-repeat right center;
   background-size: 48px 48px;
   height: 48px;
   width: 48px;
@@ -86,7 +86,7 @@
 
 .success span{
   display: inline-block;
-  background: url('../images/msg/success.png') no-repeat right center;
+  background: url('./images/msg/success.png') no-repeat right center;
   background-size: 48px 48px;
   height: 48px;
   width: 48px;
@@ -117,7 +117,7 @@
 
 .comment span{
   display: inline-block;
-  background: url('../images/msg/comment.png') no-repeat right center;
+  background: url('./images/msg/comment.png') no-repeat right center;
   background-size: 48px 48px;
   height: 48px;
   width: 48px;

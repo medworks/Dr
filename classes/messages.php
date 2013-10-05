@@ -18,6 +18,7 @@ class Message
    public function ShowError($msg)
     {     
             return '<div class="error">
+                        <span></span>
                         <p>'. $msg .'</p>
                     </div>
                     <div class="badboy"></div>';
@@ -26,6 +27,7 @@ class Message
    public function ShowInfo($msg)
     {     
             return '<div class="info">
+                      <span></span>
                       <p>'. $msg .'</p>
                     </div>
                     <div class="badboy"></div>';
@@ -34,6 +36,7 @@ class Message
    public function ShowSuccess($msg)
     {            
             return '<div class="success">
+                      <span></span>
                       <p>'. $msg .'</p>
                     </div>
                     <div class="badboy"></div>';
@@ -42,6 +45,7 @@ class Message
    public function ShowComment($msg)
     {     
             return '<div class="comment">
+                      <span></span>
                       <p>' . $msg .'</p>
                     </div>
                     <div class="badboy"></div>';
