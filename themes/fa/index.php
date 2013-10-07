@@ -24,7 +24,7 @@
 	$Tell_Number = GetSettingValue('Tell_Number',0);
 	$Fax_Number = GetSettingValue('Fax_Number',0);
 	$Address = GetSettingValue('Address',0);
-	$Dr_Pic = '../../'.GetSettingValue('Dr_Pic',0);
+	$Dr_Pic = '../'.GetSettingValue('Dr_Pic',0);
 
 $html=<<<cd
 <!DOCTYPE HTML>

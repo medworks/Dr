@@ -23,7 +23,7 @@
 	$Latin_Tell_Number = GetSettingValue('Latin_Tell_Number',0);
 	$Latin_Fax_Number = GetSettingValue('Latin_Fax_Number',0);
 	$Latin_Address = GetSettingValue('Latin_Address',0);
-	$Dr_Pic = '../../'.GetSettingValue('Dr_Pic',0);
+	$Dr_Pic = '../'.GetSettingValue('Dr_Pic',0);
 
 $html=<<<cd
 <!DOCTYPE HTML>
