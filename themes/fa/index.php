@@ -416,7 +416,7 @@ $html.=<<<cd
 		<footer>
 			<div class="copyright">
 				<p>تمامی حقوق این سایت متعلق به دکتر اقبال صدری می باشد.</p>
-				<p>طراحی <a href="http://www.mediateq.ir">مدیاتک</a></p>
+				<p>طراح <a href="http://www.mediateq.ir">مدیاتک</a></p>
 			</div>
 		</footer>
 		<!-- END Footer part -->
