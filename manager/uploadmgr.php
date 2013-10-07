@@ -15,8 +15,8 @@
  $overall_error = false;
  $pic_fldr_bit_addr = array("userspics"=>0,
 							"gallerypics"=>0);
- $pic_fldrs = array("newspics","workspics","userspics","slidespics","gallerypics");
- $fa_pic_fldrs = array("اخبار","فعالیت ها","کاربران","اسلایدها","گالری تصاویر");
+ $pic_fldrs = array("userspics","gallerypics");
+ $fa_pic_fldrs = array("کاربران","گالری تصاویر");
   for($i=0;$i<count($_POST['picsaddr']);$i++)
   {
 	if ($_POST['picsaddr'][$i]=="userspics") {$pic_fldr_bit_addr["userspics"]= 1;}	  
