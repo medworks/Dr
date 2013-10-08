@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 	    $.ajax({
 	    type: "POST",
-	    url: "themes/fa/contact.php",
+	    url: "contact.php",
 	    data: str,
 		    success: function(msg){
 		    
